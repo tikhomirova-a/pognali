@@ -6,8 +6,8 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo logo">
-        <img src="placeholder" class="logo__img" alt="Сервис путешествий «Погнали».">
+      <a class="page-header__logo logo" href="index.html" aria-label="Перейти на главную страницу">
+        <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
       </a>
       <nav class="page-header__nav main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню с навигацией</span></button>
@@ -16,10 +16,10 @@
             <a href="#">О сервисе</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Направления</a>
+            <a href="form.html">Направления</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Попутчики</a>
+            <a>Попутчики</a>
           </li>
         </ul>
         <ul class="main-nav__list user-list">
@@ -29,10 +29,10 @@
         </ul>
         <section class="main-nav__contacts contacts">
           <h3 class="visually-hidden">Наши контакты</h3>
-          <p class="contacts__tel">
+          <p class="contacts__tel tel">
             <a href="tel:88005558628">8 800 555-86-28</a>
           </p>
-          <p class="contacts__mail">
+          <p class="contacts__mail mail">
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
         </section>
@@ -40,13 +40,13 @@
           <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>
           <ul class="socials__list">
             <li class="socials__item socials__item--facebook">
-              <a href="#">Группа сервиса «Погнали» в фейсбук</a>
+              <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">Группа сервиса «Погнали» в фейсбук</a>
             </li>
             <li class="socials__item socials__item--vk">
-              <a href="#">Группа сервиса «Погнали» вконтакте</a>
+              <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">Группа сервиса «Погнали» вконтакте</a>
             </li>
             <li class="socials__item socials__item--instagram">
-              <a href="#">Профиль сервиса «Погнали» в инстаграм</a>
+              <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">Профиль сервиса «Погнали» в инстаграм</a>
             </li>
           </ul>
         </section>
@@ -57,171 +57,189 @@
       <section class="catalog">
         <h2 class="visually-hidden">Список попутчиков после фильтрации</h2>
         <ul class="catalog__list">
-          <li class="catalog__item traveler-card">
-            <a class="traveler-card__profile-link">
-              <img class="traveler-card__avatar" src="placeholder" alt="">
-            </a>
-            <a class="traveler-card__profile-link">
-              <h3 class="traveler-card__name">Таня Фирсова</h3>
-            </a>
-            <button class="traveler-card__btn-like traveler-card__btn-like--active" type="button"></button>
-            <span class="traveler-card__like-counter">1,5 М</span>
-            <p class="traveler-card__tags traveler__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <div class="traveler-card__countries">
-              <p class="traveler-card__title">хочет посетить:</p>
-              <ul class="traveler-card__countries-list countries-list">
-                <li class="countries-list__item countries-list__item--sri-lanka">Шри-Ланка</li>
-                <li class="countries-list__item countries-list__item--thailand">Тайланд</li>
-                <li class="countries-list__item countries-list__item--seychelles">Сейшелы</li>
-              </ul>
-            </div>
-            <div class="traveler-card__transport">
-              <p class="traveler-card__title">транспорт:</p>
-              <ul class="traveler-card__transport-list transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active">На самолете</li>
-                <li class="transport-list__item transport-list__item--auto">На машине</li>
-                <li class="transport-list__item transport-list__item--bicycle">На велосипеде</li>
-                <li class="transport-list__item transport-list__item--on-foot">Пешком</li>
-              </ul>
-            </div>
-            <div class="traveler-card__level">
-              <p class="traveler-card__title">левел:</p>
-              <p class="traveler-card__level-number">99</p>
-            </div>
-            <a class="traveler-card__link" href="#">Позвать!</a>
+          <li class="catalog__item">
+            <article class="traveler-card">
+              <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
+                <img class="traveler-card__avatar" src="placeholder" alt="">
+              </a>
+              <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
+                <h3 class="traveler-card__name">Таня Фирсова</h3>
+              </a>
+              <button class="traveler-card__btn-like traveler-card__btn-like--active" type="button"
+                aria-label="Поставить отметку «Мне нравится»"></button>
+              <span class="traveler-card__like-counter">1,5 М</span>
+              <p class="traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <div class="traveler-card__countries">
+                <p class="traveler-card__title">хочет посетить:</p>
+                <ul class="traveler-card__countries-list countries">
+                  <li class="countries__item countries__item--sri-lanka">Шри-Ланка</li>
+                  <li class="countries__item countries__item--thailand">Тайланд</li>
+                  <li class="countries__item countries__item--seychelles">Сейшелы</li>
+                </ul>
+              </div>
+              <div class="traveler-card__transport">
+                <p class="traveler-card__title">транспорт:</p>
+                <ul class="traveler-card__transport-list transport">
+                  <li class="transport__item transport__item--plane transport__item--active"
+                    aria-label="На самолете">На самолете</li>
+                  <li class="transport__item transport__item--auto" aria-label="На машине">На машине</li>
+                  <li class="transport__item transport__item--bicycle" aria-label="На велосипеде">На велосипеде</li>
+                  <li class="transport__item transport__item--on-foot" aria-label="Пешком">Пешком</li>
+                </ul>
+              </div>
+              <div class="traveler-card__level">
+                <p class="traveler-card__title">левел:</p>
+                <p class="traveler-card__level-number">99</p>
+              </div>
+              <a class="traveler-card__link" href="#">Позвать!</a>
+            </article>
           </li>
-          <li class="catalog__item traveler-card">
-            <a class="traveler-card__profile-link">
-              <img class="traveler-card__avatar" src="placeholder" alt="">
-            </a>
-            <a class="traveler-card__profile-link">
-              <h3 class="traveler-card__name">Петя Демин</h3>
-            </a>
-            <button class="traveler-card__btn-like" type="button"></button>
-            <span class="traveler-card__like-counter">1500</span>
-            <p class="traveler-card__tags traveler__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <div class="traveler-card__countries">
-              <p class="traveler-card__title">хочет посетить:</p>
-              <ul class="traveler-card__countries-list countries-list">
-                <li class="countries-list__item countries-list__item--belgium">Бельгия</li>
-                <li class="countries-list__item countries-list__item--czechia">Чехия</li>
-              </ul>
-            </div>
-            <div class="traveler-card__transport">
-              <p class="traveler-card__title">транспорт:</p>
-              <ul class="traveler-card__transport-list transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active">На самолете</li>
-                <li class="transport-list__item transport-list__item--auto transport-list__item--active">На машине</li>
-                <li class="transport-list__item transport-list__item--bicycle">На велосипеде</li>
-                <li class="transport-list__item transport-list__item--on-foot transport-list__item--active">Пешком</li>
-              </ul>
-            </div>
-            <div class="traveler-card__level">
-              <p class="traveler-card__title">левел:</p>
-              <p class="traveler-card__level-number">80</p>
-            </div>
-            <a class="traveler-card__link" href="#">Позвать!</a>
+          <li class="catalog__item">
+            <article class="traveler-card">
+              <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
+                <img class="traveler-card__avatar" src="placeholder" alt="">
+              </a>
+              <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
+                <h3 class="traveler-card__name">Петя Демин</h3>
+              </a>
+              <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
+              <span class="traveler-card__like-counter">1500</span>
+              <p class="traveler-card__tags">#бургер #бар #футбол #концерт #крафт</p>
+              <div class="traveler-card__countries">
+                <p class="traveler-card__title">хочет посетить:</p>
+                <ul class="traveler-card__countries-list countries">
+                  <li class="countries__item countries__item--belgium">Бельгия</li>
+                  <li class="countries__item countries__item--czechia">Чехия</li>
+                </ul>
+              </div>
+              <div class="traveler-card__transport">
+                <p class="traveler-card__title">транспорт:</p>
+                <ul class="traveler-card__transport-list transport">
+                  <li class="transport__item transport__item--plane transport__item--active"
+                    aria-label="На самолете">На самолете</li>
+                  <li class="transport__item transport__item--auto transport__item--active"
+                    aria-label="На машине">На машине</li>
+                  <li class="transport__item transport__item--bicycle" aria-label="На велосипеде">На велосипеде</li>
+                  <li class="transport__item transport__item--on-foot transport__item--active"
+                    aria-label="Пешком">Пешком</li>
+                </ul>
+              </div>
+              <div class="traveler-card__level">
+                <p class="traveler-card__title">левел:</p>
+                <p class="traveler-card__level-number">80</p>
+              </div>
+              <a class="traveler-card__link" href="#">Позвать!</a>
+            </article>
           </li>
-          <li class="catalog__item traveler-card">
-            <a class="traveler-card__profile-link">
-              <img class="traveler-card__avatar" src="placeholder" alt="">
-            </a>
-            <a class="traveler-card__profile-link">
-              <h3 class="traveler-card__name">Марк Смолов</h3>
-            </a>
-            <button class="traveler-card__btn-like" type="button"></button>
-            <span class="traveler-card__like-counter">170</span>
-            <p class="traveler-card__tags traveler__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <div class="traveler-card__countries">
-              <p class="traveler-card__title">хочет посетить:</p>
-              <ul class="traveler-card__countries-list countries-list">
-                <li class="countries-list__item countries-list__item--usa">США</li>
-                <li class="countries-list__item countries-list__item--australia">Австралия</li>
-                <li class="countries-list__item countries-list__item--dominica">Доминика</li>
-              </ul>
-            </div>
-            <div class="traveler-card__transport">
-              <p class="traveler-card__title">транспорт:</p>
-              <ul class="traveler-card__transport-list transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active">На самолете</li>
-                <li class="transport-list__item transport-list__item--auto">На машине</li>
-                <li class="transport-list__item transport-list__item--bicycle transport-list__item--active">На велосипеде</li>
-                <li class="transport-list__item transport-list__item--on-foot">Пешком</li>
-              </ul>
-            </div>
-            <div class="traveler-card__level">
-              <p class="traveler-card__title">левел:</p>
-              <p class="traveler-card__level-number">25</p>
-            </div>
-            <a class="traveler-card__link" href="#">Позвать!</a>
+          <li class="catalog__item">
+            <article class="traveler-card">
+              <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
+                <img class="traveler-card__avatar" src="placeholder" alt="">
+              </a>
+              <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
+                <h3 class="traveler-card__name">Марк Смолов</h3>
+              </a>
+              <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
+              <span class="traveler-card__like-counter">170</span>
+              <p class="traveler-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+              <div class="traveler-card__countries">
+                <p class="traveler-card__title">хочет посетить:</p>
+                <ul class="traveler-card__countries-list countries">
+                  <li class="countries__item countries__item--usa">США</li>
+                  <li class="countries__item countries__item--australia">Австралия</li>
+                  <li class="countries__item countries__item--dominica">Доминика</li>
+                </ul>
+              </div>
+              <div class="traveler-card__transport">
+                <p class="traveler-card__title">транспорт:</p>
+                <ul class="traveler-card__transport-list transport">
+                  <li class="transport__item transport__item--plane transport__item--active"
+                    aria-label="На самолете">На самолете</li>
+                  <li class="transport__item transport__item--auto" aria-label="На машине">На машине</li>
+                  <li class="transport__item transport__item--bicycle transport__item--active"
+                    aria-label="На велосипеде">На велосипеде</li>
+                  <li class="transport__item transport__item--on-foot" aria-label="Пешком">Пешком</li>
+                </ul>
+              </div>
+              <div class="traveler-card__level">
+                <p class="traveler-card__title">левел:</p>
+                <p class="traveler-card__level-number">25</p>
+              </div>
+              <a class="traveler-card__link" href="#">Позвать!</a>
+            </article>
           </li>
-          <li class="catalog__item traveler-card">
-            <a class="traveler-card__profile-link">
-              <img class="traveler-card__avatar" src="placeholder" alt="">
-            </a>
-            <a class="traveler-card__profile-link">
-              <h3 class="traveler-card__name">Лариса Роговая</h3>
-            </a>
-            <button class="traveler-card__btn-like" type="button"></button>
-            <span class="traveler-card__like-counter">23</span>
-            <p class="traveler-card__tags traveler__tags">#образование #карьера #учеба #линкедин</p>
-            <div class="traveler-card__countries">
-              <p class="traveler-card__title">хочет посетить:</p>
-              <ul class="traveler-card__countries-list countries-list">
-                <li class="countries-list__item countries-list__item--uk">Великобритания</li>
-                <li class="countries-list__item countries-list__item--germany">Германия</li>
-              </ul>
-            </div>
-            <div class="traveler-card__transport">
-              <p class="traveler-card__title">транспорт:</p>
-              <ul class="traveler-card__transport-list transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active">На самолете</li>
-                <li class="transport-list__item transport-list__item--auto transport-list__item--active">На машине</li>
-                <li class="transport-list__item transport-list__item--bicycle">На велосипеде</li>
-                <li class="transport-list__item transport-list__item--on-foot">Пешком</li>
-              </ul>
-            </div>
-            <div class="traveler-card__level">
-              <p class="traveler-card__title">левел:</p>
-              <p class="traveler-card__level-number">50</p>
-            </div>
-            <a class="traveler-card__link" href="#">Позвать!</a>
+          <li class="catalog__item">
+            <article class="traveler-card">
+              <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
+                <img class="traveler-card__avatar" src="placeholder" alt="">
+              </a>
+              <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
+                <h3 class="traveler-card__name">Лариса Роговая</h3>
+              </a>
+              <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
+              <span class="traveler-card__like-counter">23</span>
+              <p class="traveler-card__tags">#образование #карьера #учеба #линкедин</p>
+              <div class="traveler-card__countries">
+                <p class="traveler-card__title">хочет посетить:</p>
+                <ul class="traveler-card__countries-list countries">
+                  <li class="countries__item countries__item--uk">Великобритания</li>
+                  <li class="countries__item countries__item--germany">Германия</li>
+                </ul>
+              </div>
+              <div class="traveler-card__transport">
+                <p class="traveler-card__title">транспорт:</p>
+                <ul class="traveler-card__transport-list transport">
+                  <li class="transport__item transport__item--plane transport__item--active"
+                    aria-label="На самолете">На самолете</li>
+                  <li class="transport__item transport__item--auto transport__item--active"
+                    aria-label="На машине">На машине</li>
+                  <li class="transport__item transport__item--bicycle" aria-label="На велосипеде">На велосипеде</li>
+                  <li class="transport__item transport__item--on-foot" aria-label="Пешком">Пешком</li>
+                </ul>
+              </div>
+              <div class="traveler-card__level">
+                <p class="traveler-card__title">левел:</p>
+                <p class="traveler-card__level-number">50</p>
+              </div>
+              <a class="traveler-card__link" href="#">Позвать!</a>
+            </article>
           </li>
         </ul>
         <a class="catalog__link" href="#">Показать еще</a>
         <div class="catalog__pagination pagination">
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link" href="#">Показать предыдущую страницу</a>
+              <a class="pagination__link" href="#" aria-label="Показать предыдущую страницу">Показать предыдущую страницу</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#">Показать следующую страницу</a>
+              <a class="pagination__link" href="#" aria-label="Показать следующую страницу">Показать следующую страницу</a>
             </li>
           </ul>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo logo">
+      <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
         <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
       </a>
       <div class="page-footer__socials socials">
         <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>
         <ul class="socials__list">
           <li class="socials__item socials__item--facebook socials__item--accent">
-            <a href="#">Группа сервиса «Погнали» в фейсбук</a>
+            <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">Группа сервиса «Погнали» в фейсбук</a>
           </li>
           <li class="socials__item socials__item--vk socials__item--accent">
-            <a href="#">Группа сервиса «Погнали» вконтакте</a>
+            <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">Группа сервиса «Погнали» вконтакте</a>
           </li>
           <li class="socials__item socials__item--instagram socials__item--accent">
-            <a href="#">Профиль сервиса «Погнали» в инстаграм</a>
+            <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">Профиль сервиса «Погнали» в инстаграм</a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на онлайн‑курс HTML Academy:
+                HTML и CSS. Адаптивная вёрстка и автоматизация.">
           <img class="copyright__logo" src="placeholder" alt="HTML Academy">HTML Academy
         </a>
       </div>

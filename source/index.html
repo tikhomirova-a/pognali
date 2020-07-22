@@ -6,8 +6,8 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo logo">
-        <img src="placeholder" class="logo__img" alt="Сервис путешествий «Погнали».">
+      <a class="page-header__logo logo" aria-label="Вы находитесь на главной странице.">
+        <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
       </a>
       <nav class="page-header__nav main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню с навигацией</span></button>
@@ -16,10 +16,10 @@
             <a href="#">О сервисе</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Направления</a>
+            <a href="form.html">Направления</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Попутчики</a>
+            <a href="catalog.html">Попутчики</a>
           </li>
         </ul>
         <ul class="main-nav__list user-list">
@@ -29,10 +29,10 @@
         </ul>
         <section class="main-nav__contacts contacts">
           <h3 class="visually-hidden">Наши контакты</h3>
-          <p class="contacts__tel">
+          <p class="contacts__tel tel">
             <a href="tel:88005558628">8 800 555-86-28</a>
           </p>
-          <p class="contacts__mail">
+          <p class="contacts__mail mail">
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
         </section>
@@ -40,13 +40,13 @@
           <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>
           <ul class="socials__list">
             <li class="socials__item socials__item--facebook">
-              <a href="#">Группа сервиса «Погнали» в фейсбук</a>
+              <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">Группа сервиса «Погнали» в фейсбук</a>
             </li>
             <li class="socials__item socials__item--vk">
-              <a href="#">Группа сервиса «Погнали» вконтакте</a>
+              <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">Группа сервиса «Погнали» вконтакте</a>
             </li>
             <li class="socials__item socials__item--instagram">
-              <a href="#">Профиль сервиса «Погнали» в инстаграм</a>
+              <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">Профиль сервиса «Погнали» в инстаграм</a>
             </li>
           </ul>
         </section>
@@ -57,11 +57,11 @@
       <img class="page-main__slogan-img" src="placeholder" alt="В путешествие с крутыми попутчиками!">
       <nav class="page-main__nav short-nav">
         <ul class="short-nav__list">
-          <li class="short-nav__item contacts__tel contacts__tel--short">
-            <a href="tel:88005558628">Связаться с нами по телефону</a>
+          <li class="short-nav__item tel tel--short">
+            <a href="tel:88005558628" aria-label="Связаться с нами по телефону">Связаться с нами по телефону</a>
           </li>
-          <li class="short-nav__item contacts__mail contacts__mail--short">
-            <a href="mailto:mail@htmlacademy.ru">Связаться с нами по почте</a>
+          <li class="short-nav__item mail mail--short">
+            <a href="mailto:mail@htmlacademy.ru" aria-label="Связаться с нами по почте">Связаться с нами по почте</a>
           </li>
           <li class="short-nav__item user-authorize">
             <a href="#">Авторизация</a>
@@ -75,19 +75,19 @@
           <cite class="reviews-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
       </section>
-      <section class="app-instructions">
+      <section class="steps">
         <h2 class="visually-hidden">4 шага использования приложения «Погнали»</h2>
-        <ol class="app-instructions__list">
-          <li class="app-instructions__item">
+        <ol class="steps__list">
+          <li class="steps__item">
             <a href="#">Выберите направление</a>
           </li>
-          <li class="app-instructions__item">
+          <li class="steps__item">
             <a href="#">Изучите идеи путешественников</a>
           </li>
-          <li class="app-instructions__item">
+          <li class="steps__item">
             <a href="#">Находите тех, кто похож на вас</a>
           </li>
-          <li class="app-instructions__item">
+          <li class="steps__item">
             <a href="#">Путешествуйте вместе!</a>
           </li>
         </ol>
@@ -96,7 +96,7 @@
         <h2 class="info__title">О сервисе</h2>
         <p class="info__text description-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями
           путешествий и черпайте вдохновение в чужих.</p>
-        <p class="info__text description-text--emphasis">А если найдете кого-то близкого по духу — скорее
+        <p class="info__text description-text description-text--emphasis">А если найдете кого-то близкого по духу — скорее
           зовите в совместный трип!</p>
       </section>
       <section class="directions">
@@ -106,7 +106,7 @@
         <ul class="directions__list">
           <li class="directions__item country">
             <div class="country__img">
-              <img src="placeholder" alt="">
+              <img src="placeholder" alt="Прозрачная невероятно голубого цвета вода, белый песок и выстапающие из воды скалы, заросшие деревьями.">
             </div>
             <div class="country__info">
               <h3 class="visually-hidden">Таиланд</h3>
@@ -119,7 +119,7 @@
           </li>
           <li class="directions__item country">
             <div class="country__img">
-              <img src="placeholder" alt="">
+              <img src="placeholder" alt="Бульвар с красивым домом и деревьями.">
             </div>
             <div class="country__info">
               <h3 class="visually-hidden">Франция</h3>
@@ -132,7 +132,7 @@
           </li>
           <li class="directions__item country">
             <div class="country__img">
-              <img src="placeholder" alt="">
+              <img src="placeholder" alt="Панорама Праги в реки Влтавы, вид на Карлов мост.">
             </div>
             <div class="country__info">
               <h3 class="visually-hidden">Чехия</h3>
@@ -150,23 +150,23 @@
         <h2 class="travelers__title">Попутчики</h2>
         <p class="travelers__text descrtiption-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному
           нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="travelers__text descrtiption-text--emphasis">Теперь можно легко найти единомышленников!</p>
+        <p class="travelers__text description-text descrtiption-text--emphasis">Теперь можно легко найти единомышленников!</p>
         <ul class="travelers__list">
           <li class="travelers__item traveler">
             <img class="traveler__avatar" src="placeholder" alt="">
             <div class="traveler__info">
               <ul class="traveler__countries flag-list">
-                <li class="flag-list__item flag-list__item--sri-lanka">Шри-Ланка</li>
-                <li class="flag-list__item flag-list__item--thailand">Тайланд</li>
-                <li class="flag-list__item flag-list__item--seychelles">Сейшелы</li>
+                <li class="flag-list__item flag-list__item--sri-lanka" aria-label="Шри-Ланка">Шри-Ланка</li>
+                <li class="flag-list__item flag-list__item--thailand" aria-label="Тайланд">Тайланд</li>
+                <li class="flag-list__item flag-list__item--seychelles" aria-label="Сейшелы">Сейшелы</li>
               </ul>
               <h3 class="traveler__name">Таня Фирсова</h3>
               <p class="traveler__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-              <ul class="traveler__transport transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active">На самолете</li>
-                <li class="transport-list__item transport-list__item--auto">На машине</li>
-                <li class="transport-list__item transport-list__item--bicycle">На велосипеде</li>
-                <li class="transport-list__item transport-list__item--on-foot">Пешком</li>
+              <ul class="traveler__transport transport">
+                <li class="transport__item transport__item--plane transport__item--active" aria-label="На самолете">На самолете</li>
+                <li class="transport__item transport__item--auto" aria-label="На машине">На машине</li>
+                <li class="transport__item transport__item--bicycle" aria-label="На велосипеде">На велосипеде</li>
+                <li class="transport__item transport__item--on-foot" aria-label="Пешком">Пешком</li>
               </ul>
             </div>
             <p class="traveler__level"><span class="traveler__level-number">99</span>level</p>
@@ -175,16 +175,16 @@
             <img class="traveler__avatar" src="placeholder" alt="">
             <div class="traveler__info">
               <ul class="traveler__countries flag-list">
-                <li class="flag-list__item flag-list__item--belgium">Бельгия</li>
-                <li class="flag-list__item flag-list__item--czechia">Чехия</li>
+                <li class="flag-list__item flag-list__item--belgium" aria-label="Бельгия">Бельгия</li>
+                <li class="flag-list__item flag-list__item--czechia" aria-label="Чехия">Чехия</li>
               </ul>
               <h3 class="traveler__name">Петя Демин</h3>
               <p class="traveler__tags">#бургер #бар #футбол #концерт #крафт</p>
-              <ul class="traveler__transport transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active">На самолете</li>
-                <li class="transport-list__item transport-list__item--auto transport-list__item--active">На машине</li>
-                <li class="transport-list__item transport-list__item--bicycle">На велосипеде</li>
-                <li class="transport-list__item transport-list__item--on-foot transport-list__item--active">Пешком</li>
+              <ul class="traveler__transport transport">
+                <li class="transport__item transport__item--plane transport__item--active" aria-label="На самолете">На самолете</li>
+                <li class="transport__item transport__item--auto transport__item--active" aria-label="На машине">На машине</li>
+                <li class="transport__item transport__item--bicycle" aria-label="На велосипеде">На велосипеде</li>
+                <li class="transport__item transport__item--on-foot transport__item--active" aria-label="Пешком">Пешком</li>
               </ul>
             </div>
             <p class="traveler__level"><span class="traveler__level-number">80</span>level</p>
@@ -196,7 +196,7 @@
         <h2 class="profile__title">Добавьте свой профиль</h2>
         <dl class="profile__list">
           <div class="profile__item">
-            <dt class="profile__position">Базовое размещение </dt>
+            <dt class="profile__position">Базовое размещение</dt>
             <dd class="profile__price">Бесплатно</dd>
           </div>
           <div class="profile__item">
@@ -239,7 +239,7 @@
         <form class="feedback__form login-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="login-form-email">Введите Ваш электронный адрес</label>
           <input class="login-form__email" id="login-form-email" type="email" name="login-form-email" placeholder="E-mail">
-          <button class="login-form__submit" type="submit">Зарегистрироваться</button>
+          <button class="login-form__submit" type="submit" aria-label="Зарегистрироваться">Зарегистрироваться</button>
         </form>
         <p class="feedback__ask description-text">Остались вопросы? Мы с радостью на них ответим!</p>
         <div class="feedback__contacts contacts">
@@ -260,31 +260,32 @@
         <h2 class="visually-hidden">Наш офис на карте</h2>
         <iframe class="map__iframe"
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4753.827865628558!2d30.323338828660834!3d59.936482826662235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1595323087738!5m2!1sru!2sru"
-          width="320" height="424" allowfullscreen="" aria-hidden="false"
+          title="Посмотреть офис на карте" width="320" height="424" allowfullscreen="" aria-hidden="false"
           tabindex="0"></iframe>
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo logo">
+      <a class="page-footer__logo logo" aria-label="Вы находитесь на главной странице.">
         <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
       </a>
       <div class="page-footer__socials socials">
         <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>
         <ul class="socials__list">
           <li class="socials__item socials__item--facebook socials__item--accent">
-            <a href="#">Группа сервиса «Погнали» в фейсбук</a>
+            <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">Группа сервиса «Погнали» в фейсбук</a>
           </li>
           <li class="socials__item socials__item--vk socials__item--accent">
-            <a href="#">Группа сервиса «Погнали» вконтакте</a>
+            <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">Группа сервиса «Погнали» вконтакте</a>
           </li>
           <li class="socials__item socials__item--instagram socials__item--accent">
-            <a href="#">Профиль сервиса «Погнали» в инстаграм</a>
+            <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">Профиль сервиса «Погнали» в инстаграм</a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на онлайн‑курс HTML Academy:
+                HTML и CSS. Адаптивная вёрстка и автоматизация.">
           <img class="copyright__logo" src="placeholder" alt="HTML Academy">HTML Academy
         </a>
       </div>
