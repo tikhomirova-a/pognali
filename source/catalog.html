@@ -27,29 +27,25 @@
             <a href="#">Авторизация</a>
           </li>
         </ul>
-        <section class="main-nav__contacts contacts">
-          <h3 class="visually-hidden">Наши контакты</h3>
-          <p class="contacts__tel tel">
+        <ul class="main-nav__contacts contacts">
+          <li class="contacts__item contacts__item--tel tel">
             <a href="tel:88005558628">8 800 555-86-28</a>
-          </p>
-          <p class="contacts__mail mail">
+          </li>
+          <li class="contacts__item contacts__item--mail mail">
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
-        </section>
-        <section class="main-nav__socials socials">
-          <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>
-          <ul class="socials__list">
-            <li class="socials__item socials__item--facebook">
-              <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">Группа сервиса «Погнали» в фейсбук</a>
-            </li>
-            <li class="socials__item socials__item--vk">
-              <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">Группа сервиса «Погнали» вконтакте</a>
-            </li>
-            <li class="socials__item socials__item--instagram">
-              <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">Профиль сервиса «Погнали» в инстаграм</a>
-            </li>
-          </ul>
-        </section>
+          </li>
+        </ul>
+        <ul class="main-nav__socials socials">
+          <li class="socials__item socials__item--facebook">
+            <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">Группа сервиса «Погнали» в фейсбук</a>
+          </li>
+          <li class="socials__item socials__item--vk">
+            <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">Группа сервиса «Погнали» вконтакте</a>
+          </li>
+          <li class="socials__item socials__item--instagram">
+            <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">Профиль сервиса «Погнали» в инстаграм</a>
+          </li>
+        </ul>
       </nav>
       <h1 class="page-header__title">Попутчики</h1>
     </header>
@@ -60,7 +56,7 @@
           <li class="catalog__item">
             <article class="traveler-card">
               <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
-                <img class="traveler-card__avatar" src="placeholder" alt="">
+                <img class="traveler-card__avatar" src="placeholder" alt="Аватар Тани Фирсовой.">
               </a>
               <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
                 <h3 class="traveler-card__name">Таня Фирсова</h3>
@@ -80,11 +76,10 @@
               <div class="traveler-card__transport">
                 <p class="traveler-card__title">транспорт:</p>
                 <ul class="traveler-card__transport-list transport">
-                  <li class="transport__item transport__item--plane transport__item--active"
-                    aria-label="На самолете">На самолете</li>
-                  <li class="transport__item transport__item--auto" aria-label="На машине">На машине</li>
-                  <li class="transport__item transport__item--bicycle" aria-label="На велосипеде">На велосипеде</li>
-                  <li class="transport__item transport__item--on-foot" aria-label="Пешком">Пешком</li>
+                  <li class="transport__item transport__item--plane transport__item--active"><span class="visually-hidden">На самолете</span></li>
+                  <li class="transport__item transport__item--auto"><span class="visually-hidden">На машине</span></li>
+                  <li class="transport__item transport__item--bicycle"><span class="visually-hidden">На велосипеде</span></li>
+                  <li class="transport__item transport__item--on-foot"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="traveler-card__level">
@@ -97,7 +92,7 @@
           <li class="catalog__item">
             <article class="traveler-card">
               <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
-                <img class="traveler-card__avatar" src="placeholder" alt="">
+                <img class="traveler-card__avatar" src="placeholder" alt="Аватар Пети Демина.">
               </a>
               <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
                 <h3 class="traveler-card__name">Петя Демин</h3>
@@ -115,13 +110,10 @@
               <div class="traveler-card__transport">
                 <p class="traveler-card__title">транспорт:</p>
                 <ul class="traveler-card__transport-list transport">
-                  <li class="transport__item transport__item--plane transport__item--active"
-                    aria-label="На самолете">На самолете</li>
-                  <li class="transport__item transport__item--auto transport__item--active"
-                    aria-label="На машине">На машине</li>
-                  <li class="transport__item transport__item--bicycle" aria-label="На велосипеде">На велосипеде</li>
-                  <li class="transport__item transport__item--on-foot transport__item--active"
-                    aria-label="Пешком">Пешком</li>
+                  <li class="transport__item transport__item--plane transport__item--active"><span class="visually-hidden">На самолете</span></li>
+                  <li class="transport__item transport__item--auto transport__item--active"><span class="visually-hidden">На машине</span></li>
+                  <li class="transport__item transport__item--bicycle"><span class="visually-hidden">На велосипеде</span></li>
+                  <li class="transport__item transport__item--on-foot transport__item--active"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="traveler-card__level">
@@ -134,7 +126,7 @@
           <li class="catalog__item">
             <article class="traveler-card">
               <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
-                <img class="traveler-card__avatar" src="placeholder" alt="">
+                <img class="traveler-card__avatar" src="placeholder" alt="Аватар Марка Смолова.">
               </a>
               <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
                 <h3 class="traveler-card__name">Марк Смолов</h3>
@@ -153,12 +145,10 @@
               <div class="traveler-card__transport">
                 <p class="traveler-card__title">транспорт:</p>
                 <ul class="traveler-card__transport-list transport">
-                  <li class="transport__item transport__item--plane transport__item--active"
-                    aria-label="На самолете">На самолете</li>
-                  <li class="transport__item transport__item--auto" aria-label="На машине">На машине</li>
-                  <li class="transport__item transport__item--bicycle transport__item--active"
-                    aria-label="На велосипеде">На велосипеде</li>
-                  <li class="transport__item transport__item--on-foot" aria-label="Пешком">Пешком</li>
+                  <li class="transport__item transport__item--plane transport__item--active"><span class="visually-hidden">На самолете</span></li>
+                  <li class="transport__item transport__item--auto"><span class="visually-hidden">На машине</span></li>
+                  <li class="transport__item transport__item--bicycle transport__item--active"><span class="visually-hidden">На велосипеде</span></li>
+                  <li class="transport__item transport__item--on-foot"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="traveler-card__level">
@@ -171,7 +161,7 @@
           <li class="catalog__item">
             <article class="traveler-card">
               <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
-                <img class="traveler-card__avatar" src="placeholder" alt="">
+                <img class="traveler-card__avatar" src="placeholder" alt="Аватар Ларисы Роговой.">
               </a>
               <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
                 <h3 class="traveler-card__name">Лариса Роговая</h3>
@@ -189,12 +179,10 @@
               <div class="traveler-card__transport">
                 <p class="traveler-card__title">транспорт:</p>
                 <ul class="traveler-card__transport-list transport">
-                  <li class="transport__item transport__item--plane transport__item--active"
-                    aria-label="На самолете">На самолете</li>
-                  <li class="transport__item transport__item--auto transport__item--active"
-                    aria-label="На машине">На машине</li>
-                  <li class="transport__item transport__item--bicycle" aria-label="На велосипеде">На велосипеде</li>
-                  <li class="transport__item transport__item--on-foot" aria-label="Пешком">Пешком</li>
+                  <li class="transport__item transport__item--plane transport__item--active"><span class="visually-hidden">На самолете</span></li>
+                  <li class="transport__item transport__item--auto transport__item--active"><span class="visually-hidden">На машине</span></li>
+                  <li class="transport__item transport__item--bicycle"><span class="visually-hidden">На велосипеде</span></li>
+                  <li class="transport__item transport__item--on-foot"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="traveler-card__level">
@@ -240,7 +228,7 @@
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на онлайн‑курс HTML Academy:
                 HTML и CSS. Адаптивная вёрстка и автоматизация.">
-          <img class="copyright__logo" src="placeholder" alt="HTML Academy">HTML Academy
+          <img class="copyright__logo" src="placeholder" alt="HTML Academy">
         </a>
       </div>
     </footer>
