@@ -1,0 +1,12 @@
+.reviews__item {
+  @include reset-text;
+}
+
+.reviews__text {
+  @include reset-text;
+}
+
+.reviews__author {
+  font-style: normal;
+  font-weight: 700;
+}

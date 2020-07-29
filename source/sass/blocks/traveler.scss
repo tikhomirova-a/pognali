@@ -1,0 +1,20 @@
+.traveler {
+  background-color: $basic_white;
+  color: $special_grey;
+}
+
+.traveler__name {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+  color: $basic_blue;
+
+  @include reset-heading;
+}
+
+.traveler__tags {
+  line-height: 18px;
+  color: $special_grey;
+
+  @include reset-text;
+}

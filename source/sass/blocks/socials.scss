@@ -1,0 +1,40 @@
+.socials {
+  @include reset-list;
+}
+
+.socials__item {
+  width: 62px;
+  height: 62px;
+
+  @include reset-link;
+}
+
+.socials__item--accent {
+  background-color: $basic_yellow;
+
+  border-radius: 50%;
+}
+
+.socials__item--facebook {
+
+  background-image: url(../../img/facebook.svg);
+  background-repeat: no-repeat;
+  background-size: 14px 28px;
+  background-position: center;
+}
+
+.socials__item--vk {
+
+  background-image: url(../../img/vk.svg);
+  background-repeat: no-repeat;
+  background-size: 31px 16px;
+  background-position: center;
+}
+
+.socials__item--instagram {
+
+  background-image: url(../../img/instagram.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+}

@@ -1,0 +1,29 @@
+.country__info {
+  background-color: $basic_white;
+}
+
+.country__title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+  color: $basic__black;
+
+  @include reset-text;
+}
+
+.country__text {
+  font-weight: 500;
+  line-height: 18px;
+
+  opacity: 0.3;
+
+  @include reset-text;
+}
+
+.country__counter {
+  font-weight: 500;
+  line-height: 20px;
+  color: $basic_dark_blue;
+
+  opacity: 0.3;
+}

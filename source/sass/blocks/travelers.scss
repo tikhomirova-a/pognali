@@ -1,0 +1,11 @@
+.travelers {
+  background-color: $dark_blue;
+  background-image:
+    url(../../img/smolov-back-desktop@1x.png),
+    url(../../img/rogovaya-back-mobile@1x.png);
+  background-repeat: no-repeat;
+}
+
+.travelers__list {
+  @include reset-list;
+}

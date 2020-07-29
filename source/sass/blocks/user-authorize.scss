@@ -1,0 +1,19 @@
+.user-authorize {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $basic_dark_blue;
+}
+
+.user-authorize--short {
+  line-height: 20px;
+}
+
+.user-authorize__link {
+  color: $basic_dark_blue;
+
+  background-color: $basic_yellow;
+
+  @include reset-link;
+}

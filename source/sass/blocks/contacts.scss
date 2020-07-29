@@ -1,0 +1,18 @@
+.contacts {
+  font-weight: bold;
+  line-height: 18px;
+  color: $dark_blue;
+  text-transform: uppercase;
+
+  @include reset-list;
+}
+
+.contacts__link {
+  color: $dark_blue;
+
+  @include reset-link;
+}
+
+.contacts__link--dark {
+  color: $basic_yellow;
+}

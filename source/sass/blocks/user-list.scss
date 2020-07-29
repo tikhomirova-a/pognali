@@ -1,0 +1,11 @@
+.user-list {
+  color: $basic_dark_blue;
+
+  @include reset-list;
+}
+
+.user-list__link {
+  color: $basic_dark_blue;
+
+  @include reset-link;
+}

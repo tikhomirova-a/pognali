@@ -1,0 +1,17 @@
+.short-nav {
+  // min-height: ;
+  // position: relative;
+  // top: - px;
+
+  background-color: transparent;
+  background-image: url(../../img/traveller-illustration-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.short-nav__list {
+  // position: absolute;
+  // bottom: 0;
+  // display: flex;
+  @include reset-list;
+}

@@ -1,0 +1,13 @@
+.directions {
+  color: $special_grey;
+
+  background-color: $basic_blue_light;
+}
+
+.directions__list {
+  @include reset-list;
+}
+
+.directions__link {
+  @include reset-link;
+}
