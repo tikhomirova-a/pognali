@@ -1,0 +1,11 @@
+.page-footer {
+  padding-top: 35px;
+  padding-bottom: 20px;
+
+  @include lateral-padding;
+
+  line-height: 16px;
+  color: $special_grey;
+
+  background-color: $basic_white;
+}

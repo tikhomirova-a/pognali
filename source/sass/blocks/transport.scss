@@ -1,0 +1,12 @@
+.transport {
+  @include reset-list;
+}
+
+.transport__item {
+  width: 32px;
+  height: 32px;
+
+  background-color: $basic_blue_light;
+
+  border-radius: 50%;
+}

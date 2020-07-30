@@ -1,0 +1,9 @@
+.description-text {
+  font-weight: 300;
+
+  @include reset-text;
+}
+
+.description-text--emphasis {
+  font-weight: 700;
+}

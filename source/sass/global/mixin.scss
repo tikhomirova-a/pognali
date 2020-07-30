@@ -1,0 +1,30 @@
+// reset default list settings
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+// reset default heading settings
+@mixin reset-heading {
+  margin: 0;
+  padding: 0;
+}
+
+// reset default paragraph settings
+@mixin reset-text {
+  margin: 0;
+  padding: 0;
+}
+
+// reset default button settings
+@mixin reset-button {
+  border: none;
+}
+
+// add horizontal paddings
+@mixin lateral-padding {
+  padding-right: 25px;
+  padding-left: 25px;
+}

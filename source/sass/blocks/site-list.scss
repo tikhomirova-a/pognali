@@ -1,0 +1,13 @@
+.site-list {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: $dark_blue;
+  text-transform: uppercase;
+
+  background-color: $basic_white;
+}
+
+.site-list__link {
+  color: $dark_blue;
+}

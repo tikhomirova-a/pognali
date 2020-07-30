@@ -1,1 +1,113 @@
-// Начните писать стили здесь
+// fonts
+@import "global/fonts.scss";
+
+// variables
+@import "global/variables.scss";
+
+// global
+@import "global/global.scss";
+
+// mixin
+@import "global/mixin.scss";
+
+// page
+@import "blocks/page.scss";
+
+// page-header
+@import "blocks/page-header.scss";
+
+// main-nav
+@import "blocks/main-nav.scss";
+
+// site-list
+@import "blocks/site-list.scss";
+
+// user-list
+@import "blocks/user-list.scss";
+
+// user-authorize
+@import "blocks/user-authorize.scss";
+
+// contacts
+@import "blocks/contacts.scss";
+
+// socials
+@import "blocks/socials.scss";
+
+// page-main
+@import "blocks/page-main.scss";
+
+// short-nav
+@import "blocks/short-nav.scss";
+
+// reviews
+@import "blocks/reviews.scss";
+
+// steps
+@import "blocks/steps.scss";
+
+// info
+@import "blocks/info.scss";
+
+// title
+@import "blocks/title.scss";
+
+// description-text
+@import "blocks/description-text.scss";
+
+// directions
+@import "blocks/directions.scss";
+
+// country
+@import "blocks/country.scss";
+
+// button
+@import "blocks/button.scss";
+
+// travelers
+@import "blocks/travelers.scss";
+
+// traveler
+@import "blocks/traveler.scss";
+
+// transport
+@import "blocks/transport.scss";
+
+// profile
+@import "blocks/profile.scss";
+
+// business
+@import "blocks/business.scss";
+
+// feedback
+@import "blocks/feedback.scss";
+
+// login-form
+@import "blocks/login-form.scss";
+
+// route
+@import "blocks/route.scss";
+
+// map
+@import "blocks/map.scss";
+
+// page-footer
+@import "blocks/page-footer";
+
+// copyright
+@import "blocks/copyright.scss";
+
+// catalog
+@import "blocks/catalog.scss";
+
+// traveler-card
+@import "blocks/traveler-card.scss";
+
+// countries
+@import "blocks/countries.scss";
+
+// button-catalog
+@import "blocks/button-catalog.scss";
+
+// pagination
+@import "blocks/pagination.scss";

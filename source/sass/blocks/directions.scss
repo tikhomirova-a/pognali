@@ -1,0 +1,14 @@
+.directions {
+  padding-top: 100px;
+  padding-bottom: 35px;
+
+  @include lateral-padding;
+
+  color: $special_grey;
+
+  background-color: $basic_blue_light;
+}
+
+.directions__list {
+  @include reset-list;
+}

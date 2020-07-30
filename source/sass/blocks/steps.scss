@@ -1,0 +1,35 @@
+.steps {
+  background-color: $dark_blue;
+
+  @include lateral-padding;
+}
+
+.steps__list {
+  @include reset-list;
+}
+
+.steps__item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.steps__item--first {
+  background-color: $special_orange;
+}
+
+.steps__item--second {
+  background-color: #ffa530;
+}
+
+.steps__item--third {
+  background-color: $special_yellow_dark;
+}
+
+.steps__item--fourth {
+  background-color: $basic_yellow;
+}
+
+.steps__link {
+  color: $basic_dark_blue;
+}

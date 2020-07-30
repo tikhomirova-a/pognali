@@ -1,0 +1,12 @@
+.countries {
+  @include reset-list;
+}
+
+.countries__item {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  color: $basic_blue;
+
+  text-transform: uppercase;
+}

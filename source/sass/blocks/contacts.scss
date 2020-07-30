@@ -1,0 +1,15 @@
+.contacts {
+  font-weight: bold;
+  color: $dark_blue;
+  text-transform: uppercase;
+}
+
+.contacts__link {
+  color: $dark_blue;
+  line-height: 18px;
+}
+
+.contacts__link--dark {
+  color: $basic_yellow;
+  line-height: 22px;
+}

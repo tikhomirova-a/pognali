@@ -1,0 +1,25 @@
+.page-header {
+  padding-top: 28px;
+  padding-bottom: 30px;
+
+  @include lateral-padding;
+
+  background-color: $basic_dark_blue;
+}
+
+.page-header--inner {
+  background-color: #182044;
+}
+
+.page-header--dropdown {
+  background-color: $basic_white;
+}
+
+.page-header__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: $basic_white;
+
+  @include reset-heading;
+}

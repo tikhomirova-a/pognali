@@ -1,0 +1,15 @@
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $basic_blue;
+  vertical-align: middle;
+
+  background-color: $basic_yellow;
+
+  border-radius: 10px;
+}
+
+.button--contrast {
+  border: 3px solid $dark_blue;
+}
