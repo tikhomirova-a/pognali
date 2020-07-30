@@ -1,0 +1,6 @@
+.copyright__text {
+  line-height: 16px;
+  color: $special_grey;
+
+  @include reset-text;
+}

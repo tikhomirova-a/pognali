@@ -1,0 +1,25 @@
+.profile {
+  padding-top: 90px;
+  padding-right: 25px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+
+  font-weight: 300;
+  line-height: 16px;
+  color: $special_grey;
+
+  background-color: #e6e8f1;
+}
+
+.profile__list {
+  @include reset-list;
+}
+
+.profile__price {
+  @include reset-text;
+}
+
+.profile__link {
+  font-weight: 700;
+  color: #132576;
+}

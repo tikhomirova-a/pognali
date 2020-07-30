@@ -6,7 +6,7 @@
     <title>Погнали|Попутчики</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page-header--inner page-header--dropdown">
       <nav class="page-header__nav main-nav main-nav--dropdown">
         <a class="main-nav__logo logo logo--dropdown" href="index.html" aria-label="Перейти на главную страницу">
           <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
@@ -53,7 +53,7 @@
       </nav>
       <h1 class="page-header__title">Попутчики</h1>
     </header>
-    <main class="page-main">
+    <main class="page-main page-main--catalog">
       <section class="catalog">
         <h2 class="visually-hidden">Список попутчиков после фильтрации</h2>
         <ul class="catalog__list">
@@ -90,7 +90,7 @@
                 <p class="traveler-card__title">левел:</p>
                 <p class="traveler-card__level-number">99</p>
               </div>
-              <a class="traveler-card__link" href="#">Позвать!</a>
+              <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -124,7 +124,7 @@
                 <p class="traveler-card__title">левел:</p>
                 <p class="traveler-card__level-number">80</p>
               </div>
-              <a class="traveler-card__link" href="#">Позвать!</a>
+              <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -159,7 +159,7 @@
                 <p class="traveler-card__title">левел:</p>
                 <p class="traveler-card__level-number">25</p>
               </div>
-              <a class="traveler-card__link" href="#">Позвать!</a>
+              <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -193,7 +193,7 @@
                 <p class="traveler-card__title">левел:</p>
                 <p class="traveler-card__level-number">50</p>
               </div>
-              <a class="traveler-card__link" href="#">Позвать!</a>
+              <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
             </article>
           </li>
         </ul>
@@ -201,10 +201,10 @@
         <div class="catalog__pagination pagination">
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link" href="#" aria-label="Показать предыдущую страницу">Показать предыдущую страницу</a>
+              <a class="pagination__link" href="#" aria-label="Показать предыдущую страницу"></a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link" href="#" aria-label="Показать следующую страницу">Показать следующую страницу</a>
+              <a class="pagination__link" href="#" aria-label="Показать следующую страницу"></a>
             </li>
           </ul>
         </div>
@@ -214,9 +214,9 @@
       <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
         <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
       </a>
-      <div class="page-footer__socials socials">
+      <div class="page-footer__socials">
         <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>
-        <ul class="socials__list">
+        <ul class="socials">
           <li class="socials__item socials__item--facebook socials__item--accent">
             <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук."></a>
           </li>

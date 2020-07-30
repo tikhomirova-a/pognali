@@ -1,9 +1,16 @@
+.reviews {
+  padding: 50px 50px 110px;
+  // background-color: $basic_dark_blue;
+}
+
 .reviews__item {
   @include reset-text;
 }
 
 .reviews__text {
   @include reset-text;
+
+  margin-bottom: 20px;
 }
 
 .reviews__author {

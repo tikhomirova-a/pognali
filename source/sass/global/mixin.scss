@@ -6,13 +6,6 @@
   list-style: none;
 }
 
-// reset default link underlining
-@mixin reset-link {
-  text-decoration: none;
-
-  cursor: pointer;
-}
-
 // reset default heading settings
 @mixin reset-heading {
   margin: 0;
@@ -30,3 +23,8 @@
   border: none;
 }
 
+// add horizontal paddings
+@mixin lateral-padding {
+  padding-right: 25px;
+  padding-left: 25px;
+}

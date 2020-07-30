@@ -6,7 +6,7 @@
     <title>Погнали|Главная</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page-header--dropdown">
       <nav class="page-header__nav main-nav main-nav--dropdown">
         <a class="main-nav__logo logo logo--dropdown" aria-label="Вы находитесь на главной странице.">
           <img class="logo__img" src="img/placeholder" alt="Сервис путешествий «Погнали».">
@@ -155,10 +155,10 @@
           <li class="travelers__item traveler">
             <img class="traveler__avatar" src="placeholder" alt="">
             <div class="traveler__info">
-              <ul class="traveler__countries flag-list">
-                <li class="flag-list__item flag-list__item--sri-lanka"><span class="visually-hidden">Шри-Ланка</span></li>
-                <li class="flag-list__item flag-list__item--thailand"><span class="visually-hidden">Тайланд</span></li>
-                <li class="flag-list__item flag-list__item--seychelles"><span class="visually-hidden">Сейшелы</span></li>
+              <ul class="traveler__countries countries">
+                <li class="countries__item countries__item--sri-lanka"><span class="visually-hidden">Шри-Ланка</span></li>
+                <li class="countries__item countries__item--thailand"><span class="visually-hidden">Тайланд</span></li>
+                <li class="countries__item countries__item--seychelles"><span class="visually-hidden">Сейшелы</span></li>
               </ul>
               <h3 class="traveler__name">Таня Фирсова</h3>
               <p class="traveler__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -174,9 +174,9 @@
           <li class="travelers__item traveler">
             <img class="traveler__avatar" src="placeholder" alt="">
             <div class="traveler__info">
-              <ul class="traveler__countries flag-list">
-                <li class="flag-list__item flag-list__item--belgium"><span class="visually-hidden">Бельгия</span></li>
-                <li class="flag-list__item flag-list__item--czechia"><span class="visually-hidden">Чехия</span></li>
+              <ul class="traveler__countries countries">
+                <li class="countries__item countries__item--belgium"><span class="visually-hidden">Бельгия</span></li>
+                <li class="countries__item countries__item--czechia"><span class="visually-hidden">Чехия</span></li>
               </ul>
               <h3 class="traveler__name">Петя Демин</h3>
               <p class="traveler__tags">#бургер #бар #футбол #концерт #крафт</p>
@@ -208,7 +208,7 @@
             <dd class="profile__price">59 руб./мес</dd>
           </div>
         </dl>
-        <a href="#" class="profile__link">Показать тарифы для бизнеса</a>
+        <a class="profile__link" href="#">Показать тарифы для бизнеса</a>
       </section>
       <section class="business modal">
         <h2 class="business__title title">Бизнес-тарифы</h2>
@@ -233,27 +233,29 @@
         <button class="business__button-close" type="button">Закрыть окно</button>
       </section>
       <section class="feedback">
-        <h2 class="feedback__title title">Заинтересовались?</h2>
-        <p class="feedback__text description-text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда
-          скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
-        <form class="feedback__form login-form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="login-form-email">Введите Ваш электронный адрес</label>
-          <input class="login-form__email" id="login-form-email" type="email" name="login-form-email" placeholder="E-mail">
-          <button class="login-form__submit" type="submit" aria-label="Зарегистрироваться">Зарегистрироваться</button>
-        </form>
-        <p class="feedback__ask description-text">Остались вопросы? Мы с радостью на них ответим!</p>
-        <div class="feedback__contacts">
-          <h3 class="visually-hidden">Наши контакты</h3>
-          <ul class="contacts">
-            <li class="contacts__item contacts__item--tel contacts__item--dark">
-              <a class="contacts__link contacts__link--dark" href="tel:88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contacts__item contacts__item--mail contacts__item--dark">
-              <a class="contacts__link contacts__link--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
+        <div class="feedback__wrapper">
+          <h2 class="feedback__title title">Заинтересовались?</h2>
+          <p class="feedback__text description-text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда
+            скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
+          <form class="feedback__form login-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="login-form-email">Введите Ваш электронный адрес</label>
+            <input class="login-form__email" id="login-form-email" type="email" name="login-form-email" placeholder="E-mail">
+            <button class="login-form__submit" type="submit" aria-label="Зарегистрироваться"></button>
+          </form>
+          <p class="feedback__ask description-text">Остались вопросы? Мы с радостью на них ответим!</p>
+          <div class="feedback__contacts">
+            <h3 class="visually-hidden">Наши контакты</h3>
+            <ul class="feedback__contacts-list contacts">
+              <li class="contacts__item contacts__item--tel contacts__item--dark">
+                <a class="contacts__link contacts__link--dark" href="tel:88005558628">8 800 555-86-28</a>
+              </li>
+              <li class="contacts__item contacts__item--mail contacts__item--dark">
+                <a class="contacts__link contacts__link--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="feedback__route route">
+        <div class="feedback__route-wrapper route">
           <address class="route__address">ул. Большая Конюшенная, 19/8</address>
           <a class="route__link button button--contrast" href="#">Проложить маршрут</a>
         </div>
@@ -262,8 +264,7 @@
         <h3 class="visually-hidden">Наш офис на карте</h3>
         <iframe class="map__iframe"
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4753.827865628558!2d30.323338828660834!3d59.936482826662235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1595323087738!5m2!1sru!2sru"
-          title="Посмотреть офис на карте" width="320" height="424" allowfullscreen="" aria-hidden="false"
-          tabindex="0"></iframe>
+          title="Посмотреть офис на карте" width="320" height="424" allowfullscreen="" aria-hidden="false"></iframe>
       </section>
     </main>
     <footer class="page-footer">

@@ -1,0 +1,23 @@
+.login-form__email {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+
+  background-color: $basic_white;
+
+  border: none;
+}
+
+.login-form__email::placeholder {
+  color: $special_grey;
+
+  opacity: 0.3;
+}
+
+.login-form__submit {
+  background-color: $basic_yellow;
+
+  border: none;
+  border-radius: 20px;
+}

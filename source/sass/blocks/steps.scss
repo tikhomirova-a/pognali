@@ -1,5 +1,7 @@
 .steps {
   background-color: $dark_blue;
+
+  @include lateral-padding;
 }
 
 .steps__list {
@@ -30,6 +32,4 @@
 
 .steps__link {
   color: $basic_dark_blue;
-
-  @include reset-link;
 }

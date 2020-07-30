@@ -1,0 +1,16 @@
+.button-catalog {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  color: $basic_dark_blue;
+
+  text-transform: uppercase;
+
+  background-color: $basic_yellow;
+
+  border-radius: 25px;
+}
+
+.button-catalog--filter {
+  background-color: $basic_white;
+}

@@ -1,5 +1,28 @@
-.main-nav {
+.main-nav--dropdown {
   color: $dark_blue;
 
   background-color: $basic_white;
+}
+
+.main-nav__container {
+  padding-top: 45px;
+  padding-bottom: 40px;
+
+  @include lateral-padding;
+
+  color: $dark_blue;
+
+  background-color: $basic_white;
+}
+
+.main-nav__list {
+  @include reset-list;
+
+  margin-bottom: 50px;
+}
+
+.main-nav__contacts {
+  @include reset-list;
+
+  margin-bottom: 40px;
 }

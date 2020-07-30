@@ -1,0 +1,23 @@
+.feedback__wrapper {
+  padding-top: 105px;
+  padding-bottom: 30px;
+
+  @include lateral-padding;
+}
+
+.feedback__link {
+  color: $basic_yellow;
+
+  text-decoration: underline;
+}
+
+.feedback__contacts-list {
+  @include reset-list;
+}
+
+.feedback__route-wrapper {
+  padding-top: 65px;
+  padding-bottom: 35px;
+
+  @include lateral-padding;
+}

@@ -1,0 +1,12 @@
+.catalog__list {
+  @include reset-list;
+}
+
+.catalog__link {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: $basic_blue;
+
+  text-transform: uppercase;
+}

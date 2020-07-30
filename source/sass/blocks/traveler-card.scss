@@ -1,0 +1,51 @@
+.traveler-card {
+  padding-top: 15px;
+  padding-right: 22px;
+  padding-bottom: 25px;
+  padding-left: 18px;
+
+  color: $special_grey;
+
+  background-color: $basic_white;
+}
+
+.traveler-card__name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: $basic_blue;
+
+  @include reset-heading;
+}
+
+.traveler-card__like-counter {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic_dark_blue;
+
+  text-transform: uppercase;
+}
+
+.traveler-card__tags {
+  font-size: 15px;
+  line-height: 18px;
+
+  @include reset-text;
+}
+
+.traveler-card__title {
+  font-size: 15px;
+  line-height: 16px;
+
+  @include reset-text;
+}
+
+.traveler-card__level-number {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: $basic_blue;
+
+  @include reset-text;
+}

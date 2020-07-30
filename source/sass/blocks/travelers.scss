@@ -1,8 +1,13 @@
 .travelers {
+  padding-top: 100px;
+  padding-bottom: 30px;
+
+  @include lateral-padding;
+
   background-color: $dark_blue;
   background-image:
-    url(../../img/smolov-back-desktop@1x.png),
-    url(../../img/rogovaya-back-mobile@1x.png);
+    url("../../img/smolov-back-desktop@1x.png"),
+    url("../../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
 }
 

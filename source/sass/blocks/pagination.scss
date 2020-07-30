@@ -1,0 +1,7 @@
+.pagination {
+  background-color: $basic_white;
+}
+
+.pagination__list {
+  @include reset-list;
+}

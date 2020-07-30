@@ -19,6 +19,9 @@
 // main-nav
 @import "blocks/main-nav.scss";
 
+// logo
+@import "blocks/logo.scss";
+
 // site-list
 @import "blocks/site-list.scss";
 
@@ -70,5 +73,44 @@
 // traveler
 @import "blocks/traveler.scss";
 
-// flag-list
-@import "blocks/flag-list.scss";
+// transport
+@import "blocks/transport.scss";
+
+// profile
+@import "blocks/profile.scss";
+
+// business
+@import "blocks/business.scss";
+
+// feedback
+@import "blocks/feedback.scss";
+
+// login-form
+@import "blocks/login-form.scss";
+
+// route
+@import "blocks/route.scss";
+
+// map
+@import "blocks/map.scss";
+
+// page-footer
+@import "blocks/page-footer";
+
+// copyright
+@import "blocks/copyright.scss";
+
+// catalog
+@import "blocks/catalog.scss";
+
+// traveler-card
+@import "blocks/traveler-card.scss";
+
+// countries
+@import "blocks/countries.scss";
+
+// button-catalog
+@import "blocks/button-catalog.scss";
+
+// pagination
+@import "blocks/pagination.scss";
