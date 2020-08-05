@@ -5,9 +5,13 @@
   color: $dark_blue;
   text-transform: uppercase;
 
-  background-color: $basic_white;
+  // background-color: $basic_white;
 }
 
 .site-list__link {
   color: $dark_blue;
+
+  @media (min-width: $desktop-width) {
+    color: $basic_white;
+  }
 }

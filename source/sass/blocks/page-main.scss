@@ -3,10 +3,21 @@
 }
 
 .page-main--catalog {
-  padding-right: 25px;
-  padding-left: 25px;
-
   color: $basic_blue;
 
   background-color: $basic_blue_light;
+}
+
+.page-main__wrapper {
+  @media (min-width: $desktop-width) {
+    @include desktop-grid;
+  }
+}
+
+.page-main__catalog {
+  grid-column: 1/4;
+}
+
+.page-main__promo {
+  padding-top: 20px;
 }

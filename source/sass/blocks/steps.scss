@@ -1,33 +1,68 @@
 .steps {
   background-color: $dark_blue;
-
-  @include lateral-padding;
 }
 
 .steps__list {
+  background-color: transparent;
+
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .steps__item {
+  width: 270px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-}
 
-.steps__item--first {
-  background-color: $special_orange;
-}
+  &--first {
+    background-color: $special_orange;
+  }
 
-.steps__item--second {
-  background-color: #ffa530;
-}
+  &--second {
+    background-color: #ffa530;
+  }
 
-.steps__item--third {
-  background-color: $special_yellow_dark;
-}
+  &--third {
+    background-color: $special_yellow_dark;
+  }
 
-.steps__item--fourth {
-  background-color: $basic_yellow;
+  &--fourth {
+    background-color: $basic_yellow;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 375px;
+  }
+
+  &:nth-child(2n+1) {
+    @media (min-width: $tablet-width) and (max-width: 1339px) {
+      width: 365px;
+    }
+  }
+
+  &:nth-child(2n) {
+    @media (min-width: $tablet-width) and (max-width: 1339px) {
+      width: 345px;
+    }
+  }
+
+  &:nth-child(4n+1) {
+    @media (min-width: $desktop-width) {
+      width: 345px;
+    }
+  }
+
+  &:nth-child(4n) {
+    @media (min-width: $desktop-width) {
+      width: 315px;
+    }
+  }
 }
 
 .steps__link {

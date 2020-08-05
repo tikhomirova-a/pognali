@@ -1,5 +1,23 @@
+.catalog {
+}
+
 .catalog__list {
   @include reset-list;
+
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.catalog__item {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .catalog__link {

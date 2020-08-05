@@ -1,0 +1,61 @@
+.promo {
+  background-color: $basic_dark_blue;
+  background-image:
+    url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center, center;
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 930px;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    min-height: 1000px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 640px;
+  }
+}
+
+.promo__slogan {
+  width: 240px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+
+  text-align: center;
+
+  @include reset-text;
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 420px;
+
+    text-align: left;
+  }
+}
+
+.promo__reviews {
+  width: 165px;
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+    width: 265px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+  }
+}

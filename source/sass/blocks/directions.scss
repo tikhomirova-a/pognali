@@ -1,14 +1,70 @@
 .directions {
-  padding-top: 100px;
-  padding-bottom: 35px;
-
-  @include lateral-padding;
-
   color: $special_grey;
 
   background-color: $basic_blue_light;
 }
 
+.directions__wrapper {
+  padding-top: 100px;
+  padding-bottom: 35px;
+
+  @media (min-width: $desktop-width) {
+    @include desktop-grid;
+    grid-template-rows: min-content min-content min-content;
+  }
+}
+
+.directions__text-wrapper {
+  width: 215px;
+  padding-left: 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 380px;
+    padding-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
+}
+
 .directions__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    @include reset-list;
+
+    width: 615px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-list;
+
+    width: 560px;
+    padding-left: 70px;
+    grid-column: 1/3;
+    grid-row: 1/-1;
+  }
+}
+
+.directions__link {
+  display: inline-flex;
+  width: fill-available;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 275px;
+    margin-left: 110px;
+    grid-column: 3/5;
+    grid-row: 2/3;
+    align-self: start;
+  }
 }
