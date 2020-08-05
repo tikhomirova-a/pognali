@@ -20,7 +20,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 135px;
     padding-bottom: 65px;
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -48,7 +48,6 @@
 }
 
 .profile__position {
-
   &::before {
     display: inline-flex;
     justify-content: center;
