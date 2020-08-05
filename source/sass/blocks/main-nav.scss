@@ -92,7 +92,7 @@
   background-color: $basic_white;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
+    width: 688px;
 
     text-align: left;
   }
@@ -128,8 +128,6 @@
       top: 132px;
       left: 50%;
       margin-left: -384px;
-
-      width: 768px;
 
       padding-left: 40px;
       padding-right: 40px;
