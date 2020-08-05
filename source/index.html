@@ -14,7 +14,7 @@
           <a class="main-nav__logo logo logo--dropdown" aria-label="Вы находитесь на главной странице.">
             <img class="logo__img" src="img/placeholder" alt="Сервис путешествий «Погнали».">
           </a>
-          <button class="main-nav__toggle menu-toggle menu-toggle--dropdown" type="button">
+          <button class="main-nav__toggle menu-toggle" type="button">
             <span class="visually-hidden">Открыть меню с навигацией</span>
           </button>
           <div class="main-nav__container main-nav__container--nojs">
@@ -414,5 +414,19 @@
         </div>
       </div>
     </footer>
+    <!-- <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--dropdown')) {
+          navMain.classList.remove('main-nav--dropdown');
+        } else {
+          navMain.classList.add('main-nav--dropdown');
+        }
+      });
+    </script> -->
   </body>
 </html>
