@@ -29,14 +29,12 @@
 .main-nav__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-height: 75px;
   padding-top: 28px;
   padding-bottom: 30px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    // justify-content: start;
     padding-top: 40px;
     padding-bottom: 40px;
     min-height: 135px;
@@ -58,13 +56,16 @@
 }
 
 .main-nav__logo {
+  width: 100px;
   height: 15px;
 
   @media (min-width: $tablet-width) {
+    width: 164px;
     height: 42px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 200px;
     height: 52px;
   }
 }
@@ -75,6 +76,7 @@
   display: block;
   width: 25px;
   height: 11px;
+  margin-left: auto;
 
   border: none;
   background-color: transparent;
@@ -87,7 +89,7 @@
   // border-radius: 1.5px;
 
   @media (min-width: $tablet-width) {
-    justify-self: center;
+    margin-right: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -108,11 +110,11 @@
   }
 
   &::before {
-    top: 0;
+    bottom: 5px;
   }
 
   &::after {
-    top: 5px;
+    bottom: 0;
   }
 }
 
@@ -129,12 +131,12 @@
   }
 
   &::before {
+    bottom: 0;
+
     transform: rotate(-45deg);
   }
 
   &::after {
-    top: 0;
-
     transform: rotate(45deg);
   }
 }
@@ -183,6 +185,7 @@
     position: absolute;
     top: 73px;
     left: 0;
+    z-index: 1;
 
     display: block;
     padding-right: 25px;
@@ -246,8 +249,10 @@
 
 .main-nav__short-nav {
   position: absolute;
+  z-index: 0;
+  bottom: -200%;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     position: static;
   }
 }
