@@ -1,14 +1,14 @@
 .page-header {
+  color: $basic_white;
+
   background-color: $basic_dark_blue;
 
-  color: $basic_white;
+  &--inner {
+    background-color: #182044;
+  }
 }
 
-.page-header--inner {
-  background-color: #182044;
-}
-
-.page-header--inner__heading {
+.page-header--inner .page-header__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;

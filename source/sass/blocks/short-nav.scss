@@ -10,11 +10,17 @@
 
 .short-nav__item {
   display: inline-flex;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic_dark_blue;
 }
 
 .short-nav__item--tel,
 .short-nav__item--mail {
-  @media (min-width: $tablet-width) and (max-width: 1339px) {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
     display: none;
   }
 }

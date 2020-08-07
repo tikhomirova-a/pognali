@@ -12,6 +12,8 @@
   min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 
   color: $basic_white;
 

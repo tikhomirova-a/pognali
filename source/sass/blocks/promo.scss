@@ -4,7 +4,7 @@
     url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center, center;
+  background-position: center 150px, center bottom;
 }
 
 .promo__wrapper {
@@ -26,6 +26,8 @@
 }
 
 .promo__slogan {
+  @include reset-text;
+
   width: 240px;
 
   font-weight: 700;
@@ -34,10 +36,17 @@
 
   text-align: center;
 
-  @include reset-text;
+  @media (max-width: $mobile-width-only) {
+    margin: 0 auto;
+    margin-bottom: 315px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 400px;
+    margin-bottom: 85px;
+
+    font-size: 60px;
+    line-height: 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -49,13 +58,25 @@
 
 .promo__reviews {
   width: 165px;
+  padding-top: 50px;
+  padding-right: 10px;
+  padding-bottom: 110px;
+  padding-left: 10px;
+
+  background-color: $basic_dark_blue;
 
   @media (min-width: $tablet-width) {
     align-self: start;
     width: 265px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background-color: transparent;
   }
 
   @media (min-width: $desktop-width) {
     align-self: center;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
