@@ -1,5 +1,6 @@
 .business {
-  padding: 35px 50px 0;
+  // display: none;
+  width: 270px;
 
   font-weight: 300;
   line-height: 16px; // не по макету, т.к. в макете текст dt, dd одним блоком
@@ -7,12 +8,43 @@
 
   background-color: $basic_white;
 
-  // box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
-  // border-radius: 20px;
+  @media (min-width: $tablet-width) {
+    width: 690px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 750px;
+  }
+}
+
+.business__wrapper {
+  padding-top: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.business__title {
+  text-align: center;
 }
 
 .business__list {
   @include reset-list;
+}
+
+.business__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .business__price {

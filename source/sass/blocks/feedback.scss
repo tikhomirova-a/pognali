@@ -1,8 +1,14 @@
-.feedback__wrapper {
+.feedback {
   padding-top: 105px;
   padding-bottom: 30px;
+}
 
-  @include lateral-padding;
+.feedback__title {
+  text-align: center;
+}
+
+.feedback__text {
+  text-align: center;
 }
 
 .feedback__link {
@@ -11,13 +17,16 @@
   text-decoration: underline;
 }
 
-.feedback__contacts-list {
-  @include reset-list;
+.feedback__ask {
+  text-align: center;
 }
 
-.feedback__route-wrapper {
-  padding-top: 65px;
-  padding-bottom: 35px;
+.feedback__contacts-list {
+  @include reset-list;
 
-  @include lateral-padding;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 110px;
+    justify-content: center;
+  }
 }

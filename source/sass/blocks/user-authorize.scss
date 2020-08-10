@@ -1,17 +1,39 @@
 .user-authorize {
+  display: block;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
   color: $basic_dark_blue;
-}
 
-.user-authorize--short {
-  line-height: 20px;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &--short {
+    display: inline-flex;
+
+    line-height: 20px;
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      // font-size: 20px;
+
+      .main-nav--opened &,
+      .main-nav--nojs & {
+        font-weight: 400;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
 }
 
 .user-authorize__link {
   color: $basic_dark_blue;
 
   background-color: $basic_yellow;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
 }

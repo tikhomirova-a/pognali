@@ -1,18 +1,27 @@
 .page-header {
-  padding-top: 28px;
-  padding-bottom: 30px;
-
-  @include lateral-padding;
+  color: $basic_white;
 
   background-color: $basic_dark_blue;
+
+  &--inner {
+    background-color: #182044;
+  }
 }
 
-.page-header--inner {
-  background-color: #182044;
-}
+.page-header--inner .page-header__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.page-header--dropdown {
-  background-color: $basic_white;
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
 }
 
 .page-header__title {
@@ -21,5 +30,17 @@
   line-height: 36px;
   color: $basic_white;
 
-  @include reset-heading;
+  @include reset-text;
+}
+
+.page-header__home-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic_white;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }

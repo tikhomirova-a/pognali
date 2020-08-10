@@ -9,7 +9,7 @@
   line-height: 21px;
   color: $basic_blue;
 
-  @include reset-heading;
+  @include reset-text;
 }
 
 .traveler__tags {
