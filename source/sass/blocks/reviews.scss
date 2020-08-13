@@ -5,10 +5,32 @@
 .reviews__text {
   @include reset-text;
 
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+
+  font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 32px;
+  }
 }
 
 .reviews__author {
   font-style: normal;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 24px;
+  }
 }

@@ -6,7 +6,13 @@
   width: 32px;
   height: 32px;
 
-  background-color: $basic_blue_light;
-
   border-radius: 50%;
+
+  &--dark {
+    background-color: $basic_blue_light;
+  }
+
+  &--light {
+    background-color: $basic_white;
+  }
 }

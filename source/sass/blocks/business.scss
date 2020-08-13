@@ -1,15 +1,20 @@
 .business {
-  // display: none;
+  display: none;
   width: 270px;
+  margin: 0 auto;
 
   font-weight: 300;
-  line-height: 16px; // не по макету, т.к. в макете текст dt, dd одним блоком
+  line-height: 22px;
   color: $special_grey;
 
   background-color: $basic_white;
+  border-radius: 20px;
 
   @media (min-width: $tablet-width) {
     width: 690px;
+
+    font-size: 22px;
+    line-height: 28px;
   }
 
   @media (min-width: $desktop-width) {
@@ -19,21 +24,34 @@
 
 .business__wrapper {
   padding-top: 35px;
+  padding-right: 25px;
+  padding-bottom: 35px;
+  padding-left: 25px;
 
   @media (min-width: $tablet-width) {
     padding-top: 55px;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 90px;
+    padding-bottom: 50px;
+    padding-left: 90px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 60px;
+    padding-bottom: 55px;
+    padding-left: 60px;
   }
 }
 
 .business__title {
+  @include reset-text;
+
+  margin-bottom: 30px;
+
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .business__list {
@@ -41,6 +59,14 @@
 }
 
 .business__item {
+  padding: 11px 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -52,11 +78,33 @@
 }
 
 .business__button-close {
+  display: flex;
+  width: fill-available;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
   font-weight: 700;
   line-height: 24px;
   color: $basic_blue;
+  text-transform: uppercase;
+  text-align: center;
 
   background-color: #f3f4f8;
-
   border: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px;
+
+    font-size: 24px;
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 40px 45px;
+  }
 }

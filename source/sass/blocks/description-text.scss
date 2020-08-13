@@ -1,9 +1,17 @@
 .description-text {
   font-weight: 300;
 
-  @include reset-text;
-}
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 
-.description-text--emphasis {
-  font-weight: 700;
+  &--emphasis {
+    font-weight: 700;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+      line-height: 24px;
+    }
+  }
 }

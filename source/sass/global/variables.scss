@@ -29,3 +29,10 @@ $basic_white: #ffffff;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
+
+// border-radius
+$radius: 10px;
+
+@media (min-width: $tablet-width) {
+  $radius: 20px;
+}

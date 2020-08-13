@@ -1,15 +1,29 @@
 .button {
+  padding: 22px;
+
   font-weight: 700;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 1;
   color: $basic_blue;
   vertical-align: middle;
 
   background-color: $basic_yellow;
-
   border-radius: 10px;
-}
 
-.button--contrast {
-  border: 3px solid $dark_blue;
+  &--contrast {
+    border: 3px solid $dark_blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 32px;
+
+    font-size: 24px;
+
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }

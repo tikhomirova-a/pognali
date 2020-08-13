@@ -10,7 +10,8 @@
   @media (max-width: $mobile-width-only) {
     position: relative;
     top: -80px;
-    margin-bottom: -40px;
+
+    margin-bottom: -65px;
   }
 
   @media (min-width: $tablet-width) {
@@ -24,6 +25,8 @@
 }
 
 .steps__item {
+  display: flex;
+  justify-content: space-between;
   min-width: 270px;
   box-sizing: border-box;
 
@@ -32,11 +35,32 @@
   line-height: 1;
   color: $basic_dark_blue;
 
+  &::after {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: $basic_white;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
   &--first {
     background-color: $special_orange;
 
     @media (min-width: $tablet-width) {
       border-top-left-radius: 20px; // the value is based on nothing
+    }
+
+    &::after {
+      content: "1";
     }
   }
 
@@ -47,6 +71,10 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     }
+
+    &::after {
+      content: "2";
+    }
   }
 
   &--third {
@@ -54,6 +82,10 @@
 
     @media (min-width: $tablet-width) {
       border-bottom-left-radius: 20px;
+    }
+
+    &::after {
+      content: "3";
     }
   }
 
@@ -63,6 +95,10 @@
     @media (min-width: $tablet-width) {
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
+    }
+
+    &::after {
+      content: "4";
     }
   }
 
@@ -86,7 +122,7 @@
 
   &:not(:first-child) {
     @media (max-width: $mobile-width-only) {
-      $step-shift: -20px;
+      $step-shift: -22px;
 
       position: relative;
       top: $step-shift;
@@ -96,6 +132,10 @@
   }
 
   @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    min-height: 140px;
     padding-top: 30px;
     padding-right: 50px; // padding-left + $step-shift
     padding-bottom: 22px;
@@ -105,7 +145,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
     width: 375px;
+    min-height: auto;
     padding: 30px;
     padding-right: 60px; // padding-left + $step-shift
 
@@ -141,6 +184,7 @@
   &:nth-child(4n) {
     @media (min-width: $desktop-width) {
       width: 315px;
+      padding-right: 30px;
     }
   }
 

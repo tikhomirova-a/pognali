@@ -1,5 +1,5 @@
 .user-authorize {
-  display: block;
+  padding: 10px 30px;
 
   font-weight: bold;
   font-size: 17px;
@@ -7,18 +7,21 @@
   text-transform: uppercase;
   color: $basic_dark_blue;
 
+  background-color: $basic_yellow;
+  border-radius: 25px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 
   &--short {
-    display: inline-flex;
-
     line-height: 20px;
 
-    @media (min-width: $tablet-width) and (max-width: 1439px) {
-      // font-size: 20px;
+    @media (min-width: $tablet-width) {
+      padding: 15px 30px;
+    }
 
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
       .main-nav--opened &,
       .main-nav--nojs & {
         font-weight: 400;

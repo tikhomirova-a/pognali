@@ -19,13 +19,16 @@
 }
 
 .page-main__promo {
-  padding-top: 20px;
+  padding-top: 90px;
+  margin-top: -75px;
 
   @media (min-width: $tablet-width) {
     padding-top: 30px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 10px;
+    padding-top: 120px;
+    margin-top: -110px;
   }
 }

@@ -1,7 +1,17 @@
 .info {
+  position: relative;
+  z-index: 6;
+
   background-color: $dark_blue;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
+
+  @include rounded-bottom;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 130px;
+    margin-top: -60px;
+  }
 }
 
 .info__wrapper {
@@ -14,22 +24,85 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 310px;
+    width: 300px;
     padding-left: 35px;
+    padding-top: 40px;
   }
 
   @media (min-width: $desktop-width) {
     width: 620px;
+    padding-top: 60px;
     padding-left: 70px;
+  }
+
+  & br:first-of-type {
+    display: none;
+
+    @media (max-width: $mobile-width-only) {
+      display: inline;
+    }
+  }
+
+  & br:last-of-type {
+    display: none;
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      display: inline;
+    }
+  }
+}
+
+.info__title {
+  @include reset-text;
+
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
   }
 }
 
 .info__text {
+  @include reset-text;
+
   color: $basic_white;
+
+  &:first-of-type {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 45px;
+
+      line-height: 34px;
+    }
+  }
+
+  &:last-of-type {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      line-height: 25px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 80px;
+    }
+  }
 }
 
 .info__link {
   width: 275px;
+  box-sizing: border-box;
 
   @media (max-width: $mobile-width-only) {
     display: none;

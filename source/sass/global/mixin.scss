@@ -23,3 +23,31 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 60px;
 }
+
+//rounded corners
+@mixin rounded-bottom {
+  border-bottom-left-radius: 25px; // check the values
+  border-bottom-right-radius: 25px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+  }
+}
+
+@mixin rounded-top {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+  }
+}
+
+// shift
+@mixin shift($shift) {
+  top: $shift;
+
+  margin-bottom: $shift;
+}

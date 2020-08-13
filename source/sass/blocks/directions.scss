@@ -1,14 +1,37 @@
 .directions {
+  position: relative;
+  z-index: 5;
+
+  @include shift(-30px);
+
   color: $special_grey;
 
   background-color: $basic_blue_light;
+
+  @include rounded-bottom;
+
+  @media (min-width: $tablet-width) {
+    @include shift(-75px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include shift(-90px);
+  }
 }
 
 .directions__wrapper {
   padding-top: 100px;
   padding-bottom: 35px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+
   @media (min-width: $desktop-width) {
+    padding-top: 255px;
+    padding-bottom: 140px;
+
     @include desktop-grid;
     grid-template-rows: min-content min-content min-content;
   }
@@ -17,37 +40,70 @@
 .directions__text-wrapper {
   width: 215px;
   padding-left: 25px;
+  padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
     width: 380px;
     padding-left: 35px;
+    padding-bottom: 105px;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 110px;
+    padding-bottom: 100px;
     grid-column: 3/5;
     grid-row: 1/2;
   }
+}
+
+.directions__title {
+  @include reset-text;
+
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+  }
+}
+
+.directions__text {
+  @include reset-text;
 }
 
 .directions__list {
   @include reset-list;
 
   @media (min-width: $tablet-width) {
-    @include reset-list;
-
     width: 615px;
     padding-left: 35px;
     padding-right: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    @include reset-list;
-
     width: 560px;
     padding-left: 70px;
     grid-column: 1/3;
     grid-row: 1/-1;
+  }
+}
+
+.directions__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -62,6 +118,7 @@
 
   @media (min-width: $desktop-width) {
     width: 275px;
+    box-sizing: border-box;
     margin-left: 110px;
     grid-column: 3/5;
     grid-row: 2/3;
