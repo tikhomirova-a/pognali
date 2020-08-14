@@ -1,11 +1,22 @@
 .page-main {
+  z-index: 1;
+
   background-color: $basic_dark_blue;
-}
 
-.page-main--catalog {
-  color: $basic_blue;
+  .page--form & {
+    position: relative;
+    z-index: 0;
 
-  background-color: $basic_blue_light;
+    @include shift(-25px);
+
+    color: $basic_blue;
+
+    background-color: $basic_blue_light;
+
+    @media (min-width: $tablet-width) {
+      @include shift(-55px);
+    }
+  }
 }
 
 .page-main__wrapper {
@@ -19,6 +30,8 @@
 }
 
 .page-main__promo {
+  z-index: 7;
+
   padding-top: 90px;
   margin-top: -75px;
 

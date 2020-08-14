@@ -12,7 +12,6 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
-    z-index: 2;
 
     @include rounded-bottom;
   }

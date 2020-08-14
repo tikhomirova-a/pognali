@@ -71,8 +71,6 @@
 
   @media (min-width: $tablet-width) {
     width: 430px;
-
-    line-height: 34px;
   }
 
   &:first-of-type {
@@ -80,10 +78,6 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 40px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 50px;
     }
   }
 
@@ -126,6 +120,7 @@
     padding-right: 0;
     grid-column: 3/5;
     grid-row: 1/-1;
+    margin-bottom: 0;
   }
 }
 

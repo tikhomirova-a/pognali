@@ -56,6 +56,12 @@
       flex-wrap: nowrap;
     }
   }
+
+  .main-nav--inner & {
+    @media (min-width: $tablet-width) {
+      padding-bottom: 50px;
+    }
+  }
 }
 
 .main-nav__logo {
@@ -299,6 +305,10 @@
 
   @media (max-width: $mobile-width-only) {
     bottom: -415px;
+
+    .main-nav--inner & {
+      display: none;
+    }
   }
 
   @media (min-width: $tablet-width) {
