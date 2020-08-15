@@ -2,17 +2,20 @@
   @include reset-list;
 }
 
+
 .transport__item {
   width: 32px;
   height: 32px;
 
   border-radius: 50%;
 
-  &--dark {
-    background-color: $basic_blue_light;
+  .transport--dark & {
+    @media (max-width: $mobile-width-only) {
+      background-color: $basic_blue_light;
+    }
   }
 
-  &--light {
+  .transport--light & {
     background-color: $basic_white;
   }
 }
