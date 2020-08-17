@@ -125,6 +125,11 @@
 }
 
 .travelers__item {
+  @media (max-width: $mobile-width-only) {
+    width: 270px;
+    margin: 0 auto;
+  }
+
   @media (min-width: $tablet-width) {
     width: 285px;
   }
