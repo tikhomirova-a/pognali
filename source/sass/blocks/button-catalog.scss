@@ -1,12 +1,27 @@
 .button-catalog {
+  display: block;
+  padding: 15px;
+
   font-weight: 700;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 1;
   color: $basic_dark_blue;
   text-transform: uppercase;
+  text-align: center;
 
   background-color: $basic_yellow;
   border-radius: 25px;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    padding: 15px 20px;
+    min-width: 150px;
+    box-sizing: border-box;
+
+    font-size: 20px;
+  }
 
   &--filter {
     background-color: $basic_white;

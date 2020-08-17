@@ -1,15 +1,27 @@
 .contacts {
-  font-weight: bold;
   color: $dark_blue;
+}
+
+.contacts__item {
+  font-weight: bold;
+  line-height: 18px;
   text-transform: uppercase;
+
+  &--dark {
+    line-height: 22px;
+    text-align: left;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .contacts__link {
   color: $dark_blue;
-  line-height: 18px;
-}
 
-.contacts__link--dark {
-  color: $basic_yellow;
-  line-height: 22px;
+  &--dark {
+    color: $basic_yellow;
+  }
 }

@@ -4,7 +4,17 @@
     url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center 150px, center bottom;
+
+  @media (max-width: $mobile-width-only) {
+    background-position: 80px 221px, center 60px;
+    background-size: auto, 320px 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    @include rounded-bottom;
+  }
 }
 
 .promo__wrapper {
@@ -14,14 +24,19 @@
 
   @media (min-width: $tablet-width) {
     align-items: center;
-    min-height: 1000px;
+    min-height: auto;
+    // min-height: 1000px;
+    padding-bottom: 95px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 640px;
+    align-items: baseline;
+    // min-height: 640px;
+    padding-top: 90px;
+    padding-bottom: 120px;
   }
 }
 
@@ -51,6 +66,8 @@
 
   @media (min-width: $desktop-width) {
     width: 420px;
+    margin-bottom: 100px;
+    margin-left: 65px;
 
     text-align: left;
   }
@@ -58,10 +75,10 @@
 
 .promo__reviews {
   width: 165px;
-  padding-top: 50px;
-  padding-right: 10px;
+  // padding-top: 50px;
+  padding-right: 25px;
   padding-bottom: 110px;
-  padding-left: 10px;
+  padding-left: 25px;
 
   background-color: $basic_dark_blue;
 
@@ -75,8 +92,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    align-self: center;
     padding-left: 25px;
     padding-right: 25px;
+    padding-bottom: 0;
+  }
+}
+
+.promo__steps {
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }

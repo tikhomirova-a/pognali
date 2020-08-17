@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>Погнали|Главная</title>
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url("img/pp/Mobile_index_nomenu.png");
+      }
+      /* Tablet */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url("img/pp/Tablet_index_nomenu.png");
+        }
+      }
+      /* Desktop */
+      @media ( min-width: 1440px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url("img/pp/Desktop_index_noscroll.png");
+        }
+      }
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -12,7 +38,8 @@
         <div class="main-nav__wrapper container">
           <!--TODO проверить лого погнали - формат изображения и смена цвета-->
           <a class="main-nav__logo" aria-label="Вы находитесь на главной странице.">
-            <img class="logo__img" src="img/placeholder" width="100" height="15" alt="Сервис путешествий «Погнали».">
+            <img class="logo__img" src="img/placeholder" width="100" height="15" alt="«Погнали».">
+            <!--TODO вернуть такой alt="Сервис путешествий «Погнали»." -->
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню с навигацией</span>
@@ -46,7 +73,7 @@
               <ul class="main-nav__socials socials">
                 <li class="socials__item socials__item--facebook">
                   <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">
-                    <svg width="14" height="28" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    <svg width="11" height="21" version="1.1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21"
                       style="enable-background:new 0 0 11 21;" xml:space="preserve">
                       <g>
@@ -59,7 +86,7 @@
                 </li>
                 <li class="socials__item socials__item--vk">
                   <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">
-                    <svg width="31" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    <svg width="23" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8"
                       style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
                       <g>
@@ -85,7 +112,7 @@
                 </li>
                 <li class="socials__item socials__item--instagram">
                   <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">
-                    <svg width="24" height="24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    <svg width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23"
                       style="enable-background:new 0 0 23 23;" xml:space="preserve">
                       <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
@@ -123,7 +150,7 @@
             <h2 class="visually-hidden">Отзывы о приложении «Погнали»</h2>
             <blockquote class="reviews__item">
               <p class="reviews__text">«Лучшее приложение, что я видел в жизни!»</p>
-              <cite class="reviews__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+              <cite class="reviews__author">Мурат Эльтазин<br>главный редактор газеты «гаджетлайф»</cite>
             </blockquote>
           </section>
           <section class="promo__steps steps">
@@ -149,8 +176,8 @@
         <div class="container">
           <div class="info__wrapper">
             <h2 class="info__title title">О сервисе</h2>
-            <p class="info__text description-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
-              Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+            <p class="info__text description-text">Любое путешествие веселее<br> с попутчиками, которые на одной волне с тобой!
+              Делитесь своими идеями путешествий<br> и черпайте вдохновение в чужих.</p>
             <p class="info__text description-text description-text--emphasis">А если найдете кого-то близкого по духу — скорее
               зовите в совместный трип!</p>
             <a class="info__link button" href="#">Подробнее</a>
@@ -161,9 +188,9 @@
         <div class="directions__wrapper container">
           <div class="directions__text-wrapper">
             <h2 class="directions__title title">Направления</h2>
-            <p class="directions__text description-text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о
+            <p class="directions__text description-text">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о
               странах,
-              куда хотели бы отправиться и чем можно там заняться.</p>
+              куда хотели бы отправиться<br>и чем можно там заняться.</p>
           </div>
           <ul class="directions__list">
             <li class="directions__item country">
@@ -201,7 +228,7 @@
                 <h3 class="visually-hidden">Чехия</h3>
                 <dl class="country__description">
                   <dt class="country__title">Чехия</dt>
-                  <dd class="country__text">Закоулки старой Европы</dd>
+                  <dd class="country__text">Закоулки старой<br> Европы</dd>
                 </dl>
                 <p class="country__counter">5326</p>
               </div>
@@ -215,13 +242,13 @@
           <div class="travelers__text-wrapper">
             <h2 class="travelers__title title">Попутчики</h2>
             <p class="travelers__text description-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-              Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-            <p class="travelers__text travelers__text--emphasis description-text description-text--emphasis">Теперь можно
-              легко найти единомышленников!</p>
+              Одному нужен пляж и коктейль,<br> а другому маршрут для хайкинга.</p>
+            <p class="travelers__text description-text description-text--emphasis">Теперь можно
+              легко<br> найти единомышленников!</p>
           </div>
           <ul class="travelers__list">
             <li class="travelers__item traveler">
-              <img class="traveler__avatar" src="placeholder" alt="">
+              <img class="traveler__avatar" width="270" height="270" src="img/firsova-mobile@1x.jpg" alt="Аватар Тани Фирсовой">
               <div class="traveler__info">
                 <ul class="traveler__countries countries">
                   <li class="countries__item countries__item--sri-lanka"><span class="visually-hidden">Шри-Ланка</span></li>
@@ -238,10 +265,10 @@
                   <li class="transport__item transport__item--on-foot"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
-              <p class="traveler__level"><span class="traveler__level-number">99</span>level</p>
+              <p class="traveler__level level"><span class="level__number">99</span>level</p>
             </li>
             <li class="travelers__item traveler">
-              <img class="traveler__avatar" src="placeholder" alt="">
+              <img class="traveler__avatar" width="270" height="270" src="img/demin-mobile@1x.jpg" alt="Аватар Пети Демина">
               <div class="traveler__info">
                 <ul class="traveler__countries countries">
                   <li class="countries__item countries__item--belgium"><span class="visually-hidden">Бельгия</span></li>
@@ -259,7 +286,7 @@
                       class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
-              <p class="traveler__level"><span class="traveler__level-number">80</span>level</p>
+              <p class="traveler__level level"><span class="level__number">80</span>level</p>
             </li>
           </ul>
           <a class="travelers__link button" href="catalog.html">Показать всех</a>
@@ -289,25 +316,29 @@
       </section>
       <section class="feedback">
         <div class="container">
-          <h2 class="feedback__title title">Заинтересовались?</h2>
-          <p class="feedback__text description-text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда
-            скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
-          <form class="feedback__form login-form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="login-form-email">Введите Ваш электронный адрес</label>
-            <input class="login-form__email" id="login-form-email" type="email" name="login-form-email" placeholder="E-mail">
-            <button class="login-form__submit" type="submit" aria-label="Зарегистрироваться"></button>
-          </form>
-          <p class="feedback__ask description-text">Остались вопросы? Мы с радостью на них ответим!</p>
-          <div class="feedback__contacts">
-            <h3 class="visually-hidden">Наши контакты</h3>
-            <ul class="feedback__contacts-list contacts">
-              <li class="contacts__item contacts__item--tel contacts__item--dark">
-                <a class="contacts__link contacts__link--dark" href="tel:88005558628">8 800 555-86-28</a>
-              </li>
-              <li class="contacts__item contacts__item--mail contacts__item--dark">
-                <a class="contacts__link contacts__link--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-              </li>
-            </ul>
+          <div class="feedback__wrapper">
+            <h2 class="feedback__title title">Заинтересовались?</h2>
+            <p class="feedback__text description-text">Зарегистрируйтесь,<br> это быстро и бесплатно!<br> Уже зарегистрированы? Тогда
+              скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
+            <form class="feedback__form login-form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="login-form-email">Введите Ваш электронный адрес</label>
+              <input class="login-form__email" id="login-form-email" type="email" name="login-form-email" placeholder="E-mail">
+              <button class="login-form__submit" type="submit" aria-label="Зарегистрироваться">
+                <span class="login-form__button-text">Регистрация</span>
+              </button>
+            </form>
+            <p class="feedback__ask description-text">Остались вопросы?<br> Мы с радостью на них ответим!</p>
+            <div class="feedback__contacts">
+              <h3 class="visually-hidden">Наши контакты</h3>
+              <ul class="feedback__contacts-list contacts">
+                <li class="contacts__item contacts__item--tel contacts__item--dark">
+                  <a class="contacts__link contacts__link--dark" href="tel:88005558628">8 800 555-86-28</a>
+                </li>
+                <li class="contacts__item contacts__item--mail contacts__item--dark">
+                  <a class="contacts__link contacts__link--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -327,14 +358,15 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo logo" aria-label="Вы находитесь на главной странице.">
-          <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
+          <img class="logo__img" src="placeholder" alt="«Погнали».">
+          <!-- TODO alt="Сервис путешествий «Погнали»." -->
         </a>
         <div class="page-footer__socials-wrapper">
           <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>
           <ul class="page-footer__socials socials">
             <li class="socials__item socials__item--facebook socials__item--accent">
               <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">
-                <svg width="14" height="28" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="11" height="21" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21"
                   style="enable-background:new 0 0 11 21;" xml:space="preserve">
                   <g>
@@ -347,7 +379,7 @@
             </li>
             <li class="socials__item socials__item--vk socials__item--accent">
               <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">
-                <svg width="31" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="23" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8"
                   style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
                   <g>
@@ -373,7 +405,7 @@
             </li>
             <li class="socials__item socials__item--instagram socials__item--accent">
               <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">
-                <svg width="24" height="24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                <svg width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                   y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
                   <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
                   M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z" />
@@ -394,26 +426,28 @@
         </div>
       </div>
     </footer>
-    <section class="business modal modal--show container">
-      <h2 class="business__title title">Бизнес-тарифы</h2>
-      <dl class="business__list">
-        <div class="business__item">
-          <dt class="business__position">Реклама у блоггера</dt>
-          <dd class="business__price">300 000 руб./пост</dd>
-        </div>
-        <div class="business__item">
-          <dt class="business__position">Накрутка подписчиков</dt>
-          <dd class="business__price">от 1 руб./шт.</dd>
-        </div>
-        <div class="business__item">
-          <dt class="business__position">Лайки от ботов</dt>
-          <dd class="business__price">от 20 коп./лайк</dd>
-        </div>
-        <div class="business__item">
-          <dt class="business__position">Ваш продакт-плейсмент</dt>
-          <dd class="business__price">Индивидуально</dd>
-        </div>
-      </dl>
+    <section class="business modal">
+      <div class="business__wrapper">
+        <h2 class="business__title title">Бизнес-тарифы</h2>
+        <dl class="business__list">
+          <div class="business__item">
+            <dt class="business__position">Реклама у блоггера</dt>
+            <dd class="business__price">300 000 руб./пост</dd>
+          </div>
+          <div class="business__item">
+            <dt class="business__position">Накрутка подписчиков</dt>
+            <dd class="business__price">от 1 руб./шт.</dd>
+          </div>
+          <div class="business__item">
+            <dt class="business__position">Лайки от ботов</dt>
+            <dd class="business__price">от 20 коп./лайк</dd>
+          </div>
+          <div class="business__item">
+            <dt class="business__position">Ваш продакт-плейсмент</dt>
+            <dd class="business__price">Индивидуально</dd>
+          </div>
+        </dl>
+      </div>
       <button class="business__button-close" type="button">Закрыть окно</button>
     </section>
     <script>
@@ -428,6 +462,20 @@
         } else {
           navMain.classList.add('main-nav--opened');
         }
+      });
+
+      var profileButton = document.querySelector('.profile__link');
+      var modal = document.querySelector('.modal');
+      var modalButtonClose = modal.querySelector('.business__button-close');
+
+      profileButton.addEventListener('click', function () {
+        event.preventDefault();
+        modal.classList.add('modal--show');
+      });
+
+      modalButtonClose.addEventListener('click', function() {
+        event.preventDefault();
+        modal.classList.remove('modal--show');
       });
     </script>
   </body>

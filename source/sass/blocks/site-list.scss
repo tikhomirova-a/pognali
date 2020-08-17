@@ -5,7 +5,15 @@
   color: $dark_blue;
   text-transform: uppercase;
 
-  // background-color: $basic_white;
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .site-list__link {
@@ -13,5 +21,9 @@
 
   @media (min-width: $desktop-width) {
     color: $basic_white;
+
+    .main-nav--sticky & {
+      color: $dark_blue;
+    }
   }
 }

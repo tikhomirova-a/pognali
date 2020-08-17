@@ -1,5 +1,6 @@
 .main-nav {
   position: relative;
+  z-index: 3;
 
   color: $basic_white;
 
@@ -24,6 +25,17 @@
       background-color: $basic_white;
     }
   }
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+
+    color: $dark_blue;
+
+    background-color: $basic_white;
+  }
 }
 
 .main-nav__wrapper {
@@ -37,12 +49,11 @@
   @media (min-width: $tablet-width) {
     padding-top: 40px;
     padding-bottom: 40px;
-    min-height: 135px;
   }
 
   @media (min-width: $desktop-width) {
-    align-items: baseline;
-    padding-top: 50px;
+    // align-items: baseline;
+    padding-top: 45px;
     padding-bottom: 10px;
   }
 
@@ -54,6 +65,19 @@
 
     @media (min-width: $desktop-width) {
       flex-wrap: nowrap;
+    }
+  }
+
+  .main-nav--inner & {
+    @media (min-width: $tablet-width) {
+      padding-bottom: 50px;
+    }
+  }
+
+  .main-nav--sticky & {
+    @media (min-width: $desktop-width) {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }
@@ -115,7 +139,7 @@
   }
 
   &::before {
-    bottom: 5px;
+    bottom: 8px;
   }
 
   &::after {
@@ -149,6 +173,11 @@
   .main-nav--nojs & {
     display: none;
   }
+
+  .main-nav--sticky &::before,
+  .main-nav--sticky &::after {
+    background-color: #cccccc;
+  }
 }
 
 .main-nav__container {
@@ -169,14 +198,33 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
+
     display: block;
     min-width: 400px;
     margin-left: 40px;
+    padding: 0;
+    padding-left: 105px;
 
     color: #ffffff;
 
     // background-color: #161c35;
     background-color: inherit;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      content: "";
+      width: 60px;
+      height: 2px;
+      background-color: $basic_white;
+    }
+
+    .main-nav--sticky &::before {
+      background-color: $dark_blue;
+    }
   }
 
   .main-nav--nojs & {
@@ -203,7 +251,7 @@
     padding-left: 25px;
 
     @media (min-width: $tablet-width) {
-      top: 132px;
+      top: 130px;
 
       padding-right: 0;
       padding-left: 0;
@@ -240,12 +288,15 @@
 .main-nav__site-list {
   @media (min-width: $desktop-width) {
     display: flex;
+    column-gap: 33px;
+    margin-bottom: 0;
   }
 }
 
 .main-nav__user-list {
   @media (min-width: $desktop-width) {
     display: none;
+    margin-bottom: 0;
   }
 }
 
@@ -281,6 +332,10 @@
 
   @media (max-width: $mobile-width-only) {
     bottom: -415px;
+
+    .main-nav--inner & {
+      display: none;
+    }
   }
 
   @media (min-width: $tablet-width) {

@@ -4,6 +4,7 @@
 
 .short-nav__list {
   display: flex;
+  align-items: baseline;
 
   @include reset-list;
 }
@@ -16,6 +17,11 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $basic_dark_blue;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .short-nav__item--tel,

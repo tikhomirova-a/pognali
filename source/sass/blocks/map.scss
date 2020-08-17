@@ -1,3 +1,18 @@
+.map {
+  position: relative;
+  z-index: 0;
+
+  @include shift(-55px);
+
+  @media (min-width: $tablet-width) {
+    @include shift(-45px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include shift(-120px);
+  }
+}
+
 .map__iframe {
   display: block;
   width: 100%;

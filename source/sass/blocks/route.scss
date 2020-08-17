@@ -1,24 +1,56 @@
 .route {
-  padding-top: 65px;
-  padding-bottom: 35px;
+  position: relative;
+  z-index: 1;
+
+  @include shift(-25px);
 
   background-color: $basic_yellow;
+
+  @include rounded-bottom;
+
+  @media (min-width: $tablet-width) {
+    @include shift(-55px);
+  }
 }
 
 .route__wrapper {
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 85px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: flex-end;
-    column-gap: 125px;
+    align-items: baseline;
+    column-gap: 150px;
+    padding-top: 115px;
+    padding-bottom: 55px;
   }
 }
 
 .route__address {
+  margin-bottom: 30px;
+
   font-style: normal;
   font-weight: 700;
   color: $basic_blue;
 
   text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    width: 145px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .route__link {
@@ -27,6 +59,7 @@
 
   @media (min-width: $desktop-width) {
     width: 325px;
+    box-sizing: border-box;
     justify-self: end;
 
     margin-right: 75px;

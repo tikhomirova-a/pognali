@@ -1,6 +1,6 @@
 // colors
 
-$basic__black: #000000;
+$basic_black: #000000;
 
 $basic_dark_blue: #161c35;
 $basic_blue: #1d2e5b;
@@ -29,3 +29,10 @@ $basic_white: #ffffff;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
+
+// border-radius
+$radius: 10px;
+
+@media (min-width: $tablet-width) {
+  $radius: 20px;
+}

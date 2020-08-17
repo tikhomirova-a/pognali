@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page page--inner page--catalog" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,8 @@
       <nav class="page-header__nav main-nav main-nav--inner main-nav--nojs">
         <div class="main-nav__wrapper container">
           <a class="main-nav__logo" href="index.html" aria-label="Перейти на главную страницу">
-            <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
+            <img class="logo__img" src="placeholder" alt="«Погнали».">
+            <!--TODO вернуть такой alt="Сервис путешествий «Погнали»." -->
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню с навигацией</span>
@@ -45,7 +46,7 @@
               <ul class="main-nav__socials socials">
                 <li class="socials__item socials__item--facebook">
                   <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">
-                    <svg width="14" height="28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    <svg width="11" height="21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                       y="0px" viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve">
                       <g>
                         <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
@@ -57,7 +58,7 @@
                 </li>
                 <li class="socials__item socials__item--vk">
                   <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">
-                    <svg width="31" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    <svg width="23" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8"
                       style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
                       <g>
@@ -83,7 +84,7 @@
                 </li>
                 <li class="socials__item socials__item--instagram">
                   <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">
-                    <svg width="24" height="24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    <svg width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
                     <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
                     M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z" />
@@ -126,14 +127,12 @@
             <li class="catalog__item">
               <article class="traveler-card">
                 <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
-                  <img class="traveler-card__avatar" src="placeholder" alt="Аватар Тани Фирсовой.">
+                  <img class="traveler-card__avatar" src="img/firsova-mobile@1x.jpg"  width="70" height="70" alt="Аватар Тани Фирсовой.">
                 </a>
                 <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
                   <h3 class="traveler-card__name">Таня Фирсова</h3>
                 </a>
-                <button class="traveler-card__btn-like traveler-card__btn-like--active" type="button"
-                  aria-label="Поставить отметку «Мне нравится»"></button>
-                <span class="traveler-card__like-counter">1,5 М</span>
+
                 <p class="traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <div class="traveler-card__countries">
                   <p class="traveler-card__title">хочет посетить:</p>
@@ -145,7 +144,7 @@
                 </div>
                 <div class="traveler-card__transport">
                   <p class="traveler-card__title">транспорт:</p>
-                  <ul class="traveler-card__transport-list transport">
+                  <ul class="traveler-card__transport-list transport transport--dark">
                     <li class="transport__item transport__item--plane transport__item--active"><span class="visually-hidden">На самолете</span></li>
                     <li class="transport__item transport__item--auto"><span class="visually-hidden">На машине</span></li>
                     <li class="transport__item transport__item--bicycle"><span class="visually-hidden">На велосипеде</span></li>
@@ -154,9 +153,18 @@
                 </div>
                 <div class="traveler-card__level">
                   <p class="traveler-card__title">левел:</p>
-                  <p class="traveler-card__level-number">99</p>
+                  <p class="traveler-card__level-number level level--catalog">
+                    <span class="level__number">99</span><span class="level__text">level</span>
+                  </p>
                 </div>
+                <div class="traveler-card__button-wrapper">
                 <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
+                <div class="traveler-card__like">
+                  <button class="traveler-card__btn-like traveler-card__btn-like--active" type="button"
+                    aria-label="Поставить отметку «Мне нравится»"></button>
+                  <span class="traveler-card__like-counter">1,5 М</span>
+                </div>
+                </div>
               </article>
             </li>
             <li class="catalog__item">
@@ -167,8 +175,6 @@
                 <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
                   <h3 class="traveler-card__name">Петя Демин</h3>
                 </a>
-                <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
-                <span class="traveler-card__like-counter">1500</span>
                 <p class="traveler-card__tags">#бургер #бар #футбол #концерт #крафт</p>
                 <div class="traveler-card__countries">
                   <p class="traveler-card__title">хочет посетить:</p>
@@ -179,7 +185,7 @@
                 </div>
                 <div class="traveler-card__transport">
                   <p class="traveler-card__title">транспорт:</p>
-                  <ul class="traveler-card__transport-list transport">
+                  <ul class="traveler-card__transport-list transport transport--dark">
                     <li class="transport__item transport__item--plane transport__item--active"><span class="visually-hidden">На самолете</span></li>
                     <li class="transport__item transport__item--auto transport__item--active"><span class="visually-hidden">На машине</span></li>
                     <li class="transport__item transport__item--bicycle"><span class="visually-hidden">На велосипеде</span></li>
@@ -188,9 +194,17 @@
                 </div>
                 <div class="traveler-card__level">
                   <p class="traveler-card__title">левел:</p>
-                  <p class="traveler-card__level-number">80</p>
+                  <p class="traveler-card__level-number level level--catalog">
+                    <span class="level__number">99</span><span class="level__text">level</span>
+                  </p>
                 </div>
+                <div class="traveler-card__button-wrapper">
                 <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
+                  <div class="traveler-card__like">
+                    <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
+                    <span class="traveler-card__like-counter">1500</span>
+                  </div>
+                </div>
               </article>
             </li>
             <li class="catalog__item">
@@ -201,8 +215,6 @@
                 <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
                   <h3 class="traveler-card__name">Марк Смолов</h3>
                 </a>
-                <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
-                <span class="traveler-card__like-counter">170</span>
                 <p class="traveler-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
                 <div class="traveler-card__countries">
                   <p class="traveler-card__title">хочет посетить:</p>
@@ -214,7 +226,7 @@
                 </div>
                 <div class="traveler-card__transport">
                   <p class="traveler-card__title">транспорт:</p>
-                  <ul class="traveler-card__transport-list transport">
+                  <ul class="traveler-card__transport-list transport transport--dark">
                     <li class="transport__item transport__item--plane transport__item--active"><span class="visually-hidden">На самолете</span></li>
                     <li class="transport__item transport__item--auto"><span class="visually-hidden">На машине</span></li>
                     <li class="transport__item transport__item--bicycle transport__item--active"><span class="visually-hidden">На велосипеде</span></li>
@@ -223,9 +235,17 @@
                 </div>
                 <div class="traveler-card__level">
                   <p class="traveler-card__title">левел:</p>
-                  <p class="traveler-card__level-number">25</p>
+                  <p class="traveler-card__level-number level level--catalog">
+                    <span class="level__number">99</span><span class="level__text">level</span>
+                  </p>
                 </div>
-                <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
+                <div class="traveler-card__button-wrapper">
+                  <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
+                  <div class="traveler-card__like">
+                    <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
+                    <span class="traveler-card__like-counter">170</span>
+                  </div>
+                </div>
               </article>
             </li>
             <li class="catalog__item">
@@ -236,8 +256,6 @@
                 <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
                   <h3 class="traveler-card__name">Лариса Роговая</h3>
                 </a>
-                <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
-                <span class="traveler-card__like-counter">23</span>
                 <p class="traveler-card__tags">#образование #карьера #учеба #линкедин</p>
                 <div class="traveler-card__countries">
                   <p class="traveler-card__title">хочет посетить:</p>
@@ -248,7 +266,7 @@
                 </div>
                 <div class="traveler-card__transport">
                   <p class="traveler-card__title">транспорт:</p>
-                  <ul class="traveler-card__transport-list transport">
+                  <ul class="traveler-card__transport-list transport transport--dark">
                     <li class="transport__item transport__item--plane transport__item--active"><span class="visually-hidden">На самолете</span></li>
                     <li class="transport__item transport__item--auto transport__item--active"><span class="visually-hidden">На машине</span></li>
                     <li class="transport__item transport__item--bicycle"><span class="visually-hidden">На велосипеде</span></li>
@@ -257,17 +275,31 @@
                 </div>
                 <div class="traveler-card__level">
                   <p class="traveler-card__title">левел:</p>
-                  <p class="traveler-card__level-number">50</p>
+                  <p class="traveler-card__level-number level level--catalog">
+                    <span class="level__number">99</span><span class="level__text">level</span>
+                  </p>
                 </div>
-                <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
+                <div class="traveler-card__button-wrapper">
+                  <a class="traveler-card__link button-catalog" href="#">Позвать!</a>
+                  <div class="traveler-card__like">
+                    <button class="traveler-card__btn-like" type="button" aria-label="Поставить отметку «Мне нравится»"></button>
+                    <span class="traveler-card__like-counter">23</span>
+                  </div>
+                </div>
               </article>
             </li>
           </ul>
           <a class="catalog__link" href="#">Показать еще</a>
           <div class="catalog__pagination pagination">
+            <ol class="pagination__pages">
+              <li class="pagination__page pagination__page--active"><a class="pagination__page-link">1</a></li>
+              <li class="pagination__page"><a class="pagination__page-link" href="#">2</a></li>
+              <li class="pagination__page"><a class="pagination__page-link">3</a></li>
+              <li class="pagination__page"><a class="pagination__page-link">4</a></li>
+            </ol>
             <ul class="pagination__list">
               <li class="pagination__item">
-                <a class="pagination__link" href="#" aria-label="Показать предыдущую страницу"></a>
+                <a class="pagination__link" aria-label="Показать предыдущую страницу"></a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link" href="#" aria-label="Показать следующую страницу"></a>
@@ -280,14 +312,15 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img class="logo__img" src="placeholder" alt="Сервис путешествий «Погнали».">
+          <img class="logo__img" src="placeholder" alt="«Погнали».">
+          <!-- TODO alt="Сервис путешествий «Погнали». -->
         </a>
         <div class="page-footer__socials-wrapper">
           <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>
           <ul class="page-footer__socials socials">
             <li class="socials__item socials__item--facebook socials__item--accent">
               <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">
-                <svg width="14" height="28" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="11" height="21" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21"
                   style="enable-background:new 0 0 11 21;" xml:space="preserve">
                   <g>
@@ -300,7 +333,7 @@
             </li>
             <li class="socials__item socials__item--vk socials__item--accent">
               <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">
-                <svg width="31" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="23" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8"
                   style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
                   <g>
@@ -326,7 +359,7 @@
             </li>
             <li class="socials__item socials__item--instagram socials__item--accent">
               <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">
-                <svg width="24" height="24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                <svg width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                   y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
                   <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
                   M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z" />

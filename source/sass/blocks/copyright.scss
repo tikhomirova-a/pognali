@@ -1,6 +1,10 @@
 .copyright__text {
-  line-height: 16px;
+  line-height: 1;
   color: $special_grey;
 
   @include reset-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
