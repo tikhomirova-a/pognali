@@ -21,5 +21,9 @@
 
   @media (min-width: $desktop-width) {
     color: $basic_white;
+
+    .main-nav--sticky & {
+      color: $dark_blue;
+    }
   }
 }

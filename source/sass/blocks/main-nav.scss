@@ -25,6 +25,17 @@
       background-color: $basic_white;
     }
   }
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+
+    color: $dark_blue;
+
+    background-color: $basic_white;
+  }
 }
 
 .main-nav__wrapper {
@@ -60,6 +71,13 @@
   .main-nav--inner & {
     @media (min-width: $tablet-width) {
       padding-bottom: 50px;
+    }
+  }
+
+  .main-nav--sticky & {
+    @media (min-width: $desktop-width) {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }
@@ -155,6 +173,11 @@
   .main-nav--nojs & {
     display: none;
   }
+
+  .main-nav--sticky &::before,
+  .main-nav--sticky &::after {
+    background-color: #cccccc;
+  }
 }
 
 .main-nav__container {
@@ -197,6 +220,10 @@
       width: 60px;
       height: 2px;
       background-color: $basic_white;
+    }
+
+    .main-nav--sticky &::before {
+      background-color: $dark_blue;
     }
   }
 
