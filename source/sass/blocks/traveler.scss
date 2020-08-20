@@ -4,17 +4,18 @@
   color: $special_grey;
 
   background-color: $basic_white;
-  border-radius: $radius;
+
+  @include all-border;
 }
 
 .traveler__avatar {
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
+  @include top-left;
+  @include top-right;
 
-  // @media (min-width: $tablet-width) {
-  //   width: 285px;
-  //   height: 285px;
-  // }
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .traveler__info {
@@ -49,19 +50,14 @@
     font-size: 24px;
     line-height: 22px;
   }
+}
 
-  &::before {
-    position: absolute;
-    top: 8px;
-    left: 20px;
+.traveler__status {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: -16px;
 
-    content: "";
-    width: 6px;
-    height: 6px;
-
-    border-radius: 50%;
-    background-color: #f97676;
-  }
+  vertical-align: middle;
 }
 
 .traveler__tags {

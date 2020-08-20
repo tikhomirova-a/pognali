@@ -11,8 +11,12 @@
       <nav class="page-header__nav main-nav main-nav--inner main-nav--nojs">
         <div class="main-nav__wrapper container">
           <a class="main-nav__logo" href="index.html" aria-label="Перейти на главную страницу">
-            <img class="logo__img" src="placeholder" alt="«Погнали».">
-            <!--TODO вернуть такой alt="Сервис путешествий «Погнали»." -->
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="logo__img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x"
+              sizes="(min-width: 1440px) 200px, (min-width: 768px) 166px, 100px" alt="Сервис путешествий «Погнали».">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню с навигацией</span>
@@ -100,10 +104,10 @@
           <div class="main-nav__short-nav short-nav">
             <ul class="short-nav__list">
               <li class="short-nav__item short-nav__item--tel tel tel--short">
-                <a href="tel:88005558628" aria-label="Связаться с нами по телефону">tel</a>
+                <a href="tel:88005558628" aria-label="Связаться с нами по телефону"></a>
               </li>
               <li class="short-nav__item short-nav__item--mail mail mail--short">
-                <a href="mailto:mail@htmlacademy.ru" aria-label="Связаться с нами по почте">mail</a>
+                <a href="mailto:mail@htmlacademy.ru" aria-label="Связаться с нами по почте"></a>
               </li>
               <li class="short-nav__item short-nav__item--authorize user-authorize user-authorize--short">
                 <a class="user-authorize__link" href="#">Авторизация</a>
@@ -124,8 +128,12 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img class="logo__img" src="placeholder" alt="«Погнали».">
-          <!-- TODO alt="Сервис путешествий «Погнали». -->
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="logo__img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+            sizes="(min-width: 1440px) 200px, (min-width: 768px) 166px, 100px" alt="Сервис путешествий «Погнали».">
+          </picture>
         </a>
         <div class="page-footer__socials-wrapper">
           <h3 class="visually-hidden">«Погнали» в социальных сетях</h3>

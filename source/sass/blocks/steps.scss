@@ -1,8 +1,6 @@
-.steps {
-  // background-color: $dark_blue;
-}
-
 .steps__list {
+  position: relative; // lays upon the traveler-image
+
   background-color: transparent;
 
   @include reset-list;
@@ -56,7 +54,7 @@
     background-color: $special_orange;
 
     @media (min-width: $tablet-width) {
-      border-top-left-radius: 20px; // the value is based on nothing
+      @include top-left;
     }
 
     &::after {
@@ -68,8 +66,8 @@
     background-color: #ffa530;
 
     @media (min-width: $tablet-width) {
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
+      @include top-left;
+      @include top-right;
     }
 
     &::after {
@@ -81,7 +79,7 @@
     background-color: $special_yellow_dark;
 
     @media (min-width: $tablet-width) {
-      border-bottom-left-radius: 20px;
+      @include bottom-left;
     }
 
     &::after {
@@ -93,8 +91,8 @@
     background-color: $basic_yellow;
 
     @media (min-width: $tablet-width) {
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
+      @include bottom-left;
+      @include bottom-right;
     }
 
     &::after {

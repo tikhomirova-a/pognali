@@ -49,13 +49,15 @@
       position: absolute;
       top: 210px;
       right: 0;
+      z-index: -1;
 
       content: "";
       width: 200px;
       height: 285px;
 
       background-color: #e2e5f2;
-      border-radius: 20px;
+
+      @include all-border;
     }
 
     @media (min-width: $desktop-width) {
@@ -66,12 +68,50 @@
       height: 300px;
     }
   }
+
+  &::after {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    z-index: -1;
+
+    content: "";
+    width: 100px;
+    height: 100px;
+
+    background-image: url("../img/rates@1x.png");
+    background-size: 100px 100px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rates@2x.png");
+    }
+
+    @media (min-width: $tablet-width) {
+      top: auto;
+      right: 45px;
+      bottom: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 79px;
+      bottom: 265px;
+
+      width: 198px;
+      height: 198px;
+
+      background-size: 198px 198px;
+    }
+  }
 }
 
 .profile__title {
   @include reset-text;
 
   margin-bottom: 45px;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 107px;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 75px;
