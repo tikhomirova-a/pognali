@@ -8,6 +8,7 @@
   padding-right: 20px;
   padding-bottom: 25px;
   padding-left: 20px;
+  overflow: hidden;
 
   color: $special_grey;
 
@@ -28,6 +29,7 @@
     grid-template-rows: min-content min-content 1fr;
     column-gap: 60px;
     padding: 0;
+    max-width: 951px;
   }
 }
 
@@ -36,20 +38,14 @@
   align-self: start;
 
   @media (min-width: $tablet-width) {
-    &:first-child {
+    .traveler-card > & {
       grid-row: 1/4;
-      align-self: end;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &:last-of-type {
-      margin-top: 45px;
     }
   }
 }
 
 .traveler-card__avatar {
+  display: block;
   width: 70px;
   height: 70px;
 
@@ -59,7 +55,7 @@
     width: 190px;
     height: 190px;
 
-    border-radius: 20px;
+    @include all-border;
   }
 
   @media (min-width: $desktop-width) {
@@ -69,6 +65,24 @@
     border-radius: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+  }
+}
+
+.traveler-card__name-wrapper {
+  display: flex;
+  grid-row: 1/2;
+  grid-column: 2/4;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+    padding-bottom: 20px;
   }
 }
 
@@ -85,9 +99,33 @@
   }
 
   @media (min-width: $tablet-width) {
-    grid-row: 1/2;
-
+    margin-right: 20px;
     font-size: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.traveler-card__status {
+  grid-row: 1/2;
+  grid-column: 3/-1;
+  align-self: start;
+  justify-self: end;
+  margin-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: -1;
+    position: relative;
+    left: -25px;
+    top: -2px;
+    margin-right: -10px;
   }
 }
 
@@ -142,6 +180,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 25px;
     margin-top: 25px;
     margin-bottom: 0;
@@ -155,8 +194,6 @@
 }
 
 .traveler-card__title {
-  position: relative;
-
   font-size: 15px;
   line-height: 16px;
 
@@ -177,27 +214,48 @@
     display: none;
   }
 
-  // &::before,
-  // &::after {
-  //   position: absolute;
-  //   top: 50%;
+  &::before,
+  &::after {
+    position: relative;
 
+    content: "";
+    width: 50%;
+    height: 1px;
+    display: inline-block;
 
-  //   width: 100vw;
-  //   content: "";
-  //   height: 0;
-  //   border: 1px solid $basic_blue_light;
-  // }
+    vertical-align: middle;
 
-  // &::before {
-  //   left: 50%;
-  //   margin-left: calc(-1 * (100vw - 50%));
-  // }
+    background-color: $basic_blue_light;
+  }
 
-  // &::after {
-  //   right: 50%;
-  //   margin-right: calc(-1 * (100vw - 50%));
-  // }
+  &::before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  &::after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+  .traveler-card__countries &::after {
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      width: 110%;
+    }
+  }
+
+  .traveler-card__transport &::after {
+    width: 100%;
+  }
+}
+
+.traveler-card__title-text {
+  position: relative;
+  z-index: 1;
+
+  background-color: $basic_white;
 }
 
 .traveler-card__transport {
@@ -231,7 +289,14 @@
 }
 
 .traveler-card__level {
+  position: relative;
+
   grid-column: 3/-1;
+  padding-left: 15px;
+
+  text-align: center;
+
+  background-color: white;
 
   @media (min-width: $tablet-width) {
     grid-column: 3/-1;
@@ -257,9 +322,14 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    align-items: center;
+    align-items: start;
     grid-column: 2/3;
     grid-row: 3/4;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 }
 

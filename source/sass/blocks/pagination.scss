@@ -8,7 +8,8 @@
     padding: 25px;
 
     background-color: $basic_white;
-    border-radius: 20px;
+
+    @include all-border;
   }
 }
 
@@ -36,6 +37,10 @@
     background-color: $basic_yellow;
     border-radius: 50%;
   }
+}
+
+.pagination__page-link {
+  color: $basic_blue;
 }
 
 .pagination__list {
@@ -75,6 +80,10 @@
   &:last-child {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    border-left: 1px solid $basic_blue_light;
   }
 
   @media (min-width: $tablet-width) {

@@ -4,17 +4,18 @@
   color: $special_grey;
 
   background-color: $basic_white;
-  border-radius: $radius;
+
+  @include all-border;
 }
 
 .traveler__avatar {
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
+  @include top-left;
+  @include top-right;
 
-  // @media (min-width: $tablet-width) {
-  //   width: 285px;
-  //   height: 285px;
-  // }
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .traveler__info {
@@ -31,12 +32,18 @@
   @include reset-list;
 }
 
+.traveler__name-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 23px;
+  }
+}
+
 .traveler__name {
   @include reset-text;
-
-  position: relative;
-
-  margin-bottom: 15px;
 
   font-weight: 700;
   font-size: 21px;
@@ -44,25 +51,25 @@
   color: $basic_blue;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 23px;
-
     font-size: 24px;
     line-height: 22px;
   }
+}
 
-  &::before {
-    position: absolute;
-    top: 8px;
-    left: 20px;
+.traveler__status {
+  order: -1;
+  position: relative;
+  top: 8px;
 
-    content: "";
-    width: 6px;
-    height: 6px;
+  margin-right: 11px;
+  margin-left: -15px;
 
-    border-radius: 50%;
-    background-color: #f97676;
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+    margin-left: -20px;
   }
 }
+
 
 .traveler__tags {
   @include reset-text;

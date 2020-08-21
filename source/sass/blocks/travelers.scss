@@ -3,14 +3,9 @@
   z-index: 4;
 
   @include shift(-35px);
+  @include rounded-bottom;
 
   background-color: $dark_blue;
-  background-image:
-    url("../img/smolov-back-desktop@1x.png"),
-    url("../img/rogovaya-back-mobile@1x.png");
-  background-repeat: no-repeat;
-
-  @include rounded-bottom;
 
   @media (min-width: $tablet-width) {
     @include shift(-65px);
@@ -22,12 +17,39 @@
 }
 
 .travelers__wrapper {
+  position: relative;
+
   padding-top: 100px;
   padding-bottom: 30px;
+
+  background-image:
+    url("../img/smolov-back-desktop@1x.png"),
+    url("../img/rogovaya-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 143px 143px, 71px 71px;
+  background-position: calc(100% - 25px) 65px, -12px 345px;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 210px;
     padding-bottom: 85px;
+
+    background-image:
+      url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
+    background-size: 143px 143px, 285px 285px;
+    background-position: 40px 495px, calc(100% - 75px) 145px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -36,10 +58,43 @@
 
     @include desktop-grid;
     grid-template-rows: min-content min-content min-content;
+
+    background-position: 490px 230px, 190px 485px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 65px;
+    left: -25px;
+
+    content: "";
+    width: 113px;
+    height: 132px;
+
+    background-color: #141b3b;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    @media (min-width: $tablet-width) {
+      top: 140px;
+      left: 40px;
+
+      width: 212px;
+      height: 212px;
+
+      @include all-border;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 170px;
+      left: 60px;
+    }
   }
 }
 
 .travelers__text-wrapper {
+  position: relative;
+
   padding-left: 25px;
 
   @media (min-width: $tablet-width) {

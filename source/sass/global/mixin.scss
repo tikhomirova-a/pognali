@@ -24,7 +24,7 @@
   column-gap: 60px;
 }
 
-//rounded corners
+// rounded corners
 @mixin rounded-bottom {
   border-bottom-left-radius: 25px; // check the values
   border-bottom-right-radius: 25px;
@@ -44,6 +44,47 @@
     border-top-right-radius: 55px;
   }
 }
+
+@mixin all-border {
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 20px;
+  }
+}
+
+@mixin top-left {
+  border-top-left-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 20px;
+  }
+}
+
+@mixin top-right {
+  border-top-right-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    border-top-right-radius: 20px;
+  }
+}
+
+@mixin bottom-left {
+  border-bottom-left-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 20px;
+  }
+}
+
+@mixin bottom-right {
+  border-bottom-right-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-right-radius: 20px;
+  }
+}
+
 
 // shift
 @mixin shift($shift) {

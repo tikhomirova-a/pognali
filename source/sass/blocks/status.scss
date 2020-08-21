@@ -1,0 +1,20 @@
+.status {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+  }
+
+  &--offline {
+    background-color: #f97676;
+  }
+
+  &--online {
+    background-color: #81e31e;
+  }
+}

@@ -8,7 +8,8 @@
   vertical-align: middle;
 
   background-color: $basic_yellow;
-  border-radius: 10px;
+
+  @include all-border;
 
   &--contrast {
     border: 3px solid $dark_blue;
@@ -18,8 +19,6 @@
     padding: 30px 32px;
 
     font-size: 24px;
-
-    border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {

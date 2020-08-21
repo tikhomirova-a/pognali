@@ -3,21 +3,85 @@
   z-index: 6;
 
   background-color: $dark_blue;
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
 
   @include rounded-bottom;
+
+  @media (min-width: $tablet-width) {
+    background-color: #182044;
+  }
 
   @media (min-width: $desktop-width) {
     padding-top: 130px;
     margin-top: -60px;
+
+    background-color: $dark_blue;
   }
 }
 
+.info .container {
+  position: relative;
+
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+  background-size: 292px 352px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/about-tablet@1x.png");
+    background-size: 376px 548px;
+    background-position: calc(100% - 8px) 50px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/about-desktop@1x.png");
+    background-size: 630px 665px;
+    background-position: 750px bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+    }
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 0;
+      left: 40px;
+      z-index: -1;
+
+      content: "";
+      width: calc(100% - 80px);
+      height: 212px;
+
+      @include all-border;
+      background-color: #141b3b;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      left: 60px;
+
+      width: 212px;
+    }
+  }
+}
+
+
 .info__wrapper {
+  position: relative;
+  z-index: 1;
+
   padding-top: 30px;
   padding-right: 35px;
-  padding-bottom: 80px;
+  padding-bottom: 83px;
   padding-left: 25px;
 
   @media (min-width: $tablet-width) {
@@ -27,7 +91,7 @@
     width: 300px;
     padding-left: 35px;
     padding-top: 40px;
-    padding-bottom: 90px;
+    padding-bottom: 85px;
   }
 
   @media (min-width: $desktop-width) {
@@ -98,6 +162,8 @@
 
     @media (min-width: $desktop-width) {
       margin-bottom: 80px;
+
+      max-width: 425px;
     }
   }
 }
