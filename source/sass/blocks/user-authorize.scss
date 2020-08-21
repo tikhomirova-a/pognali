@@ -17,6 +17,10 @@
   &--short {
     line-height: 20px;
 
+    @media (max-width: $mobile-width-only) {
+      letter-spacing: 2px;
+    }
+
     @media (min-width: $tablet-width) {
       padding: 15px 30px;
     }

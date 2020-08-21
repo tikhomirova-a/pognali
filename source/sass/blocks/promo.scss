@@ -34,8 +34,8 @@
   }
 
   @media (min-width: 321px) and (max-width: $mobile-width-only) {
-    background-image: url("../img/globe-back-mobile@2x.jpg");
-    background-size: cover;
+    // background-image: url("../img/globe-back-mobile@2x.jpg");
+    // background-size: cover;
     background-position-y: center;
   }
 
@@ -190,9 +190,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 25px;
+    padding-top: 12px;
     padding-right: 25px;
     padding-bottom: 0;
+    padding-left: 25px;
   }
 }
 

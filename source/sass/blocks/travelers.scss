@@ -6,25 +6,9 @@
   @include rounded-bottom;
 
   background-color: $dark_blue;
-  // background-image: url("../img/rogovaya-back-mobile@1x.png");
-  // background-repeat: no-repeat;
-  // background-size: 71px 71px;
-  // background-position: -12px 345px;
-
-  // @media (min-resolution: 2dppx) {
-  //   background-image: url("../img/rogovaya-back-mobile@2x.png");
-  // }
 
   @media (min-width: $tablet-width) {
     @include shift(-65px);
-
-    // background-image: url("../img/rogovaya-back-desktop@1x.png");
-    // background-size: 285px 285px;
-    // background-position: calc(100% - 75px) 145px;
-
-    // @media (min-resolution: 2dppx) {
-    //   background-image: url("../img/rogovaya-back-desktop@2x.png");
-    // }
   }
 
   @media (min-width: $desktop-width) {

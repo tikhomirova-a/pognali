@@ -32,12 +32,18 @@
   @include reset-list;
 }
 
+.traveler__name-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 23px;
+  }
+}
+
 .traveler__name {
   @include reset-text;
-
-  position: relative;
-
-  margin-bottom: 15px;
 
   font-weight: 700;
   font-size: 21px;
@@ -45,20 +51,25 @@
   color: $basic_blue;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 23px;
-
     font-size: 24px;
     line-height: 22px;
   }
 }
 
 .traveler__status {
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: -16px;
+  order: -1;
+  position: relative;
+  top: 8px;
 
-  vertical-align: middle;
+  margin-right: 11px;
+  margin-left: -15px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+    margin-left: -20px;
+  }
 }
+
 
 .traveler__tags {
   @include reset-text;
