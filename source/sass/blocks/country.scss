@@ -6,7 +6,10 @@
 }
 
 .country__image-wrapper {
-  height: 110px; // or min-height?
+  min-height: 110px;
+  // max-height: 110px;
+
+  overflow: hidden;
 
   @include top-left;
   @include top-right;
@@ -27,6 +30,10 @@
 }
 
 .country__img {
+  display: block;
+
+  // object-fit: contain;
+
   @include top-left;
   @include top-right;
 
