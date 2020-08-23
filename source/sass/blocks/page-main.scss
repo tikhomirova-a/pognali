@@ -25,10 +25,16 @@
   }
 
   .page--inner & {
+    padding-top: 25px;
     padding-bottom: 110px; // because of page footer's shift
 
     @media (min-width: $tablet-width) {
+      padding-top: 55px;
       padding-bottom: 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
     }
   }
 }
