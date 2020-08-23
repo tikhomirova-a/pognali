@@ -124,8 +124,453 @@
       </div>
     </header>
     <main class="page-main page-main--catalog">
-      <div class="page-main__wrapper container">
-        <section class="page-main__catalog catalog">
+      <h2 class="visually-hidden">Поиск попутчиков с помощью фильтров</h2>
+      <div class="page-main__wrapper">
+        <section class="page-main__filter country-filter container">
+          <h3 class="country-filter__heading">Фильтрация по странам:</h3>
+          <ul class="country-filter__list">
+            <li class="country-filter__item"><a class="country-filter__link country-filter__link--active" href="/europe">Европа</a></li>
+            <li class="country-filter__item"><a class="country-filter__link" href="/asia">Азия</a></li>
+            <li class="country-filter__item"><a class="country-filter__link" href="/america">Америка</a></li>
+            <li class="country-filter__item"><a class="country-filter__link" href="/islands">Острова</a></li>
+          </ul>
+          <a class="country-filter__more" href="#" aria-label="Показать все страны">
+            <span class="country-filter__more-text">Показать все</span>
+          </a>
+          <div class="country-filter__dropdown countries-dropdown">
+            <table class="countries-dropdown__table">
+              <tr class="countries-dropdown__headings-row">
+                <th><button class="countries-dropdown__letter countries-dropdown__letter--active" type="button">А</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Б</button></th>
+                <th><button class="countries-dropdown__letter" type="button">В</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Г</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Д</button></th>
+              </tr>
+              <tr class="countries-dropdown__description-row">
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="/europe/australia">Австралия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="/europe/austria">Австрия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Азербайджан</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Албания</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Алжир</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Ангола</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Андорра</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Антигуа и Барбуда</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Арегнтина</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Армения</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Афганистан</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Багамские Острова</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Бангладеш</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Барбадос</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Бахрейн</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Белоруссия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Белиз</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Бельгия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Бенин</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Болгария</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Боливия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Босния и Герцеговина</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Ботсвана</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Бразилия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Бруней</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Буркина-Фасо</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Бурунди</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Бутан</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Вануату</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Великобритания</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Венгрия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Венесуэла</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Восточный Тимор</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Вьетнам</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Габон</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гаити</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гайана</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гамбия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гана</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гватемала</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гвинея</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гвинея-Бисау</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Германия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гондурас</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Гренада</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Греция</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Грузия</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Дания</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Джибути</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Доминика</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Доминикана</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="countries-dropdown__headings-row">
+                <th><button class="countries-dropdown__letter" type="button">Е</button></th>
+                <th><button class="countries-dropdown__letter" type="button">З</button></th>
+                <th><button class="countries-dropdown__letter" type="button">И</button></th>
+                <th><button class="countries-dropdown__letter" type="button">К</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Л</button></th>
+              </tr>
+              <tr class="countries-dropdown__description-row">
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Египет</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Замбия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Зимбабве</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Израиль </a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Индия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Индонезия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Иордания</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Ирак</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Иран</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Ирландия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Исландия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Испания</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Италия</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Кабо-Верде</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Казахстан</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Камбоджа</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Камерун</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Канада</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Катар</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Кения</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Кипр</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Киргизия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Кирибати</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Китай</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Колумбия</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Лаос</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Латвия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Лесото</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Либерия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Ливан</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Ливия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Литва</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Лихтенштейн</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Люксембург</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="countries-dropdown__headings-row">
+                <th><button class="countries-dropdown__letter" type="button">М</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Н</button></th>
+                <th><button class="countries-dropdown__letter" type="button">О</button></th>
+                <th><button class="countries-dropdown__letter" type="button">П</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Р</button></th>
+              </tr>
+              <tr class="countries-dropdown__description-row">
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Маврикий</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Мавритания</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Мадагаскар</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Малави</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Малайзия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Мали</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Мальдивы</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Мальта</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Марокко</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Намибия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Науру</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Непал</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Нигер</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Нигерия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Нидерланды</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Никарагуа</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Новая Зеландия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Норвегия</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">ОАЭ</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Оман</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Пакистан</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Палау</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Панама</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Папуа - Новая Гвинея</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Парагвай</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Перу</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Польша</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Португалия</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Руанда</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Румыния</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Россия</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="countries-dropdown__headings-row">
+                <th><button class="countries-dropdown__letter" type="button">С</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Т</button></th>
+                <th><button class="countries-dropdown__letter" type="button">У</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Ф</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Х</button></th>
+              </tr>
+              <tr class="countries-dropdown__description-row">
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Сальвадор</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Самоа</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Сан-Марино</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Саудовская Аравия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Сейшелы</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Сенегал</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Сербия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Сингапур</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Сирия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Словакия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Словения</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">США</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Таджикистан</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Таиланд</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Танзания</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Того</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Тонга</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Тринидад и Тобаго</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Тувалу</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Тунис</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Туркмения</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Турция</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Уганда</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Узбекистан</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Украина</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Уругвай</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Фиджи</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Филиппины</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Финляндия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Франция</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Хорватия</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="countries-dropdown__headings-row">
+                <th><button class="countries-dropdown__letter" type="button">Ч</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Ш</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Щ</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Э</button></th>
+                <th><button class="countries-dropdown__letter" type="button">Ю</button></th>
+              </tr>
+              <tr class="countries-dropdown__description-row">
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Чад</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Черногория</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Чехия</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Чили</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Швейцария</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Швеция</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Шри-Ланка</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Эквадор</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Эритрея</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Эсватини</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Эстония</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Эфиопия</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">ЮАР</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Южный Судан</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="countries-dropdown__countries">
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Ямайка</a></li>
+                    <li class="countries-dropdown__country"><a class="countries-dropdown__country-link" href="#">Япония</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+            <button class="countries-dropdown__button-close" type="button">Свернуть</button>
+          </div>
+        </section>
+        <section class="page-main__traveler-filter traveler-filter container">
+          <h3 class="traveler-filter__heading">Подберите идеального попутчика</h3>
+          <form class="traveler-filter__form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="traveler-filter__fieldset">
+              <legend class="traveler-filter__legend">Хобби:</legend>
+              <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button"></button>
+              <div class="traveler-filter__input-wrapper">
+                <ul class="traveler-filter__input-list">
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="hobby" value="gym" checked>Спортзал
+                    </label>
+                  </li>
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="hobby" value="hookah">Кальян
+                    </label>
+                  </li>
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="hobby" value="couch">Диван
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="traveler-filter__fieldset">
+              <legend class="traveler-filter__legend">Музыка:</legend>
+              <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button"></button>
+              <div class="traveler-filter__input-wrapper">
+                <ul class="traveler-filter__input-list">
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="music" value="hard-rock" checked>Тяжелый рок
+                    </label>
+                  </li>
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="music" value="russian-rap">Русский рэп
+                    </label>
+                  </li>
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="music" value="eurodance">Евроденс
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="traveler-filter__fieldset">
+              <legend class="traveler-filter__legend">Еда:</legend>
+              <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button"></button>
+              <div class="traveler-filter__input-wrapper">
+                <ul class="traveler-filter__input-list">
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="food" value="meat" checked>Мясоед
+                    </label>
+                  </li>
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="food" value="healthy-eating">Сидит на ПП
+                    </label>
+                  </li>
+                  <li class="traveler-filter__input-item">
+                    <label class="traveler-filter__label">
+                      <input class="traveler-filter__checkbox" type="checkbox" name="food" value="raw-vegan-food">Веган-сыроед
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="traveler-filter__fieldset">
+              <legend class="traveler-filter__legend">Транспорт:</legend>
+              <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button"></button>
+              <div class="traveler-filter__input-wrapper">
+                <ul class="traveler-filter__transport transport-checkbox">
+                  <li class="transport-checkbox__item">
+                    <label class="visually-hidden" for="checkbox-plane">Авиаперелет</label>
+                    <input class="transport-checkbox__input" id="checkbox-plane" type="checkbox" name="transport" value="plane" checked>
+                    <span class="transport-checkbox__icon transport-checkbox__icon--plane"></span>
+                  </li>
+                  <li class="transport-checkbox__item">
+                    <label class="visually-hidden" for="checkbox-auto">Автотранспорт</label>
+                    <input class="transport-checkbox__input" id="checkbox-auto" type="checkbox" name="transport" value="auto" checked>
+                    <span class="transport-checkbox__icon transport-checkbox__icon--auto"></span>
+                  </li>
+                  <li class="transport-checkbox__item">
+                    <label class="visually-hidden" for="checkbox-bicycle">Велосипед</label>
+                    <input class="transport-checkbox__input" id="checkbox-bicycle" type="checkbox" name="transport" value="bicycle">
+                    <span class="transport-checkbox__icon transport-checkbox__icon--bicycle"></span>
+                  </li>
+                  <li class="transport-checkbox__item">
+                    <label class="visually-hidden" for="checkbox-on-foot">Пешком</label>
+                    <input class="transport-checkbox__input" id="checkbox-on-foot" type="checkbox" name="transport" value="on-foot" checked>
+                    <span class="transport-checkbox__icon transport-checkbox__icon--on-foot"></span>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="traveler-filter__fieldset">
+              <legend class="traveler-filter__legend">Левел:</legend>
+              <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button"></button>
+              <div class="traveler-filter__input-wrapper">
+                <ul class="traveler-filter__level-list">
+                  <li class="traveler-filter__level-item">
+                    <label class="visually-hidden" for="level-min">Выберите минимальный уровень</label>
+                    <input id="level-min" type="number" name="level-min" min="1" max="100" step="1" value="30">
+                  </li>
+                  <li class="traveler-filter__level-item">
+                    <label class="visually-hidden" for="level-max">Выберите максимальный уровень</label>
+                    <input id="level-max" type="number" name="level-max" min="1" max="100" step="1" value="100">
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <button class="traveler-filter__submit button-catalog button-catalog--filter" type="submit">Показать</button>
+          </form>
+        </section>
+        <section class="page-main__catalog catalog container">
           <h2 class="visually-hidden">Список попутчиков после фильтрации</h2>
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -137,7 +582,6 @@
                     <img class="traveler-card__avatar" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@1x.jpg 70w, img/firsova-mobile@2x.jpg 140w"
                     sizes="(min-width: 1440px) 285px, (min-width: 768px) 190px, 70px" alt="Аватар Тани Фирсовой.">
                   </picture>
-                  <!-- TODO fix validation errors -->
                 </a>
                 <div class="traveler-card__name-wrapper">
                   <a class="traveler-card__profile-link" href="#" aria-label="Показать профиль попутчика">
