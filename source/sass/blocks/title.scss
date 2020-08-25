@@ -7,4 +7,12 @@
   @media (min-width: $tablet-width) {
     font-size: 45px;
   }
+
+  &--form {
+    color: $basic_blue;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+    }
+  }
 }

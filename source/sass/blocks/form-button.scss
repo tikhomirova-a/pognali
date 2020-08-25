@@ -1,0 +1,27 @@
+.form-button {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $basic_blue;
+
+  border-radius: 20px;
+  background-color: $basic_yellow;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  &--back {
+    background-color: transparent;
+    border: none;
+  }
+
+  &--submit {
+    @include reset-button;
+
+    cursor: pointer;
+  }
+}

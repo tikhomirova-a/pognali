@@ -1,0 +1,308 @@
+.plan-step {
+  padding: 25px;
+  padding-bottom: 15px;
+
+  background-color: $basic_white;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    padding-right: 40px;
+    padding-bottom: 55px;
+    padding-left: 45px;
+
+    border-radius: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-right: 160px;
+    padding-left: 160px;
+    padding-bottom: 105px;
+    border-radius: 60px;
+  }
+
+  &--date {
+    padding-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 150px;
+    }
+  }
+}
+
+.plan-step__heading {
+  @include reset-text;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    & br {
+      display: none;
+    }
+  }
+}
+
+.plan-step__description {
+  @include reset-text;
+
+  // max-width: 220px;
+
+  color: $special_grey;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 25px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.plan-step__markers {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.plan-step__travelers {
+  @include reset-fieldset;
+}
+
+.plan-step__label-wrapper {
+  @include reset-text;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: normal;
+  }
+}
+
+.plan-step__label-hint {
+  opacity: 0.3;
+
+  .plan-step__travelers & {
+    letter-spacing: 0.07em;
+
+    @media (min-width: $tablet-width) {
+      letter-spacing: 0.08em;
+    }
+
+    @media (min-width: $desktop-width) {
+      letter-spacing: normal;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+.plan-step__input-wrapper {
+  @include reset-text;
+}
+
+.plan-step__input {
+  font-weight: 500;
+  font-size: 14.86px;
+  line-height: 14px;
+  color: $basic_blue;
+
+  @include form-input-border;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $basic_dark_blue;
+    outline: none;
+  }
+}
+
+.plan-step__duration {
+  @include reset-fieldset;
+}
+
+.plan-step__checkbox-wrapper {
+  @include reset-text;
+}
+
+.plan-step__checkbox-label {
+  font-size: 15px;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.plan-step__calendar {
+  @include reset-fieldset;
+}
+
+.plan-step__month-wrapper {
+  @include reset-text;
+
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+}
+
+.plan-step__month {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: $basic_blue;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+  }
+}
+
+// plan-step--destination
+
+.plan-step__destinations {
+  @include reset-list;
+}
+
+.plan-step__destination-field {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  @include form-input-border;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:active,
+  &:focus-within {
+    color: $basic_white;
+
+    background-color: $basic_blue;
+  }
+
+  .plan-step__destination--opened & {
+    color: $basic_white;
+
+    background-color: $basic_blue;
+  }
+}
+
+.plan-step__button-add {
+  @include reset-button;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $basic_blue;
+
+  background-color: $basic_blue_light;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+// plan-step--activity
+
+.plan-step__activity-wrapper {
+  @include reset-fieldset;
+}
+
+.plan-step__activity-country {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 30px;
+  }
+}
+
+.plan-step__activity-text {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  resize: none;
+
+  @include form-input-border;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $special_grey;
+  }
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-within {
+    border-color: $basic_dark_blue;
+    outline: none;
+  }
+
+  &:invalid {
+    border-color: $special_red;
+  }
+}

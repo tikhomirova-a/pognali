@@ -1,0 +1,183 @@
+.countries-dropdown {
+  font-size: 16px;
+  line-height: 22px;
+  color: $special_grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--form {
+    background-color: $basic_white;
+
+    @media (min-width: $tablet-width) {
+      line-height: 20px;
+    }
+  }
+}
+
+.countries-dropdown__group-list {
+  @include reset-list;
+}
+
+.countries-dropdown__group-item {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.countries-dropdown__group-link {
+  color: $dark_blue;
+  opacity: 0.3;
+
+  &:active,
+  &--active {
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.countries-dropdown__alphabet-list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  background-color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  .countries-dropdown--form & {
+    display: grid;
+
+    @media (min-width: $desktop-width) {
+      gap: 15px;
+    }
+  }
+}
+
+.countries-dropdown__alphabet-item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic_blue;
+
+  border-top: 1px solid #cbced9;
+  border-left: 1px solid #cbced9;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 60px;
+    color: $dark_blue;
+
+    border: none;
+    opacity: 0.3;
+  }
+
+  &:nth-child(5n) {
+    border-right: 1px solid #cbced9;
+  }
+
+  &:nth-child(-n+25):nth-child(n+21) {
+    border-bottom: 1px solid #cbced9;
+  }
+
+  &--chosen,
+  &:active {
+    @media (max-width: $mobile-width-only) {
+      color: $basic_white;
+
+      background-color: $basic_blue;
+    }
+
+    @media (min-width: $tablet-width) {
+      opacity: 1;
+    }
+  }
+
+  .countries-dropdown--form & {
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      color: $basic_blue;
+
+      border-top: 1px solid #cbced9;
+      border-left: 1px solid #cbced9;
+      opacity: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      border: 1px solid #cbced9;
+      border-radius: 4px;
+    }
+
+    &--chosen,
+    &:active {
+      color: $basic_blue;
+
+      background-color: $basic_blue_light;
+
+      @media (min-width: $tablet-width) {
+        color: $basic_white;
+
+        background-color: $basic_blue;
+      }
+    }
+
+    &:hover {
+      border-color: #959bb2;
+    }
+  }
+}
+
+.countries-dropdown__countries-group {
+  @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.countries-dropdown__countries {
+  @include reset-list;
+
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+
+  &--1 {
+    display: block;
+  }
+}
+
+.countries-dropdown__country-link {
+  color: $special_grey;
+}

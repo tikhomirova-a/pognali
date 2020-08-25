@@ -1,0 +1,146 @@
+.calendar {
+  table-layout: fixed;
+  width: 100%; // temporary
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special_grey;
+
+  border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.calendar__body {
+  border: 1px solid #d6d9e6;
+}
+
+.calendar__header {
+  font-weight: 400;
+  text-align: center;
+
+  &:nth-child(6),
+  &:nth-child(7) {
+    color: #ff5c23;
+  }
+}
+
+.calendar__day {
+  &--long {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  &--short {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.calendar__data-cell {
+  text-align: center;
+
+  border: 1px solid #d6d9e6;
+  background-color: $basic_blue_light;
+
+  &--disabled {
+    background-color: $basic_white;
+  }
+
+  &--chosen {
+    background-color: $basic_blue;
+  }
+
+  &:not(.calendar__data-cell--disabled):hover,
+  &:not(.calendar__data-cell--disabled):focus {
+    background-color: $basic_blue;
+    outline: 2px solid #ff5c23;
+    outline-offset: -1px;
+  }
+}
+
+.calendar__data {
+  @include reset-button;
+
+  width: 100%;
+  padding: 10px; // temporary
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic_blue;
+
+  background-color: $basic_blue_light;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &:disabled {
+    font-weight: 400;
+    color: $special_grey;
+
+    background-color: transparent;
+
+    opacity: 0.3;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  &--chosen {
+    font-weight: 500;
+    color: $basic_white;
+
+    background-color: $basic_blue;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    color: $basic_white;
+
+    background-color: $basic_blue;
+    outline: none;
+  }
+
+  // .calendar__data-cell:not(.calendar__data-cell--disabled):hover &,
+  // .calendar__data-cell:not(.calendar__data-cell--disabled):focus & {
+  //   color: $basic-white;
+
+  //   background-color: $basic_blue;
+  // }
+}
