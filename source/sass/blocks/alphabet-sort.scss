@@ -1,0 +1,153 @@
+.alphabet-sort--form {
+  background-color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+  }
+}
+
+.alphabet-sort__letters-list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  background-color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  .alphabet-sort--form & {
+    display: grid;
+
+    @media (min-width: $desktop-width) {
+      gap: 15px;
+    }
+  }
+}
+
+.alphabet-sort__letters-item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic_blue;
+
+  border-top: 1px solid #cbced9;
+  border-left: 1px solid #cbced9;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 60px;
+    color: $dark_blue;
+
+    border: none;
+    opacity: 0.3;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &:nth-child(5n) {
+      border-right: 1px solid #cbced9;
+    }
+
+    &:nth-child(-n+25):nth-child(n+21) {
+      border-bottom: 1px solid #cbced9;
+    }
+  }
+
+  &--chosen,
+  &:active {
+    @media (max-width: $mobile-width-only) {
+      color: $basic_white;
+
+      background-color: $basic_blue;
+    }
+
+    @media (min-width: $tablet-width) {
+      opacity: 1;
+    }
+  }
+
+  .alphabet-sort--form & {
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      color: $basic_blue;
+
+      border-top: 1px solid #cbced9;
+      border-left: 1px solid #cbced9;
+      opacity: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      border: 1px solid #cbced9;
+      border-radius: 4px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      &:nth-child(5n) {
+        border-right: 1px solid #cbced9;
+      }
+
+      &:nth-child(-n+25):nth-child(n+21) {
+        border-bottom: 1px solid #cbced9;
+      }
+    }
+
+    &--chosen,
+    &:active {
+      color: $basic_blue;
+
+      background-color: $basic_blue_light;
+
+      @media (min-width: $tablet-width) {
+        color: $basic_white;
+
+        background-color: $basic_blue;
+      }
+    }
+
+    &:hover {
+      border-color: #959bb2;
+    }
+  }
+}
+
+.alphabet-sort__countries-list {
+  @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.alphabet-sort__countries-sublist {
+  @include reset-list;
+
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+
+  &--1 {
+    display: block;
+  }
+}
+
+.alphabet-sort__countries-link {
+  color: $special_grey;
+}
