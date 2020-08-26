@@ -14,6 +14,14 @@
   }
 }
 
+.user__level {
+  @include reset-text;
+}
+
+.user__img-wrapper {
+  @include reset-text;
+}
+
 .user__link {
   font-weight: 500;
   font-size: 20px;
