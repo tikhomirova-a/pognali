@@ -41,6 +41,7 @@
     font-size: 20px;
     line-height: 20px;
   }
+
   @media (min-width: $desktop-width) {
     line-height: 22px;
   }
@@ -97,10 +98,6 @@
   }
 }
 
-.traveler-filter__submit {
-  @include reset-button;
-}
-
 // .traveler-filter__checkbox {
 //   position: absolute;
 
@@ -128,4 +125,6 @@
 //   background-size: 11px 11px;
 //   background-position: center;
 // }
-
+.traveler-filter__submit {
+  @include reset-button;
+}
