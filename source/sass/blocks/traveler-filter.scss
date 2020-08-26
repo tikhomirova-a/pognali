@@ -1,0 +1,131 @@
+.traveler-filter__wrapper {
+  padding: 25px;
+
+  background-color: $basic_yellow;
+  border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 45px;
+  }
+}
+
+.traveler-filter__heading {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $basic_blue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.traveler-filter__fieldset {
+  @include reset-fieldset;
+}
+
+.traveler-filter__legend {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $basic_blue;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  @media (min-width: $desktop-width) {
+    line-height: 22px;
+  }
+}
+
+.traveler-filter__input-list {
+  @include reset-list;
+}
+
+.traveler-filter__label {
+  font-size: 15px;
+  line-height: 20px;
+  color: $basic_black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.traveler-filter__transport {
+  @include reset-list;
+}
+
+.traveler-filter__level-list {
+  @include reset-list;
+}
+
+.traveler-filter__level-input {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+  color: $basic_blue;
+
+  @include form-input-border;
+
+  background-color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-within {
+    border-color: $basic_dark_blue;
+    outline: none;
+  }
+}
+
+.traveler-filter__submit {
+  @include reset-button;
+}
+
+// .traveler-filter__checkbox {
+//   position: absolute;
+
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   padding: 0;
+
+//   border: 0;
+
+//   white-space: nowrap;
+//   clip-path: inset(100%);
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
+
+// .traveler-filter__checkbox-icon {
+//   position: absolute;
+//   width: 24px;
+//   height: 24px;
+
+//   border-radius: 4px;
+//   background-color: $basic_white;
+//   background-repeat: no-repeat;
+//   background-size: 11px 11px;
+//   background-position: center;
+// }
+

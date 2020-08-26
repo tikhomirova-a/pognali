@@ -61,6 +61,8 @@
 
 // catalog page components
 
+@import "blocks/country-filter.scss";
+@import "blocks/traveler-filter.scss";
 @import "blocks/catalog.scss";
 @import "blocks/traveler-card.scss";
 @import "blocks/countries.scss";

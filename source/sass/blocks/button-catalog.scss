@@ -23,7 +23,28 @@
     font-size: 20px;
   }
 
+  &:hover,
+  &:focus {
+    background-color: $special_yellow_dark;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
+
   &--filter {
     background-color: $basic_white;
+  }
+
+  &--filter:hover,
+  &--filter:focus {
+    background-color: $basic_white;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.14));
+  }
+
+  &--filter:active {
+    color: rgba(22, 28, 53, 0.3);
+
+    background-color: #f3c72b;
   }
 }
