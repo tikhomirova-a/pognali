@@ -1,6 +1,5 @@
 .calendar {
   table-layout: fixed;
-  width: 100%; // temporary
 
   font-weight: 400;
   font-size: 14px;
@@ -20,11 +19,19 @@
 }
 
 .calendar__header {
+  padding-bottom: 8px;
+
   font-weight: 400;
   text-align: center;
 
-  &:nth-child(6),
-  &:nth-child(7) {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+    padding-left: 15px;
+
+    text-align: left;
+  }
+
+  &--weekend{
     color: #ff5c23;
   }
 }
@@ -53,15 +60,18 @@
     background-color: $basic_white;
   }
 
-  &--chosen {
+  &--selected {
     background-color: $basic_blue;
   }
 
-  &:not(.calendar__data-cell--disabled):hover,
-  &:not(.calendar__data-cell--disabled):focus {
+  // &:not(.calendar__data-cell--disabled):hover,
+  // &:not(.calendar__data-cell--disabled):focus {
+  //   background-color: $basic_blue;
+  //   outline: 2px solid #ff5c23;
+  //   outline-offset: -1px;
+  // }
+  &:not(.calendar__data-cell--disabled):active {
     background-color: $basic_blue;
-    outline: 2px solid #ff5c23;
-    outline-offset: -1px;
   }
 }
 
@@ -69,7 +79,7 @@
   @include reset-button;
 
   width: 100%;
-  padding: 10px; // temporary
+  padding: 5px;
 
   font-weight: 500;
   font-size: 14px;
@@ -81,14 +91,51 @@
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
+    padding: 25px;
+    padding-bottom: 23px;
+
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
+
+    padding-top: 12px;
+    padding-left: 15px;
+    padding-bottom: 38px;
+
     font-weight: 400;
     font-size: 18px;
     line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+
+    &--1march::after {
+      content: "мар";
+      position: absolute;
+      left: 30px;
+    }
+
+    &--1april::after {
+      content: "апр";
+      position: absolute;
+      left: 30px;
+    }
+
+    &--arrival::after {
+      content: "Заезд";
+      position: absolute;
+      bottom: 12px;
+      left: 15px;
+    }
+
+    &--depature::after {
+      content: "Выезд";
+      position: absolute;
+      bottom: 12px;
+      left: 15px;
+    }
   }
 
   &:disabled {
@@ -111,7 +158,7 @@
     }
   }
 
-  &--chosen {
+  &--selected {
     font-weight: 500;
     color: $basic_white;
 
@@ -134,13 +181,14 @@
     color: $basic_white;
 
     background-color: $basic_blue;
-    outline: none;
+    outline: 2px solid #ff5c23;
+    outline-offset: -1px;
   }
 
-  // .calendar__data-cell:not(.calendar__data-cell--disabled):hover &,
-  // .calendar__data-cell:not(.calendar__data-cell--disabled):focus & {
-  //   color: $basic-white;
+  &:not(:disabled):active {
+    color: $basic_white;
 
-  //   background-color: $basic_blue;
-  // }
+    background-color: $basic_blue;
+    outline: none;
+  }
 }

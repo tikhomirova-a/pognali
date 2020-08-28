@@ -1,17 +1,29 @@
 .form-button {
+  display: block;
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
   color: $basic_blue;
 
   border-radius: 20px;
   background-color: $basic_yellow;
 
   @media (min-width: $tablet-width) {
+    display: inline-block;
+    padding: 28px 35px;
+
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
+    text-align: left;
   }
 
   &--back {
@@ -22,6 +34,17 @@
   &--submit {
     @include reset-button;
 
+    width: 100%;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+
     cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      width: 285px;
+      padding: 30px 35px;
+    }
   }
 }

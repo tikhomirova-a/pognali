@@ -4,18 +4,18 @@
   background-color: $basic_dark_blue;
 
   .page--inner & {
-    position: relative;
-    z-index: 0;
+    // position: relative;
+    // z-index: 0;
 
-    @include shift(-25px);
+    // @include shift(-25px);
 
     color: $basic_blue;
 
     background-color: $basic_blue_light;
 
-    @media (min-width: $tablet-width) {
-      @include shift(-55px);
-    }
+    // @media (min-width: $tablet-width) {
+    //   @include shift(-55px);
+    // }
   }
 }
 
@@ -25,12 +25,12 @@
   }
 
   .page--inner & {
-    padding-top: 25px;
-    padding-bottom: 110px; // because of page footer's shift
+    // padding-top: 25px;
+    padding-bottom: 90px; // because of page footer's shift
 
     @media (min-width: $tablet-width) {
-      padding-top: 55px;
-      padding-bottom: 70px;
+      // padding-top: 55px;
+      padding-bottom: 20px;
     }
 
     @media (min-width: $desktop-width) {

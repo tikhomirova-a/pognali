@@ -1,28 +1,88 @@
 .user-wrapper {
-  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content min-content;
+  padding-top: 22px;
   padding-bottom: 35px; // sum up with shift padding later
 
   @media (min-width: $tablet-width) {
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: min-content min-content min-content;
+    grid-column-gap: 60px;
     padding-top: 65px;
-    padding-bottom: 45px;
+    padding-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
     padding-top: 75px;
     padding-bottom: 65px;
     padding-left: 65px;
+    display: flex;
+    grid-column-gap: 0;
   }
 }
 
 .user__level {
   @include reset-text;
+
+  position: relative;
+
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -145px;
+    right: 330px;
+  }
 }
 
 .user__img-wrapper {
   @include reset-text;
+
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 3/-1;
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -190px;
+    right: 95px;
+
+    width: 190px;
+    height: 190px;
+  }
+}
+
+.user__img {
+  display: block;
+
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;}
 }
 
 .user__link {
+  // display: flex;
+  // justify-self: stretch;
+  // justify-content: center;
+  grid-column: 1/-1;
+  padding: 10px;
+  margin-top: 20px;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
@@ -37,6 +97,25 @@
     letter-spacing: 0.09em;
   }
 
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+    padding: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 95px;
+
+    margin-top: 0;
+    padding: 16px;
+    min-width: 190px;
+    box-sizing: border-box;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
   &:hover {
     background-color: #d1d7e9;
   }
@@ -48,11 +127,74 @@
   }
 }
 
+.user__link-word {
+  &--short  {
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+
+  &--full {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
 .user__input {
   @include reset-fieldset;
 
+  grid-column: 1/-1;
+
   border: 1px solid #cbced9;
   border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+
+  &:first-of-type {
+    margin-top: 25px;
+    margin-bottom: 17px;
+    padding-top: 15px;
+    padding-right: 25px;;
+    padding-bottom: 20px;
+    padding-left: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 51px;
+      margin-bottom: 0;
+      padding-top: 35px;
+      padding-right: 40px;
+      padding-bottom: 9px;
+      padding-left: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+      margin-right: 140px;
+      min-width: 730px;
+      box-sizing: border-box;
+    }
+  }
+
+  &:last-of-type {
+    padding-top: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 8px;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      padding: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 385px;
+      box-sizing: border-box;
+    }
+  }
 
   &:hover {
     border-color: #aeb4cb;
@@ -67,6 +209,9 @@
 .user__input-legend {
   @include reset-text;
 
+  padding-right: 10px;
+  padding-left: 10px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -75,9 +220,17 @@
   color: $basic_blue;
 
   @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+
+    background-color: $basic_blue_light;
+
+    transform: translateX(-50%);
 
     &--tags {
       letter-spacing: 0.1em;
@@ -91,7 +244,11 @@
 
   @media (min-width: $desktop-width) {
     &--tags {
+      left: 27px;
+
       letter-spacing: 0.07em;
+
+      transform: none;
     }
 
     &--transport {
@@ -102,6 +259,8 @@
 
 .user__tags {
   @include reset-text;
+
+  width: fill-available;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -132,4 +291,12 @@
 
     opacity: 0.6;
   }
+}
+
+.user__transport {
+  @include reset-list;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

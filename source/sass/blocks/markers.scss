@@ -7,6 +7,11 @@
 
   opacity: 0.6;
 
+  @media (min-width: $desktop-width) {
+    padding-left: 35px;
+    margin-bottom: 20px;
+  }
+
   &--active {
     opacity: 1;
     letter-spacing: 0.11em;

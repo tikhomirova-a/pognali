@@ -4,8 +4,8 @@
   background-color: $basic_dark_blue;
 
   &--inner {
-    position: relative;
-    z-index: 3;
+    // position: relative;
+    // z-index: 3;
 
     @include rounded-bottom;
 
@@ -44,6 +44,21 @@
   }
 }
 
+.page--form .page-header__heading {
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+  }
+}
+
 .page-header__title {
   position: relative;
 
@@ -63,6 +78,7 @@
     position: absolute;
     bottom: -12px;
     left: 0;
+    z-index: 2;
 
     content: "";
     width: 100%;
@@ -81,6 +97,16 @@
   .page--catalog &::after {
     @media (min-width: $tablet-width) {
       bottom: -93px;
+    }
+  }
+
+  .page--form &::after {
+    @media (max-width: $mobile-width-only) {
+      bottom: -16px;
+    }
+
+    @media (min-width: $tablet-width) {
+      bottom: -75px;
     }
   }
 }

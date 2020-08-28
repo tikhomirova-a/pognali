@@ -18,4 +18,8 @@
   color: $basic_white;
 
   background-color: $dark_blue;
+
+  .page--form & {
+    background-color: $basic_blue_light;
+  }
 }
