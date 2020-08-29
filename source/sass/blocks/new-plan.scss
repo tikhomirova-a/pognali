@@ -21,16 +21,16 @@
 
 .new-plan__wrapper {
   padding-top: 27px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
     padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 51px;
-    padding-bottom: 70px;
+    padding-bottom: 120px;
   }
 }
 
@@ -60,15 +60,16 @@
 }
 
 .new-plan__markers {
-  margin: 0;
-  padding: 0;
-  width: 45px;
+  @include reset-list;
+
+  width: 40px;
+  margin-right: 25px;
   display: inline-flex;
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    width: 70px;
-    margin-right: -15px;
+    width: 75px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {

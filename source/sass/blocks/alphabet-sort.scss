@@ -162,15 +162,13 @@
     border-top-color: transparent;
 
     @media (min-width: $tablet-width) {
-      display: flex;                    // for the --form
+      display: flex;
       justify-content: space-between;
       padding: 0;
 
-      border: none;
-    }
-
-    @media (min-width: $desktop-width) {
       font-size: 20px;
+
+      border: none;
     }
   }
 }

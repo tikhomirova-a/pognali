@@ -1,4 +1,6 @@
 .markers__item {
+  position: relative;
+
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.1em;
@@ -8,7 +10,7 @@
   opacity: 0.6;
 
   @media (min-width: $desktop-width) {
-    padding-left: 35px;
+    padding-left: 44px;
     margin-bottom: 20px;
   }
 
@@ -17,7 +19,26 @@
     letter-spacing: 0.11em;
   }
 
-  .markers--short & {
-    color: $basic_blue;
+  &::before {
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 0;
+
+    width: 5px;
+    height: 5px;
+    content: "";
+
+    border-radius: 50%;
+    background-color: $basic_blue;
+    opacity: 0.6;
+
+    @media (min-width: $tablet-width) {
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  &--active::before {
+    opacity: 1;
   }
 }

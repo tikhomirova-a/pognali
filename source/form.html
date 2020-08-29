@@ -288,13 +288,13 @@
                       <span class="plan-step__label-hint">Чел.</span>
                     </p>
                     <p class="plan-step__input-wrapper">
+                      <input class="plan-step__input" id="traveler-amount" type="text" name="traveler-amount" value="2">
                       <button class="plan-step__button plan-step__button--minus" type="button" aria-label="Уменьшить количество попутчиков">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                           y="0px" viewBox="0 0 14 2" style="enable-background:new 0 0 14 2;" xml:space="preserve">
                           <rect class="st0" width="14" height="2" />
                         </svg>
                       </button>
-                      <input class="plan-step__input" id="traveler-amount" type="text" name="traveler-amount" value="2">
                       <button class="plan-step__button plan-step__button--plus" type="button" aria-label="Увеличить количество попутчиков">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                           y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
@@ -305,7 +305,9 @@
                   </fieldset>
                   <p class="plan-step__checkbox-wrapper">
                     <label class="plan-step__checkbox-label" for="checkbox-children">
-                      <input class="plan-step__checkbox-input" type="checkbox" id="checkbox-children" checked>Можно с детьми
+                      <input class="plan-step__checkbox-input visually-hidden" type="checkbox" id="checkbox-children" checked>
+                      <span class="plan-step__checkbox-icon"></span>
+                      Можно с детьми
                     </label>
                   </p>
                   <fieldset class="plan-step__duration">
@@ -314,14 +316,13 @@
                       <span class="plan-step__label-hint">Дн.</span>
                     </p>
                     <p class="plan-step__input-wrapper plan-step__input-wrapper--duration">
+                      <input class="plan-step__input" id="travel-days" type="text" name="travel-days" value="2">
                       <button class="plan-step__button plan-step__button--minus" type="button" aria-label="Уменьшить количество дней">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                           y="0px" viewBox="0 0 14 2" style="enable-background:new 0 0 14 2;" xml:space="preserve">
                           <rect class="st0" width="14" height="2" />
                         </svg>
                       </button>
-                      <input class="plan-step__input" id="travel-days" type="text" name="travel-days"
-                        value="2">
                       <button class="plan-step__button plan-step__button--plus" type="button" aria-label="Увеличить количество дней">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                           y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
@@ -473,10 +474,11 @@
                     </li>
                     <li class="plan-step__destination plan-step__destination--select plan-step__destination--opened">
                       <span class="plan-step__destination-field plan-step__destination-field--select">Выберите страну</span>
+                      <!-- <button class="plan-step__destination-field plan-step__destination-field--select" type="button">Выберите страну</button> -->
                       <button class="plan-step__button-dropdown" aria-label="Показать/Скрыть список стран" type="button"></button>
                       <button class="plan-step__button-delete" aria-label="Удалить добавленную страну" type="button">
                         <svg width="9" height="9" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                        y="0px" viewBox="0 0 18.6 18.6" style="enable-background:new 0 0 18.6 18.6;" xml:space="preserve">
+                        y="0px" viewBox="0 0 18.6 18.6" xml:space="preserve">
                         <path d="M11.4,9.3l6.7-6.7c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L9.3,7.2L2.6,0.4C2-0.1,1-0.1,0.4,0.4C-0.1,1-0.1,2,0.4,2.6l6.7,6.7
                       L0.4,16c-0.6,0.6-0.6,1.5,0,2.1s1.5,0.6,2.1,0l6.7-6.7l6.7,6.7c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L11.4,9.3z" />
                         </svg>
@@ -626,7 +628,12 @@
                       </div>
                     </li>
                   </ul>
-                  <button class="plan-step__button-add" type="button">Добавить страну</button>
+                  <button class="plan-step__button-add" type="button">Добавить страну
+                    <svg width="14" height="14" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                      y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve" fill="#c2c4c9">
+                      <polygon class="st0" points="8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 14,6 " />
+                    </svg>
+                  </button>
                   <div class="plan-step__link-wrapper">
                     <a class="plan-step__link form-button" href="#plan-activity">Следующий шаг</a>
                     <a class="plan-step__link form-button form-button--back" href="#plan-date">На шаг назад</a>
@@ -635,7 +642,7 @@
                 <li class="new-plan__item plan-step plan-step--activity" id="plan-activity">
                   <header class="plan-step__header">
                     <h3 class="plan-step__heading">Шаг 3.<br> Развлечения</h3>
-                    <p class="plan-step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
+                    <p class="plan-step__description">Наконец, расскажите о своих планах времяпровождения.<br>Можно писать в
                       свободной форме и ставить тэги.</p>
                     <ul class="plan-step__markers markers">
                       <li class="markers__item">
@@ -650,17 +657,21 @@
                     </ul>
                   </header>
                   <fieldset class="plan-step__activity-wrapper">
-                    <legend class="plan-step__activity-country">Босния и Герцеговина</legend>
+                    <legend class="plan-step__activity-country plan-step__activity-country--bosnia">
+                      <span class="plan-step__country-name">Босния и Герцеговина</span>
+                    </legend>
                     <label class="visually-hidden" for="activity-first-country">Опишите план действий в выбранной стране</label>
                     <textarea class="plan-step__activity-text" id="activity-first-country" name="activity-first-country"
-                      placeholder="План действий" required></textarea>
+                      placeholder="План действий" rows="9" cols="25"></textarea>
                   </fieldset>
                   <fieldset class="plan-step__activity-wrapper">
-                    <legend class="plan-step__activity-country">Чехия</legend>
+                    <legend class="plan-step__activity-country plan-step__activity-country--czech">
+                      <span class="plan-step__country-name">Чехия</span>
+                    </legend>
                     <label class="visually-hidden" for="activity-second-country">Опишите план действий в выбранной
                       стране</label>
                     <textarea class="plan-step__activity-text" id="activity-second-country" name="activity-second-country"
-                      placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      placeholder="План действий" rows="9" cols="25" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                   </fieldset>
                   <div class="plan-step__link-wrapper">
                     <button class="plan-step__form-submit form-button form-button--submit" type="submit">Отправить</button>
