@@ -46,8 +46,6 @@
   display: flex;
   align-items: center;
   min-height: 75px;
-  // padding-top: 28px;
-  // padding-bottom: 30px;
   padding-top: 9px;
   padding-bottom: 13px;
   box-sizing: border-box;
@@ -58,26 +56,25 @@
   }
 
   @media (min-width: $desktop-width) {
-    // align-items: baseline;
     padding-top: 47px;
     padding-bottom: 8px;
   }
 
-  .main-nav--nojs & {
-    position: relative; // for the short-nav positioning on the desktop
+  // .main-nav--nojs & {
+  //   position: relative; // for the short-nav positioning on the desktop
 
-    padding-bottom: 0;
-    flex-wrap: wrap;
+  //   padding-bottom: 0;
+  //   flex-wrap: wrap;
 
-    @media (max-width: $mobile-width-only) {
-      padding-top: 28px;
-      padding-bottom: 30px;
-    }
+  //   @media (max-width: $mobile-width-only) {
+  //     padding-top: 28px;
+  //     padding-bottom: 30px;
+  //   }
 
-    @media (min-width: $desktop-width) {
-      flex-wrap: nowrap;
-    }
-  }
+  //   @media (min-width: $desktop-width) {
+  //     flex-wrap: nowrap;
+  //   }
+  // }
 
   .main-nav--inner & {
     @media (min-width: $tablet-width) {
@@ -100,10 +97,34 @@
     }
   }
 
-  .page--form .main-nav--nojs & {
+  // .page--form .main-nav--nojs & {
+  //   @media (max-width: $mobile-width-only) {
+  //     padding-top: 28px;
+  //     padding-bottom: 30px;
+  //   }
+  // }
+
+  .page--catalog & {
+    @media (max-width: $mobile-width-only) {
+      padding-top: 2px;
+      padding-bottom: 21px;
+      min-height: auto;
+    }
+  }
+
+  .main-nav--nojs & {
+    position: relative; // for the short-nav positioning on the desktop
+
+    padding-bottom: 0;
+    flex-wrap: wrap;
+
     @media (max-width: $mobile-width-only) {
       padding-top: 28px;
       padding-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-wrap: nowrap;
     }
   }
 }
@@ -275,9 +296,11 @@
 
   .main-nav--nojs & {
     display: block;
+    padding-top: 75px;
 
     @media (min-width: $tablet-width) {
-      padding-left: 35px;
+      padding-top: 100px;
+      padding-left: 55px;
       padding-right: 35px;
     }
 
@@ -300,6 +323,7 @@
     @media (min-width: $tablet-width) {
       top: 129px;
 
+      padding-top: 50px;
       padding-right: 0;
       padding-left: 0;
     }
@@ -345,6 +369,10 @@
 }
 
 .main-nav__user-list {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 145px;
+  }
+
   @media (min-width: $desktop-width) {
     display: none;
     margin-bottom: 0;

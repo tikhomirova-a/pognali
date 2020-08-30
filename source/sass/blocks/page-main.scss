@@ -39,6 +39,22 @@
   }
 }
 
+.page-main__filter {
+  position: relative;
+
+  @include shift(-25px);
+
+  @media (min-width: $tablet-width) {
+    @include shift(-55px);
+  }
+
+  @media (min-width: $desktop-width) {
+    &.country-filter--opened {
+      background-color: $basic_blue_light;
+    }
+  }
+}
+
 .page-main__catalog {
   grid-column: 1/4;
   padding-top: 30px; // might be changed

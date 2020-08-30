@@ -4,12 +4,14 @@
   background-color: $basic_dark_blue;
 
   &--inner {
-    // position: relative;
-    // z-index: 3;
-
     @include rounded-bottom;
 
     background-color: #182044;
+  }
+
+  .page--catalog & {
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -18,44 +20,19 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 75px;
+    padding-top: 80px;
     padding-right: 35px;
-    padding-bottom: 65px;
+    padding-bottom: 70px;
     padding-left: 35px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 70px;
     padding-left: 65px;
     padding-right: 65px;
-  }
-}
-
-.page--catalog .page-header__heading {
-  @media (min-width: $tablet-width) {
-    padding-top: 65px;
-    padding-bottom: 90px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 55px;
-  }
-}
-
-.page--form .page-header__heading {
-  @media (max-width: $mobile-width-only) {
-    padding-bottom: 15px;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-top: 80px;
-    padding-bottom: 70px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 70px;
   }
 }
 
@@ -76,7 +53,7 @@
 
   &::after {
     position: absolute;
-    bottom: -12px;
+    bottom: -16px;
     left: 0;
     z-index: 2;
 
@@ -88,25 +65,9 @@
     border-radius: 4px;
 
     @media (min-width: $tablet-width) {
-      bottom: -69px;
+      bottom: -75px;
 
       height: 8px;
-    }
-  }
-
-  .page--catalog &::after {
-    @media (min-width: $tablet-width) {
-      bottom: -93px;
-    }
-  }
-
-  .page--form &::after {
-    @media (max-width: $mobile-width-only) {
-      bottom: -16px;
-    }
-
-    @media (min-width: $tablet-width) {
-      bottom: -75px;
     }
   }
 }
