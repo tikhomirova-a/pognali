@@ -44,6 +44,14 @@
     // padding-right: 65px;
     // padding-left: 10px;
   }
+
+  .country-filter--opened & {
+    position: static;
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+    }
+  }
 }
 
 .country-filter__heading-wrapper {
@@ -184,11 +192,11 @@
   .country-filter--opened & {
     @media (max-width: 1439px) {
       position: absolute;
-      left: 50%;
+      left: 0;
+      right: 0;
       z-index: 1;
 
-      margin-left: calc(-1 * 50vw);
-      width: 100vw;
+      width: 100%;
       display: block;
     }
   }

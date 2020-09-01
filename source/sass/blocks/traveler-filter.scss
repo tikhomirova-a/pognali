@@ -321,7 +321,11 @@
   position: relative;
 
   display: flex;
-  max-width: 100%;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @media (min-width: $tablet-width) {
     order: 2;
@@ -364,7 +368,8 @@
 }
 
 .traveler-filter__level-input {
-  max-width: calc((100vw - 100px) / 2);
+  // max-width: calc((100vw - 117px) / 2);
+  width: 100%;
   box-sizing: border-box;
   padding-top: 10px;
   padding-right: 20px;
@@ -434,6 +439,11 @@
   position: relative;
 
   padding-top: 25px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @media (min-width: $tablet-width) {
     display: inline-block;
