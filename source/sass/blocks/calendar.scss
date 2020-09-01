@@ -64,12 +64,6 @@
     background-color: $basic_blue;
   }
 
-  // &:not(.calendar__data-cell--disabled):hover,
-  // &:not(.calendar__data-cell--disabled):focus {
-  //   background-color: $basic_blue;
-  //   outline: 2px solid #ff5c23;
-  //   outline-offset: -1px;
-  // }
   &:not(.calendar__data-cell--disabled):active {
     background-color: $basic_blue;
   }
@@ -145,6 +139,8 @@
     background-color: transparent;
 
     opacity: 0.3;
+
+    cursor: default;
 
     @media (min-width: $tablet-width) {
       font-size: 18px;

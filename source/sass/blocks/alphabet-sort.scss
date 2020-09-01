@@ -30,6 +30,10 @@
   .alphabet-sort--form & {
     display: grid;
 
+    @media (max-width: $mobile-width-only) {
+      width: 100%;
+    }
+
     @media (min-width: $desktop-width) {
       grid-template-rows: min-content min-content min-content min-content min-content;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -95,7 +99,6 @@
     line-height: 18px;
 
     @media (min-width: $tablet-width) {
-      // padding: 25px 20px;
       padding: 24px 18px;
 
       font-weight: 500;
@@ -178,10 +181,17 @@
   }
 
   .alphabet-sort--form & {
+    box-sizing: border-box;
     padding: 20px;
+    padding-left: 9%;
+    padding-right: 9%;
 
     border: 1px solid #cbced9;
     border-top-color: transparent;
+
+    @media (max-width: $mobile-width-only) {
+      width: 100%;
+    }
 
     @media (min-width: $tablet-width) {
       display: flex;
