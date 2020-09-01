@@ -1,0 +1,370 @@
+.alphabet-sort {
+  &--form {
+    background-color: $basic_white;
+
+    @media (min-width: $tablet-width) {
+      line-height: 20px;
+    }
+  }
+}
+
+.alphabet-sort__letters-list {
+  @include reset-list;
+
+  width: 220px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  background-color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  .alphabet-sort--form & {
+    display: grid;
+
+    @media (max-width: $mobile-width-only) {
+      width: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-rows: min-content min-content min-content min-content min-content;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 15px;
+    }
+  }
+}
+
+.alphabet-sort__letters-item {
+  padding: 12px 15px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic_blue;
+
+  border: 1px solid #cbced9;
+  border-color: #cbced9 transparent transparent #cbced9;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-right: 27px;
+    padding-bottom: 23px;
+    padding-left: 5px;
+
+    font-weight: 700;
+    font-size: 60px;
+    color: $dark_blue;
+
+    border: none;
+    opacity: 0.3;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &:nth-child(5n) {
+      border-right-color: #cbced9;
+    }
+
+    &:nth-child(-n+25):nth-child(n+21) {
+      border-bottom-color: #cbced9;
+    }
+  }
+
+  &--selected,
+  &:active {
+    @media (max-width: $mobile-width-only) {
+      color: $basic_white;
+
+      background-color: $basic_blue;
+    }
+
+    @media (min-width: $tablet-width) {
+      opacity: 1;
+    }
+  }
+
+  .alphabet-sort--form & {
+    padding: 10px 15px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      padding: 24px 18px;
+
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      color: $basic_blue;
+
+      border: 1px solid #cbced9;
+      border-color: #cbced9 transparent transparent #cbced9;
+      opacity: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 24px 22px;
+
+      border: 1px solid #cbced9;
+      border-radius: 4px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      &:nth-child(5n) {
+        border-right-color: #cbced9;
+      }
+
+      &:nth-child(-n+25):nth-child(n+21) {
+        border-bottom-color: #cbced9;
+      }
+    }
+
+    &--selected,
+    &:active {
+      color: $basic_blue;
+
+      background-color: $basic_blue_light;
+
+      @media (min-width: $tablet-width) {
+        color: $basic_white;
+
+        background-color: $basic_blue;
+      }
+    }
+
+    &:hover {
+      border: 1px solid transparent;
+      outline: 1px solid #959bb2;
+      outline-offset: -1px;
+
+      @media (min-width: $desktop-width) {
+        border: 1px solid #959bb2;
+        outline: none;
+      }
+    }
+  }
+}
+
+.alphabet-sort__countries-list {
+  @include reset-list;
+
+  padding-top: 18px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    // display: flex;                    // for the --form
+    // justify-content: space-between;
+    padding-top: 0;
+    margin-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-rows: min-content 1fr 400px 1fr min-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0;
+    width: 100%;
+    column-gap: 60px;
+    row-gap: 50px;
+    box-sizing: border-box;
+    padding-left: 35px;
+    padding-right: 83px;
+  }
+
+  .alphabet-sort--form & {
+    box-sizing: border-box;
+    padding: 20px;
+    padding-left: 9%;
+    padding-right: 9%;
+
+    border: 1px solid #cbced9;
+    border-top-color: transparent;
+
+    @media (max-width: $mobile-width-only) {
+      width: 100%;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin-right: 0;
+
+      font-size: 20px;
+
+      border: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: auto;
+    }
+  }
+}
+
+.alphabet-sort__countries-sublist {
+  @include reset-list;
+
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+
+  &--1 {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 60px;
+      color: $dark_blue;
+    }
+
+    &--1::before {
+      content: "А";
+    }
+
+    &--2::before {
+      content: "Б";
+    }
+
+    &--3::before {
+      content: "В";
+    }
+
+    &--4::before {
+      content: "Г";
+    }
+
+    &--5::before {
+      content: "Д";
+    }
+
+    &--6::before {
+      content: "Е";
+    }
+
+    &--7::before {
+      content: "З";
+    }
+
+    &--8::before {
+      content: "И";
+    }
+
+    &--9::before {
+      content: "К";
+    }
+
+    &--10::before {
+      content: "Л";
+    }
+
+    &--11::before {
+      content: "М";
+    }
+
+    &--12::before {
+      content: "Н";
+    }
+
+    &--13::before {
+      content: "О";
+    }
+
+    &--14::before {
+      content: "П";
+    }
+
+    &--15::before {
+      content: "Р";
+    }
+
+    &--16::before {
+      content: "С";
+    }
+
+    &--17::before {
+      content: "Т";
+    }
+
+    &--18::before {
+      content: "У";
+    }
+
+    &--19::before {
+      content: "Ф";
+    }
+
+    &--20::before {
+      content: "Х";
+    }
+
+    &--21::before {
+      content: "Ч";
+    }
+
+    &--22::before {
+      content: "Ш";
+    }
+
+    &--23::before {
+      content: "Э";
+    }
+
+    &--24::before {
+      content: "Ю";
+    }
+
+    &--25::before {
+      content: "Я";
+    }
+  }
+
+  .alphabet-sort--form &::before {
+    display: none;
+  }
+}
+
+.alphabet-sort__countries-subitem {
+  @media (min-width: $desktop-width) {
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
+
+  .alphabet-sort--form & {
+    margin-bottom: 5px;
+    margin-top: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.alphabet-sort__countries-link {
+  color: $special_grey;
+
+  &:hover,
+  &:focus {
+    color: $basic_blue;
+  }
+
+  &:active {
+    color: $basic_blue;
+    opacity: 0.3;
+    outline: none;
+  }
+}

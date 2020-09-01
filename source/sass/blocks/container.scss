@@ -16,4 +16,21 @@
     padding-left: 60px;
     padding-right: 60px;
   }
+
+  &--form {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      width: 768px;
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
+
+  // .page-main--catalog .page-main__wrapper > & {
+  //   @media (min-width: $desktop-width) {
+  //     width: auto;
+  //     min-width: auto;
+  //     padding: 0;
+  //     margin: 0;
+  //   }
+  // }
 }

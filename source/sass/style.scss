@@ -49,8 +49,22 @@
 @import "blocks/map.scss";
 @import "blocks/copyright.scss";
 
+// form page components
+@import "blocks/user.scss";
+@import "blocks/plans.scss";
+@import "blocks/new-plan.scss";
+@import "blocks/plan-step.scss";
+@import "blocks/markers.scss";
+@import "blocks/calendar.scss";
+@import "blocks/form-button.scss";
+@import "blocks/transport-checkbox.scss";
+
 // catalog page components
 
+@import "blocks/country-filter.scss";
+@import "blocks/traveler-filter.scss";
+@import "blocks/countries-dropdown.scss";
+@import "blocks/alphabet-sort.scss";
 @import "blocks/catalog.scss";
 @import "blocks/traveler-card.scss";
 @import "blocks/countries.scss";

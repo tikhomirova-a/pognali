@@ -1,0 +1,1496 @@
+.plan-step {
+  padding: 25px;
+  padding-bottom: 12px;
+
+  background-color: $basic_white;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-right: 40px;
+    padding-bottom: 55px;
+    padding-left: 45px;
+
+    border-radius: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 97px;
+    padding-right: 160px;
+    padding-left: 160px;
+    padding-bottom: 105px;
+    border-radius: 60px;
+  }
+
+  &--date {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 23px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-right: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      padding-right: 150px;
+    }
+  }
+}
+
+.plan-step__header {
+  order: -1;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e1e3e9;
+  }
+
+  .plan-step--activity & {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      margin-bottom: 35px;
+
+      border-bottom: 1px solid #e1e3e9;
+    }
+  }
+}
+
+.plan-step__heading {
+  @include reset-text;
+
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+
+    font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    & br {
+      display: none;
+    }
+  }
+}
+
+.plan-step__description {
+  @include reset-text;
+
+  margin-bottom: 20px;
+
+  color: $special_grey;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 25px;
+    margin-bottom: 35px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 2/-1;
+  }
+
+  .plan-step--destination & br {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  .plan-step--destination & {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      margin-bottom: 33px;
+    }
+  }
+
+  .plan-step--date & {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.plan-step__markers {
+  @include reset-list;
+
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    margin-right: 45px;
+    margin-top: 10px;
+
+    .plan-step--date & {
+      margin-right: 55px;
+    }
+  }
+}
+
+.plan-step__travelers {
+  @include reset-fieldset;
+
+  order: -1;
+
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+
+    padding-top: 25px;
+    margin: 0;
+
+    border-top: 1px solid #e1e3e9;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    display: inline-block;
+    width: 475px;
+    padding-top: 55px;
+
+    border: none;
+  }
+}
+
+.plan-step__label-wrapper {
+  @include reset-text;
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: normal;
+  }
+}
+
+.plan-step__label-hint {
+  opacity: 0.3;
+
+  .plan-step__travelers & {
+    letter-spacing: 0.07em;
+
+    @media (min-width: $tablet-width) {
+      letter-spacing: 0.08em;
+    }
+
+    @media (min-width: $desktop-width) {
+      letter-spacing: normal;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+.plan-step__input-wrapper {
+  @include reset-text;
+
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 30px;
+    left: 220px;
+
+    width: 180px;
+    box-sizing: border-box;
+
+    &--duration {
+      top: 0;
+    }
+  }
+}
+
+.plan-step__input {
+  // display: block;
+  width: fill-available;
+  padding-top: 14px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  box-sizing: border-box;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14.86px;
+  line-height: 14px;
+  text-align: center;
+  color: $basic_blue;
+
+  @include form-input-border;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 22px;
+    padding-right: 90px;
+    padding-bottom: 24px;
+    padding-left: 90px;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $basic_dark_blue;
+    outline: none;
+  }
+}
+
+.plan-step__button {
+  @include reset-button;
+
+  position: absolute;
+  top: 0;
+
+  width: 43px;
+  height: 43px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 70px;
+  }
+
+  & svg:first-child {
+    display: none;
+
+    @media (max-width: $mobile-width-only) {
+      display: inline;
+    }
+  }
+
+  & svg:last-child {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+  }
+
+  &--minus svg {
+    width: 14px;
+    height: 2px;
+    fill: #cccccc;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+    }
+  }
+
+  &--plus svg {
+    width: 14px;
+    height: 14px;
+    fill: #cccccc;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--plus {
+    right: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #999999;
+  }
+
+  &:active svg {
+    fill: #e5e5e5;
+  }
+
+  .plan-step__input:hover ~ & svg {
+    fill: #959bb2;
+  }
+
+  .plan-step__input:focus ~ & svg,
+  .plan-step__input:active ~ & svg {
+    fill: $basic_dark_blue;
+  }
+}
+
+.plan-step__duration {
+  @include reset-fieldset;
+
+  order: -1;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+
+    padding-top: 25px;
+    margin-bottom: 55px;
+
+    border-top: 1px solid #e1e3e9;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    display: inline-block;
+    width: 465px;
+    padding-top: 27px;
+    margin-bottom: 35px;
+
+    border: none;
+  }
+}
+
+.plan-step__checkbox-wrapper {
+  @include reset-text;
+  padding-top: 24px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+
+    padding-top: 30px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    margin-left: 280px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.plan-step__checkbox-label {
+  position: relative;
+
+  padding-left: 40px;
+
+  font-size: 15px;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 55px;
+
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.plan-step__checkbox-icon {
+  position: absolute;
+  top: -5px;
+  left: 0;
+
+  width: 26px;
+  height: 26px;
+  box-sizing: border-box;
+
+  background-color: $basic_white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px 9px;
+
+  @include form-input-border;
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+
+    background-size: 11px 12px;
+  }
+
+  .plan-step__checkbox-input:checked + & {
+    background-image: url("../img/tick.svg");
+  }
+
+  .plan-step__checkbox-label:hover & {
+    border-color: #959bb2;
+  }
+
+  .plan-step__checkbox-label:active &,
+  .plan-step__checkbox-input:active + & {
+    background-color: #e2e5f1;
+  }
+
+  .plan-step__checkbox-input:checked:active + & {
+    border: none;
+    background-color: #e2e5f1;
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve' fill='%23161c35' fill-opacity='0.3'%3E%3Cpolygon points='12,0 3.8,8 0,4.3 0,8.3 3.8,12 12,4 '/%3E%3C/svg%3E");
+  }
+}
+
+.plan-step__calendar {
+  @include reset-fieldset;
+}
+
+.plan-step__month-wrapper {
+  @include reset-text;
+
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 21px;
+    margin-bottom: 16px;
+  }
+}
+
+.plan-step__month {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 150px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  color: $basic_blue;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    max-width: 370px;
+    font-size: 36px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.plan-step__arrow {
+  @include reset-button;
+
+  align-self: stretch;
+  width: 35px;
+
+  background-color: transparent;
+  background-size: 10px 19px;
+  background-repeat: no-repeat;
+
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    background-size: 19px 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 16px 28px;
+  }
+
+  &--previous {
+    background-image: url("../img/month-arrow-left.svg");
+    background-position: left;
+
+    @media (min-width: $tablet-width) {
+      background-position: right;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: left;
+    }
+  }
+
+  &--next {
+    background-image: url("../img/month-arrow-right.svg");
+    background-position: right;
+
+    @media (min-width: $tablet-width) {
+      background-position: left;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: center;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.plan-step__calendar-table {
+  width: 100%;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 10px);
+    margin-bottom: 57px;
+  }
+}
+
+.plan-step__link {
+  @media (min-width: $tablet-width) {
+    width: 285px;
+  }
+
+  &:nth-of-type(2) {
+    padding: 0;
+    margin-top: 11px;
+
+    @media (min-width: $tablet-width) {
+      width: 178px;
+      box-sizing: border-box;
+      padding-left: 29px;
+    }
+  }
+}
+
+// plan-step--destination
+
+.plan-step__destinations {
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    padding-top: 40px;
+
+    border-top: 1px solid #e1e3e9;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 141px;
+
+      width: 1px;
+      height: calc(100% + 120px);
+      content: "";
+
+      background-image: linear-gradient(#e1e3e9, 90%, $basic_white);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 62px;
+
+    &::before {
+      right: 225px;
+
+      height: calc(100% + 230px);
+
+      background-color: #e1e3e9;
+      background-image: none;
+    }
+  }
+}
+
+.plan-step__destination {
+  position: relative;
+
+  margin-bottom: 16px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    &:nth-child(2),
+    &:last-child {
+      margin-bottom: 11px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+
+  &:not(&--select)::before {
+    position: absolute;
+    top: 0;
+    right: 1px;
+
+    content: "";
+    width: 22%;
+    height: 40px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px 24px;
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+
+    @media (min-width: 450px) {
+      width: calc(23% - 2px);
+    }
+
+    @media (min-width: $tablet-width) {
+      right: 45px;
+
+      width: 70px;
+      height: 70px;
+
+      background-size: 70px 47px;
+      border: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 115px;
+    }
+  }
+
+  &--bosnia::before {
+    background-image: url("../img/flag-bosnia.svg");
+  }
+
+  &--czech::before {
+    background-image: url("../img/flag-czech.svg");
+  }
+
+  &::after {
+    position: absolute;
+    top: calc(50% - 7px);
+    right: 22%;
+    z-index: 1;
+
+    width: 8px;
+    height: 8px;
+    content: "";
+    box-sizing: border-box;
+
+    background-color: $basic_blue;
+    border-radius: 50%;
+
+    @media (min-width: 600px) {
+      right: calc(22% + 2px);
+    }
+
+    @media (min-width: $tablet-width) {
+      right: 135px;
+
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 219px;
+    }
+  }
+
+  &--select::after {
+    top: calc(50% - 4px);
+
+    background-color: $basic_white;
+    border: 1px solid #cbced9;
+  }
+
+  &--opened::after {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  &--select {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.plan-step__destination-field {
+  position: relative;
+
+  display: inline-block;
+  // width: 165px;
+  width: 77%;
+  box-sizing: border-box;
+  padding: 11px 10px;
+
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  @include form-input-border;
+
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    padding: 25px 25px 23px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:active,
+  &:focus-within {
+    color: $basic_white;
+
+    background-color: $basic_blue;
+  }
+
+  &--bosnia::before {
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      top: 0;
+      right: -2px;
+
+      content: "";
+      width: 52px;
+      height: 100%;
+
+      background-image: url("../img/fade-mobile.png");
+    }
+  }
+
+  &--select {
+    display: inline-flex;
+    align-items: center;
+
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    text-align: left;
+    color: $basic_blue;
+
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 17 9' xml:space='preserve' fill-opacity='0.3'%3E%3Cpath d='M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7 s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 14px 24px;
+    background-position: 95% center;
+    border: none;
+
+    cursor: pointer;
+
+    @include form-input-border;
+
+    @media (max-width: $mobile-width-only) {
+      width: fill-available;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 17px 12px;
+      background-position: 93% center;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: calc(97% - 4px) center;
+    }
+
+    .plan-step__destination--opened & {
+      background-image: none;
+      border-color: transparent;
+    }
+
+    & svg {
+      display: none;
+      margin-left: auto;
+
+      @media (min-width: $tablet-width) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .plan-step__destination--opened & svg {
+      display: inline;
+      fill-opacity: 0.3;
+    }
+
+    .plan-step__destination--opened &:hover svg,
+    .plan-step__destination--opened &:focus svg {
+      fill-opacity: 1;
+    }
+
+    .plan-step__destination--opened &:active svg {
+      fill-opacity: 0.1;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: #959bb2;
+      outline: none;
+    }
+
+    .plan-step__destination--opened &:hover,
+    .plan-step__destination--opened &:focus {
+      border-color: transparent;
+    }
+  }
+
+  .plan-step__destination--opened & {
+    color: $basic_white;
+
+    background-color: $basic_blue;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.plan-step__button-dropdown {
+  @include reset-button;
+
+  position: relative;
+  left: -45px;
+  margin-right: -45px;
+
+  width: 40px;
+  height: 42px;
+
+  background-color: transparent;
+  background-image: url("../../img/dropdown-form.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 24px;
+  background-position: center;
+  opacity: 0.3;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    left: -75px;
+    margin-right: -75px;
+
+    width: 70px;
+    height: 70px;
+
+    background-size: 17px 12px;
+  }
+
+  // .plan-step__destination-field--select + & {
+  //   @media (max-width: $mobile-width-only) {
+  //     position: absolute;
+  //     top: 0;
+  //     right: 0;
+  //     left: auto;
+
+  //     width: 40px;
+  //     margin: 0;
+  //   }
+  // }
+
+  // .plan-step__destination--opened & {
+  //   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve' fill='%23ffffff'%3E%3Cpath class='st0' d='M6.9,6l4.9-4.9c0.2-0.2,0.2-0.6,0-0.9s-0.6-0.2-0.9,0L6,5.1L1.1,0.2c-0.2-0.2-0.6-0.2-0.9,0s-0.2,0.6,0,0.9 L5.1,6l-4.9,4.9c-0.2,0.2-0.2,0.6,0,0.9v0c0.2,0.2,0.6,0.2,0.9,0L6,6.9l4.9,4.9c0.2,0.2,0.6,0.2,0.9,0v0c0.2-0.2,0.2-0.6,0-0.9 L6.9,6z'/%3E%3C/svg%3E");
+  //   background-size: 9px 9px;
+  //   opacity: 0.3;
+
+  //   @media (min-width: $tablet-width) {
+  //     background-size: 22px 21px;
+  //   }
+
+  //   @media (min-width: $desktop-width) {
+  //     background-size: 22px 24px;
+  //   }
+
+  //   &:hover,
+  //   &:focus {
+  //     opacity: 1;
+  //     outline: none;
+  //   }
+
+  //   &:active {
+  //     opacity: 0.1;
+  //     outline: none;
+  //   }
+  // }
+}
+
+.plan-step__button-delete {
+  @include reset-button;
+
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  width: 21px;
+  height: 21px;
+
+  background-color: $basic_blue_light;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: calc(50% - 13px);
+    right: 0;
+
+    width: 22px;
+    height: 24px;
+
+    background-color: transparent;
+  }
+
+  & svg {
+    fill: #afb0b5;
+
+    @media (min-width: $tablet-width) {
+      width: 17px;
+      height: 18px;
+
+      fill: $basic_black;
+      fill-opacity: 0.1;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $basic_black;
+    fill-opacity: 0.3;
+  }
+
+  &:active svg {
+    fill: $basic_black;
+    fill-opacity: 0.05;
+  }
+
+  .plan-step__destination--opened & {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      bottom: -48px;
+      right: 18vw;
+
+      content: "";
+      width: 5px;
+      height: 10px;
+
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 5 10' style='enable-background:new 0 0 5 10;' xml:space='preserve' fill='%23cbced9'%3E%3Cpolygon class='st0' points='3,8.1 3,0 2,0 2,8.1 0,6.1 0,7.5 2.5,10 5,7.5 5,6.1 '/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    @media (min-width: 430px) {
+      right: 19vw;
+    }
+
+    @media (min-width: 550px) {
+      right: 20vw;
+    }
+  }
+}
+
+.plan-step__button-add {
+  @include reset-button;
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+  padding-top: 12px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: $basic_blue;
+
+  background-color: $basic_blue_light;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    padding: 25px 25px 23px;
+    margin-bottom: 50px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    margin-bottom: 55px;
+  }
+
+  &::after {
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 22%;
+
+    width: 8px;
+    height: 8px;
+    content: "";
+    box-sizing: border-box;
+
+    background-color: $basic_blue_light;
+    border-radius: 50%;
+    border: 1px solid #cbced9;
+
+    @media (min-width: $tablet-width) {
+      right: -29px;
+
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -51px;
+    }
+  }
+
+  & svg {
+    @media (min-width: $tablet-width) {
+      width: 21px;
+      height: 21px;
+
+      fill: $basic_black;
+      fill-opacity: 0.3;
+    }
+
+    @media (min-width: $desktop-width) {
+      fill: #bebfc5;
+      fill-opacity: 1;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #dfe3f0;
+    outline: none;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $basic_black;
+    fill-opacity: 0.3;
+  }
+
+  &:active svg {
+    fill: $basic_black;
+    fill-opacity: 0.1;
+  }
+}
+
+.plan-step__dropdown {
+  position: absolute;
+  z-index: 1;
+  top: 41px;
+  left: 0;
+
+  display: none;
+  width: 100%;
+
+  &--show {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 70px;
+
+    width: calc(100% + 40px);
+    padding: 35px 25px;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    padding: 30px 55px 35px 25px;
+  }
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+
+    background-color: #d6d9e6;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 368px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 240px;
+      left: auto;
+    }
+  }
+}
+
+.plan-step__link-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .plan-step--activity & {
+    padding-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 50px;
+    }
+  }
+}
+
+// plan-step--activity
+
+.plan-step__activity-wrapper {
+  @include reset-fieldset;
+
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    max-width: 920px;
+  }
+
+  &:first-of-type {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 80px;
+    }
+  }
+
+  &:first-of-type::before {
+    position: absolute;
+    top: 8px;
+    left: -15px;
+
+    content: "";
+    width: 2px;
+    height: calc(100% + 22px);
+
+    background-color: $basic_blue;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+      right: 6px;
+      left: auto;
+
+      height: calc(100% + 50px);
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 146px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: -15px;
+
+    content: "";
+    width: 11px;
+    height: 2px;
+
+    background-color: $basic_blue;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.plan-step__activity-country {
+  position: relative;
+
+  width: fill-available;
+  padding-left: 10px;
+  padding-right: 30px;
+  margin-bottom: 18px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 38px;
+    padding-left: 0;
+    padding-right: 100px;
+
+    font-weight: 700;
+    font-size: 30px;
+
+    word-break: break-word;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 150px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 6px;
+    left: -5px;
+
+    content: "";
+    width: 6px;
+    height: 6px;
+
+    background-color: $basic_blue;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+      right: 0;
+      left: auto;
+
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 140px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    content: "";
+    width: 35px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    @media (min-width: $tablet-width) {
+      right: 35px;
+      top: -10px;
+
+      width: 70px;
+      height: 47px;
+    }
+  }
+
+  &--bosnia::after {
+    background-image: url("../img/flag-bosnia.svg");
+  }
+
+  &--czech::after {
+    background-image: url("../img/flag-czech.svg");
+  }
+}
+
+.plan-step__country-name {
+  .plan-step__activity-country--bosnia &::before {
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      content: "";
+      width: 72px;
+      height: 100%;
+      background-image: url("../img/fade-mobile.png");
+    }
+  }
+}
+
+.plan-step__activity-text {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  resize: none;
+
+  @include form-input-border;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 35px);
+    height: 140px;
+    padding-top: 18px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $special_grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 190px);
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-left: 25px;
+  }
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-within {
+    border-color: $basic_dark_blue;
+    outline: none;
+  }
+
+  &:invalid {
+    border-color: $special_red;
+  }
+}
+
+//
+// .plan-step__destination-field--select {
+//   @include reset-button;
+
+//   background-color: transparent;
+
+//   display: inline-block;
+//   width: min-content;
+//   min-width: 220px;
+//   box-sizing: border-box;
+//   padding: 11px 10px;
+//   text-overflow: clip;
+//   white-space: nowrap;
+//   overflow: hidden;
+
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 18px;
+//   text-transform: uppercase;
+//   letter-spacing: 0.1em;
+//   text-align: left;
+//   color: $basic_blue;
+
+//   border: 1px solid #cbced9;
+//   border-radius: 4px;
+//   background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 17 9' fill-opacity='0.3' xml:space='preserve'%3E%3Cpath d='M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7 s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z'/%3E%3C/svg%3E");
+//   background-repeat: no-repeat;
+//   background-size: 14px 24px;
+//   background-position: 95% center;
+
+//   &:hover,
+//   &:focus {
+//     border-color: #959bb2;
+//     outline: none;
+//   }
+// }
