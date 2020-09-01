@@ -1,20 +1,25 @@
 .pagination {
-  margin-bottom: 45px;
-
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px;
+    padding-left: 30px;
 
     background-color: $basic_white;
 
     @include all-border;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 35px;
+  }
 }
 
 .pagination__pages {
   @include reset-list;
+
+  display: flex;
 
   @media (max-width: $mobile-width-only) {
     display: none;
@@ -51,7 +56,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    min-width: 63px;
+    min-width: 70px;
   }
 }
 
@@ -97,12 +102,14 @@
 
   &::before {
     display: inline-block;
-    border: 13px solid $basic_blue;
-    border-top-width: 10px;
+    border: 11px solid $basic_blue;
+    border-top-width: 9px;
     border-top-color: transparent;
-    border-bottom-width: 10px;
+    border-bottom-width: 9px;
     border-bottom-color: transparent;
     content: "";
+
+    vertical-align: middle;
   }
 
   .pagination__item:first-child &::before {

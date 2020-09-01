@@ -17,20 +17,17 @@
   @media (min-width: $desktop-width) {
     padding-top: 115px;
     padding-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   &--opened {
     border-radius: 0;
 
     @media (min-width: $desktop-width) {
-      background-color: $basic_blue_light;
-    }
-  }
+      margin-bottom: 0;
+      padding-bottom: 0;
 
-  &--closed {
-    @media (min-width: $desktop-width) {
-      padding-top: 130px;
-      padding-bottom: 60px;
+      background-color: $basic_blue_light;
     }
   }
 }
@@ -188,6 +185,7 @@
     @media (max-width: 1439px) {
       position: absolute;
       left: 50%;
+      z-index: 1;
 
       margin-left: calc(-1 * 50vw);
       width: 100vw;

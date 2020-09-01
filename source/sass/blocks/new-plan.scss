@@ -9,10 +9,14 @@
 
   @media (min-width: $tablet-width) {
     @include shift(-39px);
+
+    padding-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
     @include shift(-55px);
+
+    padding-bottom: 20px;
 
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;

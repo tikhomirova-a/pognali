@@ -1,14 +1,14 @@
 .catalog__list {
   @include reset-list;
 
-  margin-top: 30px;
+  // margin-top: 30px;
 
   @media (min-width: $tablet-width) {
     margin-top: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 50px;
+    margin-top: 0;
   }
 }
 
@@ -46,6 +46,18 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 65px;
+    margin-bottom: 75px;
+    max-width: 950px;
+    box-sizing: border-box;
+  }
+}
+
+.catalog__pagination {
+  margin-bottom: 70px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 950px;
+    box-sizing: border-box;
     margin-bottom: 70px;
   }
 }

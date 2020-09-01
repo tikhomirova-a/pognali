@@ -56,6 +56,14 @@
 
     border-bottom: 1px solid #e1e3e9;
   }
+
+  .plan-step--activity & {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      margin-bottom: 35px;
+
+      border-bottom: 1px solid #e1e3e9;
+    }
+  }
 }
 
 .plan-step__heading {
@@ -106,6 +114,18 @@
   .plan-step--destination & br {
     @media (max-width: $mobile-width-only) {
       display: none;
+    }
+  }
+
+  .plan-step--destination & {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      margin-bottom: 33px;
+    }
+  }
+
+  .plan-step--date & {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      margin-bottom: 40px;
     }
   }
 }
@@ -609,10 +629,14 @@
     min-width: 220px;
   }
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     &:nth-child(2),
     &:last-child {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
   }
 

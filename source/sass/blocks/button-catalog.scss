@@ -34,6 +34,10 @@
 
   &--filter {
     background-color: $basic_white;
+
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 10px;
+    }
   }
 
   &--filter:hover,
