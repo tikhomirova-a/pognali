@@ -7,7 +7,6 @@
 
 .country__image-wrapper {
   min-height: 110px;
-  // max-height: 110px;
 
   overflow: hidden;
 
@@ -172,6 +171,8 @@
 }
 
 .country__counter {
+  @include reset-text;
+
   position: relative;
   padding-left: 18px;
 
@@ -180,8 +181,6 @@
   color: $basic_dark_blue;
 
   opacity: 0.3;
-
-  @include reset-text;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
