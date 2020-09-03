@@ -137,9 +137,9 @@ const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("source/img"))
- }
+}
 
- exports.webp = createWebp;
+exports.webp = createWebp;
 
 // Sprite
 
@@ -148,9 +148,9 @@ const sprite = () => {
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("source/img"))
- }
+}
 
- exports.sprite = sprite;
+exports.sprite = sprite;
 
 // Build
 
