@@ -12,6 +12,8 @@
   @include top-left;
   @include top-right;
 
+  display: block;
+
   @media (min-width: $tablet-width) {
     width: 285px;
     height: 285px;
@@ -19,6 +21,8 @@
 }
 
 .traveler__info {
+  position: relative;
+
   padding: 25px 30px 20px;
 
   text-align: center;
@@ -30,6 +34,14 @@
 
 .traveler__countries {
   @include reset-list;
+
+  position: absolute;
+  top: -13px;
+  left: 50%;
+
+  display: flex;
+
+  transform: translateX(-50%);
 }
 
 .traveler__name-wrapper {
@@ -69,7 +81,6 @@
     margin-left: -20px;
   }
 }
-
 
 .traveler__tags {
   @include reset-text;

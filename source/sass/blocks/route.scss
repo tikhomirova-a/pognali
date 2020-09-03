@@ -19,7 +19,9 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 100px;
+    padding-right: 35px;
     padding-bottom: 85px;
+    padding-left: 35px;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,12 +30,17 @@
     align-items: baseline;
     column-gap: 150px;
     padding-top: 115px;
+    padding-right: 0;
     padding-bottom: 55px;
+    padding-left: 0;
   }
 }
 
 .route__address {
+  position: relative;
+
   margin-bottom: 30px;
+  padding-left: 60px;
 
   font-style: normal;
   font-weight: 700;
@@ -47,9 +54,48 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 45px;
+    padding-left: 90px;
 
     font-size: 28px;
     line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 120px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 45px;
+    height: 45px;
+    content: "";
+
+    background-image: url("../img/contacts-location.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 21px;
+    background-position: center;
+    background-color: $contrast_blue;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 50%;
+      margin-top: -34px;
+      width: 68px;
+      height: 68px;
+
+      background-size: 24px 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -45px;
+      width: 90px;
+      height: 90px;
+
+      background-size: 32px 45px;
+    }
   }
 }
 

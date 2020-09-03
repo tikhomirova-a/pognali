@@ -26,6 +26,7 @@
   &:hover,
   &:focus {
     background-color: $special_yellow_dark;
+    outline: none;
   }
 
   &:active {

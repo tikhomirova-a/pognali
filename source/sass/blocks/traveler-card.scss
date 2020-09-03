@@ -369,13 +369,65 @@
   border: none;
   border-radius: 50%;
 
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
   &--active {
     background-color: #f9eaea;
   }
 
-  @media (min-width: $tablet-width) {
-    width: 50px;
-    height: 50px;
+  &--active:hover,
+  &--active:focus,
+  &--active:active {
+    background-color: $basic_red_light;
+  }
+
+  & svg {
+    vertical-align: middle;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 17px;
+    }
+  }
+
+  & .traveler-card__like-on {
+    display: none;
+  }
+
+  &--active .traveler-card__like-on {
+    display: inline;
+    fill: $basic_red;
+  }
+
+  &--active .traveler-card__like-off {
+    display: none;
+  }
+
+  & .traveler-card__like-off {
+    fill: $dark_blue;
+    fill-opacity: 0.3;
+  }
+
+  &:hover .traveler-card__like-off,
+  &:focus .traveler-card__like-off {
+    fill-opacity: 0.5;
+  }
+
+  &:active .traveler-card__like-off {
+    fill-opacity: 0.1;
+  }
+
+  &:active .traveler-card__like-on {
+    fill-opacity: 0.3;
   }
 }
 

@@ -17,6 +17,8 @@
 
     font-size: 28px;
     line-height: 28px;
+
+    background-color: $basic_blue_light;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,7 +35,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 135px;
-    padding-bottom: 65px;
+    padding-bottom: 80px;
     padding-left: 0;
   }
 
@@ -132,7 +134,7 @@
 
   @media (min-width: $tablet-width) {
     width: 565px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     margin-left: 90px;
   }
 
@@ -153,8 +155,8 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 
   &:first-child {
@@ -215,6 +217,7 @@
 }
 
 .profile__link {
+  position: relative;
   font-weight: 700;
   line-height: 1;
   color: #132576;
@@ -223,5 +226,35 @@
     padding-left: 90px;
 
     font-size: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(19, 37, 118, 0.7);
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(19, 37, 118, 0.3);
+  }
+}
+
+.profile__icon-wrapper {
+  position: absolute;
+  top: 50%;
+  margin-top: -34px;
+  left: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+
+  border-radius: 50%;
+  background-color: #e2e5f2;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
   }
 }

@@ -73,8 +73,6 @@
 }
 
 .page-header__home-link {
-  padding-right: 60px;
-  min-width: 175px;
   box-sizing: border-box;
 
   font-weight: 700;
@@ -87,5 +85,19 @@
 
   @media (max-width: $mobile-width-only) {
     display: none;
+  }
+
+  & svg {
+    margin-left: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

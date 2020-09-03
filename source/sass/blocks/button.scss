@@ -1,4 +1,6 @@
 .button {
+  align-items: center;
+  justify-content: space-between;
   padding: 22px;
 
   font-weight: 700;
@@ -24,5 +26,26 @@
   @media (min-width: $desktop-width) {
     padding-left: 35px;
     padding-right: 35px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $special_yellow_dark;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
+  &--contrast:hover,
+  &--contrast:focus {
+    color: $basic_white;
+
+    background-color: $basic_dark_blue;
+  }
+
+  &--contrast:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

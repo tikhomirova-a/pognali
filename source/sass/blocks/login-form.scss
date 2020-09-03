@@ -47,7 +47,11 @@
   padding: 24px 22px;
   box-sizing: border-box;
 
+  color: $basic_blue;
+
   background-color: $basic_yellow;
+
+  cursor: pointer;
 
   @include top-right;
   @include bottom-right;
@@ -63,6 +67,16 @@
     padding-left: 35px;
     padding-right: 35px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $special_yellow_dark;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .login-form__button-text {
@@ -71,7 +85,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: $basic_blue;
+  // color: $basic_blue;
 
   @media (min-width: $desktop-width) {
     display: inline;

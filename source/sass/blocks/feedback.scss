@@ -82,6 +82,16 @@
   color: $basic_yellow;
 
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $special_orange;
+  }
+
+  &:active {
+    color: $special_orange;
+    opacity: 0.3;
+  }
 }
 
 .feedback__form {

@@ -76,7 +76,7 @@
   @media (min-width: $tablet-width) {
     min-width: 430px;
     padding: 30px;
-    padding-bottom: 26px;
+    padding-bottom: 15px;
     box-sizing: border-box;
 
     border-top-right-radius: 0;
@@ -87,13 +87,53 @@
     min-width: 375px;
     padding-top: 24px;
   }
+
+  &::before {
+    position: absolute;
+    top: -12px;
+    left: 25px;
+
+    content: "";
+    width: 35px;
+    height: 24px;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-width: $tablet-width) {
+      top: 15px;
+      right: -35px;
+      left: auto;
+
+      width: 70px;
+      height: 47px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 23px;
+    }
+  }
+
+  &--thailand::before {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--france::before {
+    background-image: url("../img/flag-france.svg");
+  }
+
+  &--czech::before {
+    z-index: 1;
+
+    background-image: url("../img/flag-czech.svg");
+  }
 }
 
 .country__description {
   @include reset-list;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -132,6 +172,9 @@
 }
 
 .country__counter {
+  position: relative;
+  padding-left: 18px;
+
   font-weight: 500;
   line-height: 20px;
   color: $basic_dark_blue;
@@ -139,4 +182,30 @@
   opacity: 0.3;
 
   @include reset-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding-left: 30px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    content: "";
+    width: 11px;
+    height: 12px;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../img/user.svg");
+
+    opacity: 0.3;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 20px;
+    }
+  }
 }

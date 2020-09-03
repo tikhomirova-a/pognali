@@ -1,4 +1,4 @@
-.user-authorize {
+.authorize-link {
   padding: 10px 30px;
 
   font-weight: bold;
@@ -9,6 +9,10 @@
 
   background-color: $basic_yellow;
   border-radius: 25px;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -33,14 +37,14 @@
       }
     }
   }
-}
 
-.user-authorize__link {
-  color: $basic_dark_blue;
+  &:hover,
+  &:focus {
+    background-color: $special_yellow_dark;
+    outline: none;
+  }
 
-  background-color: $basic_yellow;
-
-  @media (max-width: $mobile-width-only) {
-    display: block;
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
   }
 }

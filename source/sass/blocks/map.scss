@@ -18,4 +18,8 @@
   width: 100%;
 
   border: none;
+
+  @media (min-width: $tablet-width) {
+    height: 580px;
+  }
 }

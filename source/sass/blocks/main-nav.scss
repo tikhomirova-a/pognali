@@ -120,7 +120,7 @@
 
     @media (max-width: $mobile-width-only) {
       padding-top: 28px;
-      padding-bottom: 30px;
+      // padding-bottom: 30px;
     }
 
     @media (min-width: $desktop-width) {
@@ -250,7 +250,8 @@
 .main-nav__container {
   display: none;
   padding-top: 45px;
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
+  padding-bottom: 25px;
   width: fill-available;
   min-width: 270px;
 
@@ -361,6 +362,10 @@
 }
 
 .main-nav__site-list {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 135px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     column-gap: 33px;
@@ -369,10 +374,6 @@
 }
 
 .main-nav__user-list {
-  @media (min-width: $tablet-width) {
-    margin-bottom: 145px;
-  }
-
   @media (min-width: $desktop-width) {
     display: none;
     margin-bottom: 0;
@@ -382,7 +383,7 @@
 .main-nav__contacts {
   @include reset-list;
 
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 
   @media (min-width: $desktop-width) {
     display: none;
