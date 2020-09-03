@@ -157,6 +157,10 @@
   .traveler-filter__fieldset--opened & svg {
     transform: rotate(180deg);
   }
+
+  & svg {
+    fill: $dark_blue;
+  }
 }
 
 .traveler-filter__input-wrapper {
@@ -287,6 +291,8 @@
 
   & svg {
     display: none;
+
+    fill: $basic_dark_blue;
 
     @media (min-width: $tablet-width) {
       width: 11px;

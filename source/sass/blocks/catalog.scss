@@ -27,6 +27,7 @@
 .catalog__link {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -49,6 +50,31 @@
     margin-bottom: 75px;
     max-width: 950px;
     box-sizing: border-box;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  & svg {
+    margin-right: 15px;
+
+    fill: $basic_blue;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 25px;
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill-opacity: 0.6;
+  }
+
+  &:active svg {
+    fill-opacity: 0.3;
   }
 }
 
