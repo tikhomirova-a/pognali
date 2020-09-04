@@ -281,16 +281,18 @@
           </div>
           <ul class="travelers__list">
             <li class="travelers__item traveler">
-              <picture>
-                <source type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
-                <img class="traveler__avatar" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@1x.jpg 285w, img/firsova-desktop@2x.jpg 570w"
-                sizes="(min-width: 768px) 285px, 270px" alt="Аватар Тани Фирсовой">
-              </picture>
+              <div class="traveler__avatar-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                  <img class="traveler__avatar" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@1x.jpg 285w, img/firsova-desktop@2x.jpg 570w"
+                  sizes="(min-width: 768px) 285px, 270px" alt="Аватар Тани Фирсовой">
+                </picture>
+              </div>
               <div class="traveler__info">
                 <ul class="traveler__countries countries countries--short">
-                  <li class="countries__item countries__item--sri-lanka"><span class="visually-hidden">Шри-Ланка</span></li>
-                  <li class="countries__item countries__item--thailand"><span class="visually-hidden">Тайланд</span></li>
-                  <li class="countries__item countries__item--seychelles"><span class="visually-hidden">Сейшелы</span></li>
+                  <li class="countries__item countries__item--sri-lanka"><span class="countries__tooltip">Шри-Ланка</span></li>
+                  <li class="countries__item countries__item--thailand"><span class="countries__tooltip">Тайланд</span></li>
+                  <li class="countries__item countries__item--seychelles"><span class="countries__tooltip">Сейшелы</span></li>
                 </ul>
                 <div class="traveler__name-wrapper">
                   <h3 class="traveler__name">Таня Фирсова</h3>
@@ -306,24 +308,28 @@
                     viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
                     <use xlink:href="img/sprite.svg#plane"></use>
                     </svg>
+                    <span class="transport__tooltip">Авиаперелет</span>
                   </li>
                   <li class="transport__item transport__item--auto"><span class="visually-hidden">На машине</span>
                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
                     <use xlink:href="img/sprite.svg#bus"></use>
                     </svg>
+                    <span class="transport__tooltip">Автотранспорт</span>
                   </li>
                   <li class="transport__item transport__item--bicycle"><span class="visually-hidden">На велосипеде</span>
                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
                     <use xlink:href="img/sprite.svg#bike"></use>
                     </svg>
+                    <span class="transport__tooltip">Велосипед</span>
                   </li>
                   <li class="transport__item transport__item--on-foot"><span class="visually-hidden">Пешком</span>
                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     x="0px" y="0px" viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;" xml:space="preserve">
                     <use xlink:href="img/sprite.svg#run"></use>
                     </svg>
+                    <span class="transport__tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
@@ -334,15 +340,17 @@
               </p>
             </li>
             <li class="travelers__item traveler">
-              <picture>
-                <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
-                <img class="traveler__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@1x.jpg 285w, img/demin-desktop@2x.jpg 570w"
-                sizes="(min-width: 768px) 285px, 270px" alt="Аватар Пети Демина">
-              </picture>
+              <div class="traveler__avatar-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                  <img class="traveler__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@1x.jpg 285w, img/demin-desktop@2x.jpg 570w"
+                  sizes="(min-width: 768px) 285px, 270px" alt="Аватар Пети Демина">
+                </picture>
+              </div>
               <div class="traveler__info">
                 <ul class="traveler__countries countries countries--short">
-                  <li class="countries__item countries__item--belgium"><span class="visually-hidden">Бельгия</span></li>
-                  <li class="countries__item countries__item--czechia"><span class="visually-hidden">Чехия</span></li>
+                  <li class="countries__item countries__item--belgium"><span class="countries__tooltip">Бельгия</span></li>
+                  <li class="countries__item countries__item--czechia"><span class="countries__tooltip">Чехия</span></li>
                 </ul>
                 <div class="traveler__name-wrapper">
                   <h3 class="traveler__name">Петя Демин</h3>
@@ -358,6 +366,7 @@
                     viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
                     <use xlink:href="img/sprite.svg#plane"></use>
                     </svg>
+                    <span class="transport__tooltip">Авиаперелет</span>
                   </li>
                   <li class="transport__item transport__item--auto transport__item--active"><span class="visually-hidden">На
                       машине</span>
@@ -365,12 +374,14 @@
                     y="0px" viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
                     <use xlink:href="img/sprite.svg#bus"></use>
                     </svg>
+                    <span class="transport__tooltip">Автотранспорт</span>
                   </li>
                   <li class="transport__item transport__item--bicycle"><span class="visually-hidden">На велосипеде</span>
                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
                     <use xlink:href="img/sprite.svg#bike"></use>
                     </svg>
+                    <span class="transport__tooltip">Велосипед</span>
                   </li>
                   <li class="transport__item transport__item--on-foot transport__item--active"><span
                       class="visually-hidden">Пешком</span>
@@ -378,6 +389,7 @@
                       x="0px" y="0px" viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;" xml:space="preserve">
                       <use xlink:href="img/sprite.svg#run"></use>
                     </svg>
+                    <span class="transport__tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
@@ -433,8 +445,8 @@
             <p class="feedback__text description-text">Зарегистрируйтесь,<br> это быстро и бесплатно!<br> Уже зарегистрированы? Тогда
               скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
             <form class="feedback__form login-form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="login-form-email">Введите Ваш электронный адрес</label>
               <input class="login-form__email" id="login-form-email" type="email" name="login-form-email" placeholder="E-mail">
+              <label class="login-form__label" for="login-form-email">Введите e-mail</label>
               <button class="login-form__submit" type="submit" aria-label="Зарегистрироваться">
                 <span class="login-form__button-text">Регистрация</span>
                 <svg width="13" height="14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"

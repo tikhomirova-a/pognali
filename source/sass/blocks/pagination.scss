@@ -62,10 +62,8 @@
 
 .pagination__item {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  padding: 15px;
-  padding-bottom: 10px;
+
   min-width: 135px;
   box-sizing: border-box;
 
@@ -100,8 +98,19 @@
 .pagination__link {
   position: relative;
 
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+    padding-top: 25px;
+  }
+
   &::before {
     display: inline-block;
+
     border: 11px solid $basic_blue;
     border-top-width: 9px;
     border-top-color: transparent;
@@ -118,5 +127,16 @@
 
   .pagination__item:last-child &::before {
     border-right-width: 0;
+  }
+
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
   }
 }

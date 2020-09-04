@@ -81,3 +81,44 @@
     background-image: url("../img/flag-germany.svg");
   }
 }
+
+.countries__tooltip {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 2;
+  margin-left: -60px;
+
+  visibility: hidden;
+  padding: 10px;
+  width: 100px;
+
+  text-align: center;
+  text-transform: none;
+  color: $basic_white;
+
+  background-color: #101d41;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .countries__item:hover & {
+    visibility: visible;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    z-index: 1;
+
+    content: "";
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #101d41 transparent;
+  }
+}

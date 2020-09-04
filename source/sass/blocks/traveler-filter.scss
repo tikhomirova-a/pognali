@@ -154,6 +154,16 @@
     line-height: 22px;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   .traveler-filter__fieldset--opened & svg {
     transform: rotate(180deg);
   }
@@ -374,7 +384,6 @@
 }
 
 .traveler-filter__level-input {
-  // max-width: calc((100vw - 117px) / 2);
   width: 100%;
   box-sizing: border-box;
   padding-top: 10px;
@@ -395,7 +404,6 @@
   background-color: $basic_white;
 
   @media (min-width: $tablet-width) {
-    // max-width: calc((100vw * 0.18 / 2));
     max-width: 75px;
     padding-top: 12px;
     padding-bottom: 10px;
@@ -517,6 +525,8 @@
   background-color: $basic_blue;
   border-radius: 50%;
 
+  cursor: pointer;
+
   &--min {
     left: 30%;
   }
@@ -525,12 +535,34 @@
     right: 0;
   }
 
+  &:hover,
+  &:focus {
+    bottom: -5px;
+
+    width: 13px;
+    height: 13px;
+
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+  }
+
   @media (min-width: $tablet-width) {
     width: 13px;
     height: 13px;
 
     &--min {
       left: 25%;
+    }
+
+    &:hover,
+    &:focus {
+      bottom: -7px;
+
+      width: 19px;
+      height: 19px;
     }
   }
 

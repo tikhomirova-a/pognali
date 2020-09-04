@@ -107,4 +107,14 @@
   @media (min-width: $desktop-width) {
     padding: 40px 40px 45px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $basic_blue_light;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }

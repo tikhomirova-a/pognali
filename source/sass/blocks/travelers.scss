@@ -196,6 +196,8 @@
 
   &:first-child {
     @media (max-width: $mobile-width-only) {
+      z-index: 1;
+
       margin-bottom: 10px;
     }
   }

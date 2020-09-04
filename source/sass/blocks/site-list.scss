@@ -17,16 +17,14 @@
 }
 
 .site-list__link {
+  position: relative;
+
+  display: inline-flex;
+  overflow: hidden;
+
   color: $dark_blue;
 
   @media (min-width: $desktop-width) {
-    position: relative;
-
-    display: inline-block;
-    height: 1em;
-    padding: 0 5px;
-
-    overflow: hidden;
     color: $basic_white;
 
     .main-nav--sticky & {
@@ -47,23 +45,21 @@
 }
 
 .site-list__link-text {
-  @media (min-width: $desktop-width) {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 
-    transition: transform 0.3s;
+  transition: transform 0.3s;
 
-    &::before {
-      position: absolute;
-      top: 100%;
+  &::before {
+    position: absolute;
+    top: 100%;
 
-      content: attr(data-hover);
+    content: attr(data-hover);
 
-      transform: translate3d(0, 0, 0);
-    }
+    transform: translate3d(0, 0, 0);
+  }
 
-    .site-list__link[href]:hover & {
-      transform: translateY(-100%);
-    }
+  .site-list__link[href]:hover & {
+    transform: translateY(-100%);
   }
 }
