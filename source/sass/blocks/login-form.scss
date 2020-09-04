@@ -22,7 +22,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
-    padding: 28px 36px;
+    padding: 20px 36px;
   }
 }
 
@@ -58,14 +58,18 @@
 
   @media (min-width: $tablet-width) {
     min-width: 80px;
-    padding: 32px 30px;
+    padding: 33px 30px;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: auto;
+    display: inline-flex;
+    align-items: center;
     justify-content: space-between;
+    min-width: auto;
+    padding-top: 29px;
     padding-left: 35px;
     padding-right: 35px;
+    padding-bottom: 28px;
   }
 
   &:hover,
@@ -89,5 +93,6 @@
 
   @media (min-width: $desktop-width) {
     display: inline;
+    padding-right: 107px;
   }
 }

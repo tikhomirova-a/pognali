@@ -29,20 +29,20 @@
 .profile__wrapper {
   position: relative;
 
-  padding-top: 90px;
+  padding-top: 100px;
   padding-bottom: 35px;
   padding-left: 25px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 135px;
-    padding-bottom: 80px;
+    padding-top: 130px;
+    padding-bottom: 85px;
     padding-left: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 175px;
+    padding-top: 170px;
     padding-right: 70px;
-    padding-bottom: 165px;
+    padding-bottom: 190px;
     padding-left: 70px;
   }
 
@@ -63,7 +63,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      top: 310px;
+      top: 304px;
       right: 185px;
 
       width: 445px;
@@ -95,7 +95,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      right: 79px;
+      right: 72px;
       bottom: 265px;
 
       width: 198px;
@@ -109,7 +109,7 @@
 .profile__title {
   @include reset-text;
 
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 
   @media (max-width: $mobile-width-only) {
     max-width: 107px;
@@ -130,11 +130,11 @@
   @include reset-list;
 
   width: 200px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     width: 565px;
-    margin-bottom: 55px;
+    margin-bottom: 52px;
     margin-left: 90px;
   }
 
@@ -147,7 +147,7 @@
   position: relative;
 
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 6px;
 
   border-bottom: 1px solid #e1e3e9;
 
@@ -155,7 +155,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-top: 18px;
+    padding-top: 19px;
     padding-bottom: 18px;
   }
 

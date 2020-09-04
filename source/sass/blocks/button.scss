@@ -13,10 +13,6 @@
 
   @include all-border;
 
-  &--contrast {
-    border: 3px solid $dark_blue;
-  }
-
   @media (min-width: $tablet-width) {
     padding: 30px 32px;
 
@@ -26,6 +22,15 @@
   @media (min-width: $desktop-width) {
     padding-left: 35px;
     padding-right: 35px;
+  }
+
+  &--contrast {
+    padding: 18px;
+    border: 3px solid $dark_blue;
+
+    @media (min-width: $tablet-width) {
+      padding: 25px 33px 25px 34px;
+    }
   }
 
   &:hover,
