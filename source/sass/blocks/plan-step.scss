@@ -1,5 +1,6 @@
 .plan-step {
   padding: 25px;
+  padding-top: 22px;
   padding-bottom: 12px;
 
   background-color: $basic_white;
@@ -37,6 +38,16 @@
     @media (min-width: $desktop-width) {
       display: block;
       padding-right: 150px;
+    }
+  }
+
+  &--activity {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      padding-bottom: 52px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 100px;
     }
   }
 }
@@ -89,6 +100,12 @@
       display: none;
     }
   }
+
+  .plan-step--date & {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 18px;
+    }
+  }
 }
 
 .plan-step__description {
@@ -118,6 +135,10 @@
   }
 
   .plan-step--destination & {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 22px;
+    }
+
     @media (min-width: $tablet-width) and (max-width: 1439px) {
       margin-bottom: 33px;
     }
@@ -126,6 +147,12 @@
   .plan-step--date & {
     @media (min-width: $tablet-width) and (max-width: 1439px) {
       margin-bottom: 40px;
+    }
+  }
+
+  .plan-step--activity & {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 23px;
     }
   }
 }
@@ -829,6 +856,10 @@
     }
   }
 
+  &--bosnia:active::before {
+    display: none;
+  }
+
   &--select {
     display: inline-flex;
     align-items: center;
@@ -862,8 +893,22 @@
     }
 
     .plan-step__destination--opened & {
+      padding: 11px 15px;
+
+      letter-spacing: 0.02em;
+
       background-image: none;
       border-color: transparent;
+
+      @media (min-width: $tablet-width) {
+        padding: 23px;
+
+        letter-spacing: 0.1em;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 20px 23px 25px;
+      }
     }
 
     & svg {
@@ -922,7 +967,7 @@
   height: 42px;
 
   background-color: transparent;
-  background-image: url("../../img/dropdown-form.svg");
+  background-image: url("../img/dropdown-form.svg");
   background-repeat: no-repeat;
   background-size: 14px 24px;
   background-position: center;
@@ -1036,10 +1081,10 @@
   align-items: center;
   width: 100%;
   margin-bottom: 25px;
-  padding-top: 12px;
+  padding-top: 14px;
   padding-right: 15px;
   padding-bottom: 10px;
-  padding-left: 10px;
+  padding-left: 12px;
 
   font-weight: 500;
   font-size: 14px;
@@ -1063,7 +1108,7 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   &::after {
@@ -1128,7 +1173,7 @@
 
 .plan-step__dropdown {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 41px;
   left: 0;
 
@@ -1156,7 +1201,7 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
-    padding: 30px 55px 35px 25px;
+    padding: 30px 60px 35px 25px;
   }
 
   &::after {
@@ -1188,10 +1233,10 @@
   }
 
   .plan-step--activity & {
-    padding-top: 20px;
+    padding-top: 15px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 45px;
+      padding-top: 42px;
     }
 
     @media (min-width: $desktop-width) {
@@ -1215,7 +1260,7 @@
     margin-bottom: 20px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 45px;
+      margin-bottom: 48px;
     }
 
     @media (min-width: $desktop-width) {
@@ -1418,7 +1463,7 @@
     outline: none;
   }
 
-  &:invalid {
+  &--error {
     border-color: $special_red;
   }
 }
@@ -1449,7 +1494,7 @@
     line-height: 20px;
   }
 
-  .plan-step__activity-text:invalid + & {
+  .plan-step__activity-text--error + & {
     display: inline-block;
   }
 }

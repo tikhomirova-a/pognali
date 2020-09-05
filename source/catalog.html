@@ -575,8 +575,8 @@
             <form class="traveler-filter__form" action="https://echo.htmlacademy.ru" method="get">
               <div class="traveler-filter__fieldset-wrapper">
                 <fieldset class="traveler-filter__fieldset">
-                  <!-- <span class="traveler-filter__legend-wrapper"><legend class="traveler-filter__legend">Хобби:</legend></span> -->
-                  <span class="traveler-filter__legend-wrapper"><span class="traveler-filter__legend">Хобби:</span></span>
+                  <legend class="visually-hidden">Хобби:</legend>
+                  <span class="traveler-filter__legend">Хобби:</span>
                   <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button">Хобби:
                     <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                       y="0px" viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
@@ -622,8 +622,8 @@
                   </div>
                 </fieldset>
                 <fieldset class="traveler-filter__fieldset traveler-filter__fieldset--opened">
-                  <!-- <span class="traveler-filter__legend-wrapper"><legend class="traveler-filter__legend">Музыка:</legend></span> -->
-                  <span class="traveler-filter__legend-wrapper"><span class="traveler-filter__legend">Музыка:</span></span>
+                  <legend class="visually-hidden">Музыка:</legend>
+                  <span class="traveler-filter__legend">Музыка:</span>
                   <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button">Музыка:
                     <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
@@ -669,8 +669,8 @@
                   </div>
                 </fieldset>
                 <fieldset class="traveler-filter__fieldset">
-                  <!-- <span class="traveler-filter__legend-wrapper"><legend class="traveler-filter__legend">Еда:</legend></span> -->
-                  <span class="traveler-filter__legend-wrapper"><span class="traveler-filter__legend">Еда:</span></span>
+                  <legend class="visually-hidden">Еда:</legend>
+                  <span class="traveler-filter__legend">Еда:</span>
                   <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button">Еда:
                     <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
@@ -716,8 +716,8 @@
                   </div>
                 </fieldset>
                 <fieldset class="traveler-filter__fieldset traveler-filter__fieldset--opened">
-                  <!-- <span class="traveler-filter__legend-wrapper"><legend class="traveler-filter__legend">Транспорт:</legend></span> -->
-                  <span class="traveler-filter__legend-wrapper"><span class="traveler-filter__legend">Транспорт:</span></span>
+                  <legend class="visually-hidden">Транспорт:</legend>
+                  <span class="traveler-filter__legend">Транспорт:</span>
                   <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button">Транспорт:
                     <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
@@ -778,8 +778,8 @@
                   </div>
                 </fieldset>
                 <fieldset class="traveler-filter__fieldset traveler-filter__fieldset--opened">
-                  <!-- <span class="traveler-filter__legend-wrapper"><legend class="traveler-filter__legend">Левел:</legend></span> -->
-                  <span class="traveler-filter__legend-wrapper"><span class="traveler-filter__legend">Левел:</span></span>
+                  <legend class="visually-hidden">Левел:</legend>
+                  <span class="traveler-filter__legend">Левел:</span>
                   <button class="traveler-filter__button" aria-label="Развернуть фильтр" type="button">Левел:
                     <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
@@ -1165,7 +1165,7 @@
             Показать еще</a>
           <div class="catalog__pagination pagination">
             <ol class="pagination__pages">
-              <li class="pagination__page pagination__page--active"><a class="pagination__page-link">1</a></li>
+              <li class="pagination__page"><a class="pagination__page-link pagination__page-link--active">1</a></li>
               <li class="pagination__page"><a class="pagination__page-link" href="#">2</a></li>
               <li class="pagination__page"><a class="pagination__page-link" href="#">3</a></li>
               <li class="pagination__page"><a class="pagination__page-link" href="#">4</a></li>
@@ -1234,20 +1234,9 @@
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--opened')) {
-          navMain.classList.remove('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--opened');
-        }
-      });
-
+    <script src="js/script.js"></script>
+    <script src="js/catalog.js"></script>
+    <!-- <script>
       var countryFilter = document.querySelector('.country-filter');
       var countryFilterToggle = countryFilter.querySelector('.country-filter__toggle');
       var countryFilterClose = countryFilter.querySelector('.countries-dropdown__button-close');
@@ -1265,45 +1254,6 @@
       countryFilterClose.addEventListener('click', function() {
         countryFilter.classList.remove('country-filter--opened');
       });
-
-      // var travelerFilter = document.querySelectorAll('.traveler-filter__fieldset');
-      // var travelerFilterToggle = travelerFilter.querySelectorAll('.traveler-filter__button');
-
-      // travelerFilter.forEach(element => element.classList.remove('traveler-filter__fieldset--opened'));
-
-      // for (i=0; i < travelerFilter.length; i++) {
-      //   travelerFilterToggle[i].addEventListener('click', runFilter.bind(i));
-      // }
-
-      // function runFilter(evt) {
-      //   evt.preventDefault();
-      //   if (travelerFilter[this].classList.contains('traveler-filter__fieldset--opened')) {
-      //     travelerFilter[this].classList.remove('traveler-filter__fieldset--opened');
-      //   } else {
-      //     travelerFilter[this].classList.add('traveler-filter__fieldset--opened');
-      //   }
-      // }
-
-      // travelerFilterToggle.addEventListener('click', function() {
-      //   if (travelerFilter.classList.contains('traveler-filter__fieldset--opened')) {
-      //     travelerFilter.classList.remove('traveler-filter__fieldset--opened');
-      //   } else {
-      //     travelerFilter.classList.add('traveler-filter__fieldset--opened');
-      //   }
-      // });
-
-      // var widthMediaQuery = window.matchMedia('(min-width: 1440px)');
-
-      // // filter.classList.remove('country-filter--opened');
-
-      // widthMediaQuery.addListener(function(data) {
-      //   if (data.matches) {
-      //     filter.classList.add('country-filter--opened');
-      //   }
-      //   else {
-      //     filter.classList.remove('country-filter--opened');
-      //   }
-      // });
-    </script>
+    </script> -->
   </body>
 </html>

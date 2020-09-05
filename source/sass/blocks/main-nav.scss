@@ -246,7 +246,7 @@
     min-width: 400px;
     margin-left: 40px;
     padding: 0;
-    padding-left: 100px;
+    padding-left: 105px;
 
     color: #ffffff;
 
@@ -343,7 +343,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    column-gap: 24px;
+    column-gap: 34px;
     margin-bottom: 0;
   }
 }

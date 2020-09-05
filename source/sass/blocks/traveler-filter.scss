@@ -108,7 +108,7 @@
   color: $basic_blue;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: inline-flex;
     min-width: 114px;
 
     font-weight: 500;

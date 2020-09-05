@@ -79,6 +79,18 @@
     }
   }
 
+  &:hover {
+    @media (max-width: $mobile-width-only) {
+      border: 1px solid transparent;
+      outline: 1px solid #959bb2;
+      outline-offset: -1px;
+    }
+
+    @media (min-width: $tablet-width) {
+      opacity: 0.6;
+    }
+  }
+
   &--selected,
   &:active {
     @media (max-width: $mobile-width-only) {
@@ -92,14 +104,18 @@
     }
   }
 
+  &:focus {
+    outline: none;
+  }
+
   .alphabet-sort--form & {
-    padding: 10px 15px;
+    padding: 10px 15px 11px;
 
     font-size: 14px;
     line-height: 18px;
 
     @media (min-width: $tablet-width) {
-      padding: 24px 18px;
+      padding: 23px 18px 24px;
 
       font-weight: 500;
       font-size: 20px;
@@ -181,6 +197,7 @@
   .alphabet-sort--form & {
     box-sizing: border-box;
     padding: 20px;
+    padding-top: 18px;
     padding-left: 9%;
     padding-right: 9%;
 
@@ -343,7 +360,7 @@
   }
 
   .alphabet-sort--form & {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     margin-top: 0;
 
     @media (min-width: $tablet-width) {

@@ -26,7 +26,7 @@
   }
 }
 
-.pagination__page {
+.pagination__page-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -38,15 +38,22 @@
   line-height: 20px;
   color: $basic_blue;
 
-  &--active {
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+
+    outline: none;
+  }
+
+  &--active,
+  &:active {
+    color: rgba(29, 46, 91, 1);
+
     background-color: $basic_yellow;
     border-radius: 50%;
   }
 }
 
-.pagination__page-link {
-  color: $basic_blue;
-}
 
 .pagination__list {
   @include reset-list;
