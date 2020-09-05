@@ -1,7 +1,7 @@
 .countries__item {
   position: relative;
 
-  padding-left: 55px;
+  padding-left: 40px;
 
   font-weight: 500;
   font-size: 15px;
@@ -10,8 +10,23 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding-left: 43px;
+    padding-right: 5px;
+
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 9px;
+
+    &:nth-child(2) {
+      margin-bottom: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &::before {
@@ -27,8 +42,16 @@
     background-size: 100%;
 
     @media (min-width: $tablet-width) {
+      top: -5px;
+      left: -3px;
+
       width: 35px;
       height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      left: -10px;
     }
   }
 

@@ -1,6 +1,7 @@
 .button-catalog {
   display: block;
-  padding: 15px;
+  padding: 14px;
+  padding-bottom: 10px;
 
   font-weight: 700;
   font-size: 17px;
@@ -38,6 +39,10 @@
 
     @media (max-width: $mobile-width-only) {
       padding-bottom: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 25px;
     }
   }
 

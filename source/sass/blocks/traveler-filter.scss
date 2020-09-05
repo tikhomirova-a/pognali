@@ -1,12 +1,13 @@
 .traveler-filter__wrapper {
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
 
   background-color: $basic_yellow;
   border-radius: 20px;
 
   @media (min-width: $tablet-width) {
     padding: 35px;
+    padding-bottom: 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,7 +55,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 0;
+    padding-top: 24px;
+    padding-bottom: 12px;
 
     border: none;
   }
@@ -76,6 +78,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
     margin: 0;
   }
 
@@ -92,12 +95,6 @@
   }
 }
 
-.traveler-filter__legend-wrapper {
-  @media (min-width: $tablet-width) {
-    display: inline-flex;
-  }
-}
-
 .traveler-filter__legend {
   display: none;
 
@@ -109,7 +106,7 @@
 
   @media (min-width: $tablet-width) {
     display: inline-flex;
-    min-width: 114px;
+    min-width: 19%;
 
     font-weight: 500;
     font-size: 20px;
@@ -201,9 +198,11 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 25px;
+    padding-bottom: 5px;
 
     &--transport {
       padding-top: 20px;
+      padding-bottom: 0;
     }
 
     &--level {
@@ -588,6 +587,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 25px;
+    margin-top: 0;
   }
 }

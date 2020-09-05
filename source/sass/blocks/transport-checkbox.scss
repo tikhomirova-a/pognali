@@ -8,6 +8,8 @@
   background-color: $basic_white;
   border-radius: 50%;
 
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     width: 43px;
     height: 43px;
