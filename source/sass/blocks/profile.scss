@@ -129,11 +129,13 @@
 .profile__list {
   @include reset-list;
 
-  width: 200px;
+  min-width: 195px;
+  max-width: 81%;
   margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     width: 565px;
+    max-width: none;
     margin-bottom: 52px;
     margin-left: 90px;
   }

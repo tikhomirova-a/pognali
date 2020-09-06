@@ -3,35 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Погнали|Попутчики</title>
-      <!-- Pixel Glass -->
-      <style>
-        HTML {
-          background-repeat: no-repeat;
-          background-position:  50% 0;
-          /* Mobile layout by default */
-          background-image: url("img/pp/Mobile_catalog_filter.png");
-        }
-        /* Tablet */
-        @media ( min-width: 768px ) {
-          HTML {
-            /* Tablet layout */
-            background-image: url("img/pp/Tablet_catalog_filter.png");
-          }
-        }
-        /* Desktop */
-        @media ( min-width: 1440px ) {
-          HTML {
-            /* Desktop layout */
-            background-image: url("img/pp/Desktop_catalog_new.png");
-          }
-        }
-      </style>
-      <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-      <script src="../node_modules/pixel-glass/script.js"></script>
-      <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <header class="page-header page-header--inner">
@@ -772,8 +750,8 @@
                       <div class="traveler-filter__scale">
                         <div class="traveler-filter__bar"></div>
                       </div>
-                      <button class="traveler-filter__toggle traveler-filter__toggle--min" type="button"></button>
-                      <button class="traveler-filter__toggle traveler-filter__toggle--max" type="button"></button>
+                      <button class="traveler-filter__toggle traveler-filter__toggle--min" type="button" aria-label="Минимальный левел"></button>
+                      <button class="traveler-filter__toggle traveler-filter__toggle--max" type="button" aria-label="Максимальный левел"></button>
                     </div>
                   </div>
                 </fieldset>
