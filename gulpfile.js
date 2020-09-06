@@ -51,7 +51,7 @@ const terser = require("gulp-terser");
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles_build"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
@@ -150,7 +150,7 @@ const server_build = (done) => {
 
 exports.server_build = server_build;
 
-Images
+// Images
 
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
