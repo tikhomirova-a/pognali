@@ -9,7 +9,6 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const del = require("del");
 const imagemin = require("gulp-imagemin");
-const imageminJpegtran = require("imagemin-jpegtran");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
@@ -105,7 +104,7 @@ const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
-    imageminJpegtran({progressive: true}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
     imagemin.svgo()
   ]))
   .pipe(gulp.dest("build/img"))
