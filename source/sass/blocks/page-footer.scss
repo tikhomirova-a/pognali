@@ -78,6 +78,11 @@
 
   @media (min-width: $tablet-width) {
     min-width: 185px;
+    max-width: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 500px;
   }
 }
 

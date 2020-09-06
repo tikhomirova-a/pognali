@@ -343,6 +343,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 34px;
     margin-bottom: 0;
   }
@@ -371,6 +372,7 @@
 
 .main-nav__socials {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
@@ -401,6 +403,10 @@
 
   @media (min-width: $tablet-width) {
     position: static;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 290px;
   }
 
   .main-nav--nojs & {

@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content min-content min-content;
   padding-top: 22px;
-  padding-bottom: 35px; // sum up with shift padding later
+  padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: min-content 1fr min-content;
@@ -119,7 +119,7 @@
   }
 
   &:active {
-    color: rgba(22, 28, 53, 0.3); // $basic_dark_blue, opacity: 0.3;
+    color: rgba(22, 28, 53, 0.3);
 
     background-color: $special_blue_light;
   }
@@ -296,6 +296,7 @@
   @include reset-list;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }

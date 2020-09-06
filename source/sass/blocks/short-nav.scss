@@ -5,8 +5,13 @@
 .short-nav__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    width: 300px;
+  }
 }
 
 .short-nav__link {

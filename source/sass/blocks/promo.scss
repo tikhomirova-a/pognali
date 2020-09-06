@@ -33,7 +33,7 @@
     background-image: url("../img/globe-back-mobile@2x.jpg");
   }
 
-  @media (min-width: 321px) and (max-width: $mobile-width-only) {
+  @media (min-width: 338px) and (max-width: $mobile-width-only) {
     background-position-y: center;
   }
 
@@ -89,7 +89,7 @@
   &::before {
     position: absolute;
     top: 132px;
-    right: calc(100vw - 85%);
+    right: 49px;
 
     content: "";
     width: 192px;
@@ -101,6 +101,10 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/traveller-illustration-mobile@2x.png");
+    }
+
+    @media (min-width: 338px) and (max-width: $mobile-width-only) {
+      right: calc(100vw - 85%);
     }
 
     @media (min-width: $tablet-width) {

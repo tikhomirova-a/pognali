@@ -141,6 +141,8 @@
 }
 
 .country__title {
+  word-break: break-word;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 1;

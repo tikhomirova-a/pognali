@@ -150,8 +150,7 @@
     color: $basic_blue;
 
     @media (min-width: $desktop-width) {
-      margin-top: 13px;
-      margin-bottom: 5px;
+      margin-top: 14px;
     }
   }
 
@@ -173,6 +172,10 @@
 
     @media (max-width: $mobile-width-only) {
       display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 4px;
     }
   }
 

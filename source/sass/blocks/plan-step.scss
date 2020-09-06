@@ -228,6 +228,10 @@
   }
 }
 
+.plan-step__label {
+  word-break: break-word;
+}
+
 .plan-step__label-hint {
   opacity: 0.3;
 
@@ -1376,10 +1380,14 @@
 
     @media (min-width: $tablet-width) {
       right: 35px;
-      top: -10px;
+      top: -5px;
 
       width: 70px;
       height: 47px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
     }
   }
 

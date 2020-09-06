@@ -20,9 +20,14 @@
   @include reset-list;
 
   display: flex;
+  flex-wrap: wrap;
 
   @media (max-width: $mobile-width-only) {
     display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 80%;
   }
 }
 
@@ -38,8 +43,8 @@
   line-height: 20px;
   color: $basic_blue;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: rgba(29, 46, 91, 0.6);
 
     outline: none;
@@ -53,7 +58,6 @@
     border-radius: 50%;
   }
 }
-
 
 .pagination__list {
   @include reset-list;
