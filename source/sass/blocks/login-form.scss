@@ -170,45 +170,9 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  // color: $basic_blue;
 
   @media (min-width: $desktop-width) {
     display: inline;
     padding-right: 107px;
   }
 }
-
-// .login-form__warning {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-
-//   display: none;
-//   width: min-content;
-//   padding-top: 30px;
-//   padding-left: 25px;
-
-//   font-weight: 700;
-//   font-size: 18px;
-//   line-height: 1;
-//   color: #ff0000;
-
-//   background-color: $basic_white;
-
-//   @include top-left;
-//   @include bottom-left;
-
-//   @media (min-width: $tablet-width) {
-//     font-size: 24px;
-//     padding-top: 35px;
-//     padding-left: 36px;
-//   }
-
-//   .login-form__email:invalid ~ & {
-//     display: inline-block;
-//   }
-
-//   .login-form__email:invalid:focus ~ & {
-//     display: none;
-//   }
-// }
