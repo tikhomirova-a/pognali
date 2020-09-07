@@ -17,6 +17,11 @@
 }
 
 .site-list__link {
+  position: relative;
+
+  display: inline-flex;
+  overflow: hidden;
+
   color: $dark_blue;
 
   @media (min-width: $desktop-width) {
@@ -25,5 +30,36 @@
     .main-nav--sticky & {
       color: $dark_blue;
     }
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $basic_yellow;
+    outline: none;
+  }
+
+  &[href]:active {
+    color: $basic_yellow;
+    opacity: 0.3;
+  }
+}
+
+.site-list__link-text {
+  position: relative;
+  display: inline-block;
+
+  transition: transform 0.3s;
+
+  &::before {
+    position: absolute;
+    top: 100%;
+
+    content: attr(data-hover);
+
+    transform: translate3d(0, 0, 0);
+  }
+
+  .site-list__link[href]:hover & {
+    transform: translateY(-100%);
   }
 }

@@ -4,18 +4,10 @@
   background-color: $basic_dark_blue;
 
   .page--inner & {
-    // position: relative;
-    // z-index: 0;
-
-    // @include shift(-25px);
 
     color: $basic_blue;
 
     background-color: $basic_blue_light;
-
-    // @media (min-width: $tablet-width) {
-    //   @include shift(-55px);
-    // }
   }
 }
 
@@ -25,10 +17,10 @@
   }
 
   .page--inner & {
-    padding-bottom: 90px; // because of page footer's shift
+    padding-bottom: 90px;
 
     @media (min-width: $tablet-width) {
-      padding-bottom: 80px;
+      padding-bottom: 70px;
     }
 
     @media (min-width: $desktop-width) {
@@ -91,7 +83,7 @@
 .page-main__catalog {
   grid-column: 1/4;
   grid-row: 2/3;
-  padding-top: 25px;
+  padding-top: 27px;
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
@@ -118,15 +110,3 @@
     margin-top: -105px;
   }
 }
-
-// .page-main__country-filter {
-//   margin-bottom: 20px;
-
-//   @media (min-width: $tablet-width) {
-//     margin-bottom: 45px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     margin-bottom: 45px;
-//   }
-// }

@@ -1,15 +1,147 @@
 .countries__item {
-  padding-left: 55px;
+  position: relative;
+
+  padding-left: 40px;
 
   font-weight: 500;
   font-size: 15px;
   line-height: 16px;
   color: $basic_blue;
-
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 43px;
+    padding-right: 5px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 9px;
+
+    &:nth-child(2) {
+      margin-bottom: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: "";
+    width: 26px;
+    height: 18px;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-width: $tablet-width) {
+      top: -5px;
+      left: -3px;
+
+      width: 35px;
+      height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      left: -10px;
+    }
+  }
+
+  .countries--short &::before {
+    left: 20%;
+
+    @media (max-width: $mobile-width-only) {
+      width: 35px;
+      height: 25px;
+    }
+  }
+
+  &--sri-lanka::before {
+    background-image: url("../img/flag-sri-lanka.svg");
+  }
+
+  &--thailand::before {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--seychelles::before {
+    background-image: url("../img/flag-seychelles.svg");
+  }
+
+  &--belgium::before {
+    background-image: url("../img/flag-belgium.svg");
+  }
+
+  &--czechia::before {
+    background-image: url("../img/flag-czech.svg");
+  }
+
+  &--usa::before {
+    background-image: url("../img/flag-usa.svg");
+  }
+
+  &--australia::before {
+    background-image: url("../img/flag-australia.svg");
+  }
+
+  &--dominica::before {
+    background-image: url("../img/flag-dominica.svg");
+  }
+
+  &--uk::before {
+    background-image: url("../img/flag-united-kingdom.svg");
+  }
+
+  &--germany::before {
+    background-image: url("../img/flag-germany.svg");
+  }
+}
+
+.countries__tooltip {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 2;
+  margin-left: -60px;
+
+  visibility: hidden;
+  padding: 10px;
+  width: 100px;
+
+  text-align: center;
+  text-transform: none;
+  color: $basic_white;
+
+  background-color: #101d41;
+  border-radius: 4px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .countries__item:hover & {
+    visibility: visible;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    z-index: 1;
+
+    content: "";
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #101d41 transparent;
   }
 }

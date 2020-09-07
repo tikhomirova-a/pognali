@@ -40,11 +40,6 @@
     padding-left: 25px;
   }
 
-  @media (min-width: $desktop-width) {
-    // padding-right: 65px;
-    // padding-left: 10px;
-  }
-
   .country-filter--opened & {
     position: static;
 
@@ -81,7 +76,7 @@
   text-transform: uppercase;
   color: $dark_blue;
 
-  @media (min-width: $tablet-width) and (max-width: 1439px) { // visually-hidden
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
     position: absolute;
 
     width: 1px;

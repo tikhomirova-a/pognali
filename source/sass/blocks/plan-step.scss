@@ -1,5 +1,6 @@
 .plan-step {
   padding: 25px;
+  padding-top: 22px;
   padding-bottom: 12px;
 
   background-color: $basic_white;
@@ -37,6 +38,16 @@
     @media (min-width: $desktop-width) {
       display: block;
       padding-right: 150px;
+    }
+  }
+
+  &--activity {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      padding-bottom: 52px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 100px;
     }
   }
 }
@@ -89,6 +100,12 @@
       display: none;
     }
   }
+
+  .plan-step--date & {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 18px;
+    }
+  }
 }
 
 .plan-step__description {
@@ -118,6 +135,10 @@
   }
 
   .plan-step--destination & {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 22px;
+    }
+
     @media (min-width: $tablet-width) and (max-width: 1439px) {
       margin-bottom: 33px;
     }
@@ -126,6 +147,12 @@
   .plan-step--date & {
     @media (min-width: $tablet-width) and (max-width: 1439px) {
       margin-bottom: 40px;
+    }
+  }
+
+  .plan-step--activity & {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 23px;
     }
   }
 }
@@ -201,6 +228,10 @@
   }
 }
 
+.plan-step__label {
+  word-break: break-word;
+}
+
 .plan-step__label-hint {
   opacity: 0.3;
 
@@ -242,7 +273,6 @@
 }
 
 .plan-step__input {
-  // display: block;
   width: fill-available;
   padding-top: 14px;
   padding-right: 30px;
@@ -606,14 +636,14 @@
     width: 285px;
   }
 
-  &:nth-of-type(2) {
+  & + &,
+  .plan-step__form-submit + & {
     padding: 0;
     margin-top: 11px;
 
     @media (min-width: $tablet-width) {
-      width: 178px;
+      width: 182px;
       box-sizing: border-box;
-      padding-left: 29px;
     }
   }
 }
@@ -777,7 +807,6 @@
   position: relative;
 
   display: inline-block;
-  // width: 165px;
   width: 77%;
   box-sizing: border-box;
   padding: 11px 10px;
@@ -831,6 +860,10 @@
     }
   }
 
+  &--bosnia:active::before {
+    display: none;
+  }
+
   &--select {
     display: inline-flex;
     align-items: center;
@@ -864,8 +897,22 @@
     }
 
     .plan-step__destination--opened & {
+      padding: 11px 15px;
+
+      letter-spacing: 0.02em;
+
       background-image: none;
       border-color: transparent;
+
+      @media (min-width: $tablet-width) {
+        padding: 23px;
+
+        letter-spacing: 0.1em;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 20px 23px 25px;
+      }
     }
 
     & svg {
@@ -924,7 +971,7 @@
   height: 42px;
 
   background-color: transparent;
-  background-image: url("../../img/dropdown-form.svg");
+  background-image: url("../img/dropdown-form.svg");
   background-repeat: no-repeat;
   background-size: 14px 24px;
   background-position: center;
@@ -941,43 +988,6 @@
 
     background-size: 17px 12px;
   }
-
-  // .plan-step__destination-field--select + & {
-  //   @media (max-width: $mobile-width-only) {
-  //     position: absolute;
-  //     top: 0;
-  //     right: 0;
-  //     left: auto;
-
-  //     width: 40px;
-  //     margin: 0;
-  //   }
-  // }
-
-  // .plan-step__destination--opened & {
-  //   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve' fill='%23ffffff'%3E%3Cpath class='st0' d='M6.9,6l4.9-4.9c0.2-0.2,0.2-0.6,0-0.9s-0.6-0.2-0.9,0L6,5.1L1.1,0.2c-0.2-0.2-0.6-0.2-0.9,0s-0.2,0.6,0,0.9 L5.1,6l-4.9,4.9c-0.2,0.2-0.2,0.6,0,0.9v0c0.2,0.2,0.6,0.2,0.9,0L6,6.9l4.9,4.9c0.2,0.2,0.6,0.2,0.9,0v0c0.2-0.2,0.2-0.6,0-0.9 L6.9,6z'/%3E%3C/svg%3E");
-  //   background-size: 9px 9px;
-  //   opacity: 0.3;
-
-  //   @media (min-width: $tablet-width) {
-  //     background-size: 22px 21px;
-  //   }
-
-  //   @media (min-width: $desktop-width) {
-  //     background-size: 22px 24px;
-  //   }
-
-  //   &:hover,
-  //   &:focus {
-  //     opacity: 1;
-  //     outline: none;
-  //   }
-
-  //   &:active {
-  //     opacity: 0.1;
-  //     outline: none;
-  //   }
-  // }
 }
 
 .plan-step__button-delete {
@@ -1075,10 +1085,10 @@
   align-items: center;
   width: 100%;
   margin-bottom: 25px;
-  padding-top: 12px;
+  padding-top: 14px;
   padding-right: 15px;
   padding-bottom: 10px;
-  padding-left: 10px;
+  padding-left: 12px;
 
   font-weight: 500;
   font-size: 14px;
@@ -1102,7 +1112,7 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   &::after {
@@ -1167,7 +1177,7 @@
 
 .plan-step__dropdown {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 41px;
   left: 0;
 
@@ -1195,7 +1205,7 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
-    padding: 30px 55px 35px 25px;
+    padding: 30px 60px 35px 25px;
   }
 
   &::after {
@@ -1227,10 +1237,10 @@
   }
 
   .plan-step--activity & {
-    padding-top: 20px;
+    padding-top: 15px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 45px;
+      padding-top: 42px;
     }
 
     @media (min-width: $desktop-width) {
@@ -1254,7 +1264,7 @@
     margin-bottom: 20px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 45px;
+      margin-bottom: 48px;
     }
 
     @media (min-width: $desktop-width) {
@@ -1370,10 +1380,14 @@
 
     @media (min-width: $tablet-width) {
       right: 35px;
-      top: -10px;
+      top: -5px;
 
       width: 70px;
       height: 47px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
     }
   }
 
@@ -1402,6 +1416,9 @@
 }
 
 .plan-step__activity-text {
+  position: relative;
+  z-index: 1;
+
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -1414,6 +1431,7 @@
   font-size: 16px;
   line-height: 22px;
 
+  background-color: transparent;
   resize: none;
 
   @include form-input-border;
@@ -1453,44 +1471,38 @@
     outline: none;
   }
 
-  &:invalid {
+  &--error {
     border-color: $special_red;
   }
 }
 
-//
-// .plan-step__destination-field--select {
-//   @include reset-button;
+.plan-step__warning {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  z-index: 0;
 
-//   background-color: transparent;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
 
-//   display: inline-block;
-//   width: min-content;
-//   min-width: 220px;
-//   box-sizing: border-box;
-//   padding: 11px 10px;
-//   text-overflow: clip;
-//   white-space: nowrap;
-//   overflow: hidden;
+  color: #ff0000;
 
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 18px;
-//   text-transform: uppercase;
-//   letter-spacing: 0.1em;
-//   text-align: left;
-//   color: $basic_blue;
+  background-color: $special_red_light;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 
-//   border: 1px solid #cbced9;
-//   border-radius: 4px;
-//   background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 17 9' fill-opacity='0.3' xml:space='preserve'%3E%3Cpath d='M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7 s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z'/%3E%3C/svg%3E");
-//   background-repeat: no-repeat;
-//   background-size: 14px 24px;
-//   background-position: 95% center;
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 35px);
+    padding: 20px;
+    padding-bottom: 15px;
 
-//   &:hover,
-//   &:focus {
-//     border-color: #959bb2;
-//     outline: none;
-//   }
-// }
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .plan-step__activity-text--error + & {
+    display: inline-block;
+  }
+}

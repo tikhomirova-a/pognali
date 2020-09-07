@@ -14,15 +14,15 @@
   @media (min-width: $tablet-width) {
     @include shift(-55px);
 
-    padding-top: 135px;
+    padding-top: 127px;
     padding-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
     @include shift(-105px);
 
-    padding-top: 215px;
-    padding-bottom: 95px;
+    padding-top: 210px;
+    padding-bottom: 103px;
   }
 }
 
@@ -61,7 +61,7 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
-    margin-bottom: 65px;
+    margin-bottom: 67px;
 
     font-size: 28px;
     line-height: 32px;
@@ -82,6 +82,16 @@
   color: $basic_yellow;
 
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $special_orange;
+  }
+
+  &:active {
+    color: $special_orange;
+    opacity: 0.3;
+  }
 }
 
 .feedback__form {
@@ -93,12 +103,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 }
 
-.feedback__ask { // margin-bottom to the icon
-  margin-bottom: 20px;
+.feedback__ask {
+  margin-bottom: 17px;
 
   text-align: center;
   letter-spacing: 0.01em;
@@ -112,6 +122,10 @@
     & br {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
   }
 }
 

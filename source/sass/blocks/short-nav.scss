@@ -5,12 +5,19 @@
 .short-nav__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    width: 300px;
+  }
 }
 
-.short-nav__item {
+.short-nav__link {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   font-weight: bold;
   font-size: 17px;
@@ -44,7 +51,32 @@
     background-color: $special_orange;
   }
 
+  &--tel:hover,
+  &--tel:focus {
+    background-color: $special_orange_dark;
+    outline: none;
+  }
+
+  &:active svg {
+    fill-opacity: 0.3;
+  }
+
   &--mail {
     background-color: $special_yellow_dark;
+  }
+
+  &--mail:hover,
+  &--mail:focus {
+    background-color: $special_orange;
+    outline: none;
+  }
+
+  & svg {
+    fill: $basic_dark_blue;
+  }
+
+  &--mail svg {
+    width: 16px;
+    height: 14px;
   }
 }

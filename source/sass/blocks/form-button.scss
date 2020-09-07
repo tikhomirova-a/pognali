@@ -17,7 +17,9 @@
   background-color: $basic_yellow;
 
   @media (min-width: $tablet-width) {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 28px 35px;
 
     font-size: 24px;
@@ -80,6 +82,14 @@
     @media (min-width: $tablet-width) {
       width: 285px;
       padding: 30px 35px;
+    }
+  }
+
+  & svg {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
     }
   }
 }

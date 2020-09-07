@@ -1,13 +1,62 @@
 .login-form {
+  position: relative;
+  z-index: 0;
+
   display: flex;
+}
+
+.login-form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 50%;
+  height: 50%;
+  padding-top: 22px;
+  padding-left: 21px;
+  opacity: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: #ff0000;
+
+  background-color: $basic_white;
+
+  @include top-left;
+  @include bottom-left;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 28px;
+    padding-left: 32px;
+
+    font-size: 24px;
+  }
+
+  .login-form__email:invalid:not(:focus):not(:placeholder-shown) + & {
+    opacity: 1;
+  }
+
+  .login-form__email:invalid:focus:not(:placeholder-shown) + & {
+    opacity: 0;
+  }
+
+  .login-form__email:focus + & {
+    opacity: 0;
+  }
+
+  .login-form__email:hover + & {
+    background-color: $basic_blue_light;
+  }
 }
 
 .login-form__email {
   display: inline-block;
   min-width: 220px;
-  width: fill-available;
+  width: 99%;
   box-sizing: border-box;
-  padding: 20px 25px;
+  padding: 16px 21px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 700;
@@ -15,21 +64,51 @@
   line-height: 1;
 
   background-color: $basic_white;
-  border: none;
+  border: 4px solid transparent;
 
   @include top-left;
   @include bottom-left;
 
   @media (min-width: $tablet-width) {
+    width: fill-available;
+
     font-size: 24px;
-    padding: 28px 36px;
+    padding: 16px 32px;
   }
-}
 
-.login-form__email::placeholder {
-  color: $special_grey;
+  &:hover {
+    width: 99%;
+    background-color: $basic_blue_light;
+  }
 
-  opacity: 0.3;
+  &:focus,
+  &:active {
+    width: 99%;
+
+    color: $basic_white;
+
+    background-color: $dark_blue;
+    border: 4px solid $basic_white;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $special_grey;
+
+    opacity: 0.3;
+  }
+
+  &:hover::placeholder {
+    opacity: 0.5;
+  }
+
+  &:invalid:not(:focus) {
+    background-color: $basic_white;
+  }
+
+  &:invalid:not(:focus):hover {
+    background-color: $basic_blue_light;
+  }
 }
 
 .login-form__submit {
@@ -47,21 +126,41 @@
   padding: 24px 22px;
   box-sizing: border-box;
 
+  color: $basic_blue;
+
   background-color: $basic_yellow;
 
-  @include top-right;
-  @include bottom-right;
+  cursor: pointer;
+
+  @include all-border;
 
   @media (min-width: $tablet-width) {
+    left: -20px;
+
+    margin-right: -20px;
     min-width: 80px;
-    padding: 32px 30px;
+    padding: 33px 30px;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: auto;
+    display: inline-flex;
+    align-items: center;
     justify-content: space-between;
+    min-width: auto;
+    padding-top: 29px;
     padding-left: 35px;
     padding-right: 35px;
+    padding-bottom: 28px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $special_yellow_dark;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
   }
 }
 
@@ -71,9 +170,9 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: $basic_blue;
 
   @media (min-width: $desktop-width) {
     display: inline;
+    padding-right: 107px;
   }
 }

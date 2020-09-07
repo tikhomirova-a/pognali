@@ -1,12 +1,13 @@
 .traveler-filter__wrapper {
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
 
   background-color: $basic_yellow;
   border-radius: 20px;
 
   @media (min-width: $tablet-width) {
     padding: 35px;
+    padding-bottom: 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,7 +55,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 0;
+    padding-top: 24px;
+    padding-bottom: 12px;
 
     border: none;
   }
@@ -76,6 +78,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
     margin: 0;
   }
 
@@ -92,12 +95,6 @@
   }
 }
 
-.traveler-filter__legend-wrapper {
-  @media (min-width: $tablet-width) {
-    display: inline-flex;
-  }
-}
-
 .traveler-filter__legend {
   display: none;
 
@@ -108,8 +105,8 @@
   color: $basic_blue;
 
   @media (min-width: $tablet-width) {
-    display: block;
-    min-width: 114px;
+    display: inline-flex;
+    min-width: 19%;
 
     font-weight: 500;
     font-size: 20px;
@@ -154,8 +151,22 @@
     line-height: 22px;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   .traveler-filter__fieldset--opened & svg {
     transform: rotate(180deg);
+  }
+
+  & svg {
+    fill: $dark_blue;
   }
 }
 
@@ -187,9 +198,11 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 25px;
+    padding-bottom: 5px;
 
     &--transport {
       padding-top: 20px;
+      padding-bottom: 0;
     }
 
     &--level {
@@ -288,6 +301,8 @@
   & svg {
     display: none;
 
+    fill: $basic_dark_blue;
+
     @media (min-width: $tablet-width) {
       width: 11px;
       height: 11px;
@@ -312,6 +327,7 @@
   @include reset-list;
 
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 11px;
 }
 
@@ -368,7 +384,6 @@
 }
 
 .traveler-filter__level-input {
-  // max-width: calc((100vw - 117px) / 2);
   width: 100%;
   box-sizing: border-box;
   padding-top: 10px;
@@ -389,7 +404,6 @@
   background-color: $basic_white;
 
   @media (min-width: $tablet-width) {
-    // max-width: calc((100vw * 0.18 / 2));
     max-width: 75px;
     padding-top: 12px;
     padding-bottom: 10px;
@@ -511,6 +525,8 @@
   background-color: $basic_blue;
   border-radius: 50%;
 
+  cursor: pointer;
+
   &--min {
     left: 30%;
   }
@@ -519,12 +535,34 @@
     right: 0;
   }
 
+  &:hover,
+  &:focus {
+    bottom: -5px;
+
+    width: 13px;
+    height: 13px;
+
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+  }
+
   @media (min-width: $tablet-width) {
     width: 13px;
     height: 13px;
 
     &--min {
       left: 25%;
+    }
+
+    &:hover,
+    &:focus {
+      bottom: -7px;
+
+      width: 19px;
+      height: 19px;
     }
   }
 
@@ -550,6 +588,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 25px;
+    margin-top: 0;
   }
 }

@@ -1,4 +1,6 @@
 .button {
+  align-items: center;
+  justify-content: space-between;
   padding: 22px;
 
   font-weight: 700;
@@ -11,10 +13,6 @@
 
   @include all-border;
 
-  &--contrast {
-    border: 3px solid $dark_blue;
-  }
-
   @media (min-width: $tablet-width) {
     padding: 30px 32px;
 
@@ -24,5 +22,39 @@
   @media (min-width: $desktop-width) {
     padding-left: 35px;
     padding-right: 35px;
+  }
+
+  &--contrast {
+    padding: 18px;
+    border: 3px solid $dark_blue;
+
+    @media (min-width: $tablet-width) {
+      padding: 25px 33px 25px 34px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $special_yellow_dark;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
+  &--contrast:hover,
+  &--contrast:focus {
+    color: $basic_white;
+
+    background-color: $basic_dark_blue;
+  }
+
+  &--contrast:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  & svg {
+    padding-left: 10px;
   }
 }

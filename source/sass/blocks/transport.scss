@@ -2,10 +2,16 @@
   @include reset-list;
 }
 
-
 .transport__item {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
   height: 32px;
+
+  color: $basic_blue;
 
   border-radius: 50%;
 
@@ -17,5 +23,59 @@
 
   .transport--light & {
     background-color: $basic_white;
+  }
+
+  & svg {
+    fill: $basic_blue;
+    fill-opacity: 0.15;
+
+    @media (min-width: $tablet-width) {
+      width: 21px;
+      height: 20px;
+    }
+  }
+
+  &--active svg {
+    fill-opacity: 1;
+  }
+}
+
+.transport__tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 1;
+  margin-left: -70px;
+
+  visibility: hidden;
+  padding: 10px;
+  width: 120px;
+
+  text-align: center;
+  color: $basic_white;
+
+  background-color: #101d41;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .transport__item:hover & {
+    visibility: visible;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    z-index: 1;
+
+    content: "";
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #101d41 transparent;
   }
 }

@@ -5,8 +5,6 @@
   width: 45px;
   height: 45px;
 
-  fill: $dark_blue;
-
   &:hover {
     fill-opacity: 0.6;
   }
@@ -34,5 +32,30 @@
   @media (min-width: $tablet-width) {
     width: 62px;
     height: 62px;
+  }
+
+  & svg {
+    fill: $dark_blue;
+  }
+
+  &--facebook svg {
+    @media (min-width: $tablet-width) {
+      width: 14px;
+      height: 28px;
+    }
+  }
+
+  &--vk svg {
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 16px;
+    }
+  }
+
+  &--instagram svg {
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+    }
   }
 }

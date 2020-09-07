@@ -3,34 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Погнали|Направления</title>
-    <!-- Pixel Glass -->
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* Mobile layout by default */
-        background-image: url("img/pp/Mobile_form.png");
-      }
-      /* Tablet */
-      @media ( min-width: 768px ) {
-        HTML {
-          /* Tablet layout */
-          background-image: url("img/pp/Tablet_form.png");
-        }
-      }
-      /* Desktop */
-      @media ( min-width: 1440px ) {
-        HTML {
-          /* Desktop layout */
-          background-image: url("img/pp/Desktop_form_drop.png");
-        }
-      }
-    </style>
-    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-    <script src="../node_modules/pixel-glass/script.js"></script>
-    <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <header class="page-header page-header--inner">
@@ -38,6 +16,9 @@
         <div class="main-nav__wrapper container">
           <a class="main-nav__logo" href="index.html" aria-label="Перейти на главную страницу">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
               <img class="main-nav__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@1x.png 100w, img/logo-mobile-white@2x.png 200w"
@@ -51,76 +32,63 @@
             <div class="main-nav__layout">
               <ul class="main-nav__site-list site-list">
                 <li class="site-list__item">
-                  <a class="site-list__link" href="#">О сервисе</a>
+                  <a class="site-list__link" href="#">
+                    <span class="site-list__link-text" data-hover="О&nbsp;сервисе">О сервисе</span>
+                  </a>
                 </li>
                 <li class="site-list__item">
-                  <a class="site-list__link">Направления</a>
+                  <a class="site-list__link">
+                    <span class="site-list__link-text" data-hover="Направления">Направления</span>
+                  </a>
                 </li>
                 <li class="site-list__item">
-                  <a class="site-list__link" href="catalog.html">Попутчики</a>
+                  <a class="site-list__link" href="catalog.html">
+                    <span class="site-list__link-text" data-hover="Попутчики">Попутчики</span>
+                  </a>
                 </li>
               </ul>
               <ul class="main-nav__user-list user-list">
-                <li class="user-list__item user-authorize">
-                  <a class="user-authorize__link" href="#">Авторизация</a>
+                <li class="user-list__item">
+                  <a class="user-list__link authorize-link" href="#">Авторизация</a>
                 </li>
               </ul>
               <ul class="main-nav__contacts contacts">
-                <li class="contacts__item contacts__item--tel tel">
-                  <a class="contacts__link" href="tel:88005558628">8 800 555-86-28</a>
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__link--tel" href="tel:88005558628">
+                    <span class="contacts__icon-wrapper">
+                      <svg width="18" height="17" viewBox="0 0 36 36">
+                        <use xlink:href="img/sprite.svg#contacts-phone"></use>
+                      </svg>
+                    </span>8 800 555-86-28</a>
                 </li>
-                <li class="contacts__item contacts__item--mail mail">
-                  <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">
+                    <span class="contacts__icon-wrapper">
+                      <svg width="18" height="12" viewBox="0 0 36 26">
+                        <use xlink:href="img/sprite.svg#contacts-mail"></use>
+                      </svg>
+                    </span>mail@htmlacademy.ru</a>
                 </li>
               </ul>
               <ul class="main-nav__socials socials">
                 <li class="socials__item socials__item--facebook">
                   <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">
-                    <svg width="11" height="21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                      y="0px" viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve">
-                      <g>
-                        <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
-                      V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
-                      C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z" />
-                      </g>
+                    <svg width="11" height="21" viewBox="0 0 11 21">
+                      <use xlink:href="img/sprite.svg#facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item socials__item--vk">
                   <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">
-                    <svg width="23" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8"
-                      style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
-                      <g>
-                        <path d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6
-                      c0,0.1,0,0.8-0.5,1.2c-0.4,0.4-1.1,0.5-1.2,0.5l-1.9,0c-1,0-4.4-0.2-7.4-3c-3.7-3.4-6.8-9.8-7-10.1C0,2.2-0.1,1.5,0.3,1.1
-                      c0.4-0.4,1.1-0.5,1.4-0.5l4.1,0l0.1,0c0.1,0,0.6,0.1,1,0.3c0.4,0.2,0.6,0.7,0.6,0.7c0,0,0.6,1.4,1.5,2.7c1.3,2,1.9,2.5,2.1,2.6
-                      c0.2-0.4,0.3-1.7,0.2-2.9c0-0.5-0.1-1.1-0.3-1.3c-0.1-0.1-0.4-0.3-0.8-0.3L9.5,1.8c-0.1-0.7,0.6-1.2,1.1-1.4
-                      C11.3,0.1,12.4,0,13.7,0l0.7,0c1.2,0,1.6,0.1,2.1,0.2c1.7,0.4,1.6,1.7,1.6,3.3c0,0.5,0,1,0,1.6c0,0.2,0,0.3,0,0.5
-                      c0,0.4,0,1,0.1,1.3c0.2-0.1,0.9-0.7,2.1-2.5c0.8-1.2,1.4-2.5,1.5-2.8l0,0c0.2-0.4,0.6-0.9,1.6-0.9l4.3,0c0,0,0.2,0,0.4,0
-                      c1,0,1.6,0.3,1.8,0.9c0.3,0.6,0.2,1.7-2.4,4.6c-0.4,0.4-0.7,0.8-1,1.1c-0.6,0.7-1.2,1.4-1.2,1.6C25.4,9,26,9.5,26.6,10
-                      c1.5,1.2,2.5,2.3,3,3.1c0.5,0.8,0.4,1.3,0.3,1.7c-0.4,0.9-1.6,1-1.9,1l-3.8,0C24.1,15.8,24.1,15.8,23.9,15.8z M18.6,10.9
-                      c0.9,0,1.7,0.8,2.5,1.6c0.5,0.5,1,1,1.5,1.3c0.7,0.4,1.3,0.4,1.4,0.4l0.1,0l3.8,0c0.2,0,0.4-0.1,0.5-0.1c0,0,0-0.1-0.1-0.2
-                      c-0.4-0.7-1.4-1.7-2.7-2.7c-1.2-1-1.8-1.5-1.9-2.2c-0.1-0.8,0.5-1.4,1.6-2.7c0.3-0.3,0.6-0.7,1-1.1c1.6-1.8,2-2.6,2.1-3
-                      c-0.2,0-0.6,0-0.7,0l-4.4,0c-0.2,0-0.2,0-0.2,0c-0.2,0.4-0.8,1.8-1.6,3c-1.9,2.8-2.8,3.2-3.4,3.2c-0.2,0-0.4,0-0.6-0.1
-                      c-1-0.6-1-1.8-0.9-2.8c0-0.1,0-0.3,0-0.4c0-0.6,0-1.2,0-1.7c0.1-1.7,0-1.7-0.4-1.8c-0.4-0.1-0.7-0.1-1.9-0.2l-0.7,0
-                      c-0.6,0-1.3,0-1.9,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.6,0.7,0.6,2,0.6,2.2c0.1,1.6,0.1,3.8-1,4.3c-0.2,0.1-0.4,0.1-0.6,0.1
-                      c-0.9,0-1.9-0.9-3.4-3.3C6.8,3.9,6.1,2.4,6.1,2.3c0,0-0.1-0.1-0.1-0.1C5.9,2.2,5.8,2.1,5.7,2.1l-4,0c0,0,0,0-0.1,0
-                      C2.2,3.3,5,8.7,8.1,11.6c2.7,2.5,5.8,2.6,6.4,2.6l1.9,0c0,0,0.2-0.1,0.3-0.1c0,0,0-0.1,0-0.1c0-0.3,0-2.6,1.6-3
-                      C18.4,10.9,18.5,10.9,18.6,10.9z" />
-                      </g>
+                    <svg width="23" height="12" viewBox="0 0 30 15.8">
+                      <use xlink:href="img/sprite.svg#vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item socials__item--instagram">
                   <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">
-                    <svg width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                    y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
-                    <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
-                    M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z" />
-                    <path class="st0" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6
-                    c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z" />
-                    <circle class="st0" cx="17.6" cy="5.4" r="1.3" />
+                    <svg width="18" height="18" viewBox="0 0 23 23">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
                   </svg>
                   </a>
                 </li>
@@ -129,14 +97,22 @@
           </div>
           <div class="main-nav__short-nav short-nav">
             <ul class="short-nav__list">
-              <li class="short-nav__item short-nav__item--tel tel tel--short">
-                <a href="tel:88005558628" aria-label="Связаться с нами по телефону"></a>
+              <li class="short-nav__item">
+                <a class="short-nav__link short-nav__link--tel" href="tel:88005558628" aria-label="Связаться с нами по телефону">
+                  <svg width="18" height="18" viewBox="0 0 18 18">
+                    <use xlink:href="img/sprite.svg#topmenu-phone"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="short-nav__item short-nav__item--mail mail mail--short">
-                <a href="mailto:mail@htmlacademy.ru" aria-label="Связаться с нами по почте"></a>
+              <li class="short-nav__item">
+                <a class="short-nav__link short-nav__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="Связаться с нами по почте">
+                  <svg width="18" height="15" viewBox="0 0 18 14">
+                    <use xlink:href="img/sprite.svg#topmenu-mail"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="short-nav__item short-nav__item--authorize user-authorize user-authorize--short">
-                <a class="user-authorize__link" href="#">Авторизация</a>
+              <li class="short-nav__item">
+                <a class="short-nav__link authorize-link authorize-link--short" href="#">Авторизация</a>
               </li>
             </ul>
           </div>
@@ -153,14 +129,17 @@
         <section class="user container container--form">
           <div class="user-wrapper">
             <h2 class="visually-hidden">Информация в профиле пользователя</h2>
-            <p class="user__level level level--form">
+            <p class="user__level level level--80 level--form">
               <span class="level__number">80</span>
               <span class="level__text">level</span>
               <span class="level__circle level__circle--start"></span>
               <span class="level__circle level__circle--end"></span>
             </p>
             <p class="user__img-wrapper">
-              <img class="user__img" src="img/demin-desktop@1x.jpg" alt="Аватар пользователя">
+              <picture>
+                <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                <img class="user__img" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x" alt="Аватар пользователя">
+              </picture>
             </p>
             <a class="user__link" href="#">
               <span class="user__link-word user__link-word--full">Сменить фото</span>
@@ -181,15 +160,8 @@
                     <input class="visually-hidden transport-checkbox__input" id="checkbox-plane" type="checkbox" form="new-plan__form"
                       name="transport" value="plane" checked>
                     <span class="transport-checkbox__icon transport-checkbox__icon--plane">
-                      <svg width="17" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
-                      <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
-                        c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
-                        C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1
-                        c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1
-                        c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9
-                        c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5
-                        c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
+                      <svg width="17" height="16" viewBox="0 0 19 21">
+                        <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                     </span>
                   </label>
@@ -200,13 +172,8 @@
                     <input class="visually-hidden transport-checkbox__input" id="checkbox-auto" type="checkbox" form="new-plan__form"
                       name="transport" value="auto" checked>
                     <span class="transport-checkbox__icon transport-checkbox__icon--auto">
-                      <svg width="17" height="16" version="1.1" id="svg2103" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                        y="0px" viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
-                        <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
-                        c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
-                        C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z
-                        M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9
-                        H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z" />
+                      <svg width="17" height="16" viewBox="0 0 17 21">
+                        <use xlink:href="img/sprite.svg#bus"></use>
                       </svg>
                     </span>
                   </label>
@@ -217,13 +184,8 @@
                     <input class="visually-hidden transport-checkbox__input" id="checkbox-bicycle" type="checkbox" form="new-plan__form"
                     name="transport" value="bicycle">
                     <span class="transport-checkbox__icon transport-checkbox__icon--bicycle">
-                      <svg width="17" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                        y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
-                        <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
-                      S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
-                      l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5
-                      l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5
-                      s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z" />
+                      <svg width="17" height="16" viewBox="0 0 24 21">
+                        <use xlink:href="img/sprite.svg#bike"></use>
                       </svg>
                     </span>
                   </label>
@@ -234,16 +196,8 @@
                     <input class="visually-hidden transport-checkbox__input" id="checkbox-on-foot" type="checkbox" form="new-plan__form"
                     name="transport" value="on-foot" checked>
                     <span class="transport-checkbox__icon transport-checkbox__icon--on-foot">
-                      <svg width="17" height="16" version="1.1" id="Icons_Run" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px" y="0px" viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;" xml:space="preserve">
-                      <g>
-                        <ellipse cx="14.3" cy="2" rx="2.1" ry="2" />
-                        <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6
-                      C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5
-                      c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4
-                      c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6
-                      z" />
-                      </g>
+                      <svg width="17" height="16" viewBox="0 0 20 21">
+                        <use xlink:href="img/sprite.svg#run"></use>
                       </svg>
                     </span>
                   </label>
@@ -326,24 +280,19 @@
                     <p class="plan-step__input-wrapper">
                       <input class="plan-step__input" id="traveler-amount" type="text" name="traveler-amount" value="2">
                       <button class="plan-step__button plan-step__button--minus" type="button" aria-label="Уменьшить количество попутчиков">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                          y="0px" viewBox="0 0 14 2" style="enable-background:new 0 0 14 2;" xml:space="preserve">
-                          <rect class="st0" width="14" height="2" />
+                        <svg viewBox="0 0 14 2">
+                          <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
                         </svg>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                        y="0px" viewBox="0 0 20 2" style="enable-background:new 0 0 20 2;" xml:space="preserve">
-                        <rect class="st0" width="20" height="2" />
-                        <rect class="st0" width="20" height="2" />
+                        <svg viewBox="0 0 20 2">
+                          <use xlink:href="img/sprite.svg#qty-minus"></use>
                         </svg>
                       </button>
                       <button class="plan-step__button plan-step__button--plus" type="button" aria-label="Увеличить количество попутчиков">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                          y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
-                          <polygon class="st0" points="8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 14,6 " />
+                        <svg viewBox="0 0 14 14">
+                          <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
                         </svg>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                        y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
-                        <polygon class="st0" points="20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 " />
+                        <svg viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#qty-plus"></use>
                         </svg>
                       </button>
                     </p>
@@ -363,24 +312,19 @@
                     <p class="plan-step__input-wrapper plan-step__input-wrapper--duration">
                       <input class="plan-step__input" id="travel-days" type="text" name="travel-days" value="2">
                       <button class="plan-step__button plan-step__button--minus" type="button" aria-label="Уменьшить количество дней">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                          y="0px" viewBox="0 0 14 2" style="enable-background:new 0 0 14 2;" xml:space="preserve">
-                          <rect class="st0" width="14" height="2" />
+                        <svg width="14" height="2" viewBox="0 0 14 2">
+                          <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
                         </svg>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                          y="0px" viewBox="0 0 20 2" style="enable-background:new 0 0 20 2;" xml:space="preserve">
-                          <rect class="st0" width="20" height="2" />
-                          <rect class="st0" width="20" height="2" />
+                        <svg width="20" height="2" viewBox="0 0 20 2">
+                          <use xlink:href="img/sprite.svg#qty-minus"></use>
                         </svg>
                       </button>
                       <button class="plan-step__button plan-step__button--plus" type="button" aria-label="Увеличить количество дней">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                          y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
-                          <polygon class="st0" points="8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 14,6 " />
+                        <svg width="14" height="14" viewBox="0 0 14 14">
+                          <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
                         </svg>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                          y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
-                          <polygon class="st0" points="20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 " />
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#qty-plus"></use>
                         </svg>
                       </button>
                     </p>
@@ -483,7 +427,11 @@
                       </tbody>
                     </table>
                   </fieldset>
-                  <a class="plan-step__link form-button" href="#plan-destination">Следующий шаг</a>
+                  <a class="plan-step__link form-button" href="#plan-destination">Следующий шаг
+                    <svg width="14" height="14" viewBox="0 0 10 14" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#triangle-arrow-right"></use>
+                    </svg>
+                  </a>
                   </li>
                 <li class="new-plan__item plan-step plan-step--destination" id="plan-destination">
                   <header class="plan-step__header">
@@ -508,11 +456,8 @@
                       <span class="plan-step__destination-field plan-step__destination-field--bosnia">Босния и Герцеговина</span>
                       <button class="plan-step__button-dropdown" aria-label="Показать/Скрыть список стран" type="button"></button>
                       <button class="plan-step__button-delete" aria-label="Удалить добавленную страну" type="button">
-                        <svg width="9" height="9" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 9 9" xml:space="preserve">
-                        <path d="M5.2,4.5l3.7-3.7C9,0.6,9,0.3,8.9,0.1S8.4,0,8.2,0.1L4.5,3.8L0.8,0.1C0.6,0,0.3,0,0.1,0.1S0,0.6,0.1,0.8l3.7,3.7L0.1,8.2
-                          C0,8.4,0,8.7,0.1,8.9C0.2,9,0.4,9,0.5,9s0.2,0,0.3-0.1l3.7-3.7l3.7,3.7C8.3,9,8.4,9,8.5,9s0.2,0,0.3-0.1C9,8.7,9,8.4,8.9,8.2
-                          L5.2,4.5z"/>
+                        <svg width="9" height="9" viewBox="0 0 9 9">
+                        <use xlink:href="img/sprite.svg#small-cross"></use>
                         </svg>
                       </button>
                     </li>
@@ -520,31 +465,20 @@
                       <span class="plan-step__destination-field">Чехия</span>
                       <button class="plan-step__button-dropdown" aria-label="Показать/Скрыть список стран" type="button"></button>
                       <button class="plan-step__button-delete" aria-label="Удалить добавленную страну" type="button">
-                        <svg width="9" height="9" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 9 9" xml:space="preserve">
-                        <path d="M5.2,4.5l3.7-3.7C9,0.6,9,0.3,8.9,0.1S8.4,0,8.2,0.1L4.5,3.8L0.8,0.1C0.6,0,0.3,0,0.1,0.1S0,0.6,0.1,0.8l3.7,3.7L0.1,8.2
-                          C0,8.4,0,8.7,0.1,8.9C0.2,9,0.4,9,0.5,9s0.2,0,0.3-0.1l3.7-3.7l3.7,3.7C8.3,9,8.4,9,8.5,9s0.2,0,0.3-0.1C9,8.7,9,8.4,8.9,8.2
-                          L5.2,4.5z"/>
+                        <svg width="9" height="9" viewBox="0 0 9 9">
+                          <use xlink:href="img/sprite.svg#small-cross"></use>
                         </svg>
                       </button>
                     </li>
                     <li class="plan-step__destination plan-step__destination--select plan-step__destination--opened">
-                      <!-- <span class="plan-step__destination-field plan-step__destination-field--select">Выберите страну</span> -->
                       <button class="plan-step__destination-field plan-step__destination-field--select" type="button">Выберите страну
-                        <svg width="9" height="9" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                          y="0px" viewBox="0 0 9 9" xml:space="preserve" fill="#ffffff">
-                          <path d="M5.2,4.5l3.7-3.7C9,0.6,9,0.3,8.9,0.1S8.4,0,8.2,0.1L4.5,3.8L0.8,0.1C0.6,0,0.3,0,0.1,0.1S0,0.6,0.1,0.8l3.7,3.7L0.1,8.2
-                        C0,8.4,0,8.7,0.1,8.9C0.2,9,0.4,9,0.5,9s0.2,0,0.3-0.1l3.7-3.7l3.7,3.7C8.3,9,8.4,9,8.5,9s0.2,0,0.3-0.1C9,8.7,9,8.4,8.9,8.2
-                        L5.2,4.5z" />
+                        <svg width="9" height="9" viewBox="0 0 9 9" fill="#ffffff">
+                          <use xlink:href="img/sprite.svg#small-cross"></use>
                         </svg>
                       </button>
-                      <!-- <button class="plan-step__button-dropdown" aria-label="Показать/Скрыть список стран" type="button"></button> -->
                       <button class="plan-step__button-delete" aria-label="Удалить добавленную страну" type="button">
-                        <svg width="9" height="9" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 9 9" xml:space="preserve">
-                        <path d="M5.2,4.5l3.7-3.7C9,0.6,9,0.3,8.9,0.1S8.4,0,8.2,0.1L4.5,3.8L0.8,0.1C0.6,0,0.3,0,0.1,0.1S0,0.6,0.1,0.8l3.7,3.7L0.1,8.2
-                          C0,8.4,0,8.7,0.1,8.9C0.2,9,0.4,9,0.5,9s0.2,0,0.3-0.1l3.7-3.7l3.7,3.7C8.3,9,8.4,9,8.5,9s0.2,0,0.3-0.1C9,8.7,9,8.4,8.9,8.2
-                          L5.2,4.5z"/>
+                        <svg width="9" height="9" viewBox="0 0 9 9">
+                          <use xlink:href="img/sprite.svg#small-cross"></use>
                         </svg>
                       </button>
                       <div class="plan-step__dropdown plan-step__dropdown--show alphabet-sort alphabet-sort--form">
@@ -693,14 +627,22 @@
                     </li>
                   </ul>
                   <button class="plan-step__button-add" type="button">Добавить страну
-                    <svg width="14" height="14" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                      y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve" fill="#c2c4c9">
-                      <polygon class="st0" points="8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 14,6 " />
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="#c2c4c9">
+                      <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
                     </svg>
                   </button>
                   <div class="plan-step__link-wrapper">
-                    <a class="plan-step__link form-button" href="#plan-activity">Следующий шаг</a>
-                    <a class="plan-step__link form-button form-button--back" href="#plan-date">На шаг назад</a>
+                    <a class="plan-step__link form-button" href="#plan-activity">Следующий шаг
+                      <svg width="14" height="14" viewBox="0 0 10 14" fill="currentColor">
+                        <use xlink:href="img/sprite.svg#triangle-arrow-right"></use>
+                      </svg>
+                    </a>
+                    <a class="plan-step__link form-button form-button--back" href="#plan-date">
+                      <svg width="16" height="16" viewBox="0 0 10 14" fill="currentColor">
+                        <use xlink:href="img/sprite.svg#triangle-arrow-left"></use>
+                      </svg>
+                      На шаг назад
+                    </a>
                   </div>
                 </li>
                 <li class="new-plan__item plan-step plan-step--activity" id="plan-activity">
@@ -726,7 +668,8 @@
                     </legend>
                     <label class="visually-hidden" for="activity-first-country">Опишите план действий в выбранной стране</label>
                     <textarea class="plan-step__activity-text" id="activity-first-country" name="activity-first-country"
-                      placeholder="План действий" rows="9" cols="25"></textarea>
+                      placeholder="План действий" rows="9" cols="25" required></textarea>
+                    <span class="plan-step__warning">Это поле должно быть заполнено</span>
                   </fieldset>
                   <fieldset class="plan-step__activity-wrapper">
                     <legend class="plan-step__activity-country plan-step__activity-country--czech">
@@ -735,11 +678,22 @@
                     <label class="visually-hidden" for="activity-second-country">Опишите план действий в выбранной
                       стране</label>
                     <textarea class="plan-step__activity-text" id="activity-second-country" name="activity-second-country"
-                      placeholder="План действий" rows="9" cols="25" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      placeholder="План действий" rows="9" cols="25" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                    </textarea>
+                    <span class="plan-step__warning">Это поле должно быть заполнено</span>
                   </fieldset>
                   <div class="plan-step__link-wrapper">
-                    <button class="plan-step__form-submit form-button form-button--submit" type="submit">Отправить</button>
-                    <a class="plan-step__link form-button form-button--back" href="#plan-destination">На шаг назад</a>
+                    <button class="plan-step__form-submit form-button form-button--submit" type="submit">Отправить
+                      <svg width="14" height="14" viewBox="0 0 10 14" fill="currentColor">
+                        <use xlink:href="img/sprite.svg#triangle-arrow-right"></use>
+                      </svg>
+                    </button>
+                    <a class="plan-step__link form-button form-button--back" href="#plan-destination">
+                      <svg width="16" height="16" viewBox="0 0 10 14" fill="currentColor">
+                        <use xlink:href="img/sprite.svg#triangle-arrow-left"></use>
+                      </svg>
+                      На шаг назад
+                    </a>
                   </div>
                 </li>
               </ol>
@@ -752,10 +706,13 @@
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
             <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@1x.png 100w, img/logo-mobile-blue@2x.png 200w"
-            sizes="(min-width: 1440px) 200px, (min-width: 768px) 166px, 100px" alt="Сервис путешествий «Погнали».">
+            loading="lazy" sizes="(min-width: 1440px) 200px, (min-width: 768px) 166px, 100px" alt="Сервис путешествий «Погнали».">
           </picture>
         </a>
         <div class="page-footer__socials-wrapper">
@@ -763,79 +720,35 @@
           <ul class="page-footer__socials socials">
             <li class="socials__item socials__item--facebook socials__item--accent">
               <a href="#" aria-label="Группа сервиса «Погнали» в фейсбук.">
-                <svg width="11" height="21" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21"
-                  style="enable-background:new 0 0 11 21;" xml:space="preserve">
-                  <g>
-                    <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
-                    V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
-                    C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z" />
-                  </g>
+                <svg width="11" height="21" viewBox="0 0 11 21">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item socials__item--vk socials__item--accent">
               <a href="#" aria-label="Группа сервиса «Погнали» вконтакте.">
-                <svg width="23" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8"
-                  style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
-                  <g>
-                    <path d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6
-                    c0,0.1,0,0.8-0.5,1.2c-0.4,0.4-1.1,0.5-1.2,0.5l-1.9,0c-1,0-4.4-0.2-7.4-3c-3.7-3.4-6.8-9.8-7-10.1C0,2.2-0.1,1.5,0.3,1.1
-                    c0.4-0.4,1.1-0.5,1.4-0.5l4.1,0l0.1,0c0.1,0,0.6,0.1,1,0.3c0.4,0.2,0.6,0.7,0.6,0.7c0,0,0.6,1.4,1.5,2.7c1.3,2,1.9,2.5,2.1,2.6
-                    c0.2-0.4,0.3-1.7,0.2-2.9c0-0.5-0.1-1.1-0.3-1.3c-0.1-0.1-0.4-0.3-0.8-0.3L9.5,1.8c-0.1-0.7,0.6-1.2,1.1-1.4
-                    C11.3,0.1,12.4,0,13.7,0l0.7,0c1.2,0,1.6,0.1,2.1,0.2c1.7,0.4,1.6,1.7,1.6,3.3c0,0.5,0,1,0,1.6c0,0.2,0,0.3,0,0.5
-                    c0,0.4,0,1,0.1,1.3c0.2-0.1,0.9-0.7,2.1-2.5c0.8-1.2,1.4-2.5,1.5-2.8l0,0c0.2-0.4,0.6-0.9,1.6-0.9l4.3,0c0,0,0.2,0,0.4,0
-                    c1,0,1.6,0.3,1.8,0.9c0.3,0.6,0.2,1.7-2.4,4.6c-0.4,0.4-0.7,0.8-1,1.1c-0.6,0.7-1.2,1.4-1.2,1.6C25.4,9,26,9.5,26.6,10
-                    c1.5,1.2,2.5,2.3,3,3.1c0.5,0.8,0.4,1.3,0.3,1.7c-0.4,0.9-1.6,1-1.9,1l-3.8,0C24.1,15.8,24.1,15.8,23.9,15.8z M18.6,10.9
-                    c0.9,0,1.7,0.8,2.5,1.6c0.5,0.5,1,1,1.5,1.3c0.7,0.4,1.3,0.4,1.4,0.4l0.1,0l3.8,0c0.2,0,0.4-0.1,0.5-0.1c0,0,0-0.1-0.1-0.2
-                    c-0.4-0.7-1.4-1.7-2.7-2.7c-1.2-1-1.8-1.5-1.9-2.2c-0.1-0.8,0.5-1.4,1.6-2.7c0.3-0.3,0.6-0.7,1-1.1c1.6-1.8,2-2.6,2.1-3
-                    c-0.2,0-0.6,0-0.7,0l-4.4,0c-0.2,0-0.2,0-0.2,0c-0.2,0.4-0.8,1.8-1.6,3c-1.9,2.8-2.8,3.2-3.4,3.2c-0.2,0-0.4,0-0.6-0.1
-                    c-1-0.6-1-1.8-0.9-2.8c0-0.1,0-0.3,0-0.4c0-0.6,0-1.2,0-1.7c0.1-1.7,0-1.7-0.4-1.8c-0.4-0.1-0.7-0.1-1.9-0.2l-0.7,0
-                    c-0.6,0-1.3,0-1.9,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.6,0.7,0.6,2,0.6,2.2c0.1,1.6,0.1,3.8-1,4.3c-0.2,0.1-0.4,0.1-0.6,0.1
-                    c-0.9,0-1.9-0.9-3.4-3.3C6.8,3.9,6.1,2.4,6.1,2.3c0,0-0.1-0.1-0.1-0.1C5.9,2.2,5.8,2.1,5.7,2.1l-4,0c0,0,0,0-0.1,0
-                    C2.2,3.3,5,8.7,8.1,11.6c2.7,2.5,5.8,2.6,6.4,2.6l1.9,0c0,0,0.2-0.1,0.3-0.1c0,0,0-0.1,0-0.1c0-0.3,0-2.6,1.6-3
-                    C18.4,10.9,18.5,10.9,18.6,10.9z" />
-                  </g>
+                <svg width="23" height="12" viewBox="0 0 30 15.8">
+                  <use xlink:href="img/sprite.svg#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item socials__item--instagram socials__item--accent">
               <a href="#" aria-label="Профиль сервиса «Погнали» в инстаграм.">
-                <svg width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                  y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
-                  <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
-                  M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z" />
-                  <path class="st0" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6
-                  c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z" />
-                  <circle class="st0" cx="17.6" cy="5.4" r="1.3" />
+                <svg width="18" height="18" viewBox="0 0 23 23">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на онлайн‑курс HTML Academy:
-                  HTML и CSS. Адаптивная вёрстка и автоматизация.">
-            <img class="copyright__logo" src="placeholder" alt="HTML Academy">
+            HTML и CSS. Адаптивная вёрстка и автоматизация.">Разработано
+            <img width="27" height="33" class="copyright__logo" src="img/htmlacademy.svg" alt="HTML Academy">
           </a>
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--opened')) {
-          navMain.classList.remove('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

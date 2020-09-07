@@ -1,4 +1,9 @@
-.copyright__text {
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
   line-height: 1;
   color: $special_grey;
 
@@ -6,5 +11,15 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
