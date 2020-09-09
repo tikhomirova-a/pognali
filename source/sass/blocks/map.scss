@@ -11,7 +11,8 @@
   @media (min-width: $tablet-width) {
     height: 580px;
 
-    @include shift(-45px);
+    top: -55px;
+    margin-bottom: -45px;
   }
 
   @media (min-width: $desktop-width) {

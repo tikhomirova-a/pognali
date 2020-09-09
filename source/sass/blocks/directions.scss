@@ -16,6 +16,9 @@
 
   @media (min-width: $desktop-width) {
     @include shift(-90px);
+
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
   }
 }
 
@@ -71,6 +74,7 @@
   @include reset-text;
 
   margin-bottom: 20px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 60px;
@@ -82,14 +86,19 @@
 }
 
 .directions__list {
-  position: relative;
-
   @include reset-list;
 
+  position: relative;
+
+  overflow: hidden;
+  margin-bottom: 25px;
+
   @media (min-width: $tablet-width) {
-    width: 615px;
+    width: 619px;
     padding-left: 35px;
     padding-right: 35px;
+    max-height: 440px;
+    margin-bottom: 45px;
 
     &::before {
       position: absolute;
@@ -110,7 +119,7 @@
       bottom: 0;
       left: 35px;
       content: "";
-      width: 615px;
+      width: 90%;
       height: 94px;
       background-image: url("../img/country-fade-tablet.svg");
     }
@@ -121,6 +130,8 @@
     padding-left: 70px;
     grid-column: 1/3;
     grid-row: 1/-1;
+    max-height: 450px;
+    margin-bottom: 0;
 
     &::before {
       top: -70px;
@@ -128,30 +139,18 @@
 
     &::after {
       left: 70px;
-      bottom: 11px;
+      bottom: 0;
 
       width: 560px;
-      height: 80px;
+      height: 90px;
 
       background-image: url("../img/country-fade-desktop.svg");
     }
   }
 }
 
-.directions__item {
+.directions__item:not(:last-child) {
   margin-bottom: 10px;
-
-  &:last-child {
-    margin-bottom: 25px;
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 45px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 0;
-    }
-  }
 }
 
 .directions__link {

@@ -269,7 +269,8 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-within {
     color: rgba(0, 0, 0, 0.6);
     outline: none;
   }
@@ -314,7 +315,8 @@
   }
 
   .traveler-filter__label:hover &,
-  .traveler-filter__label:focus & {
+  .traveler-filter__label:focus &,
+  .traveler-filter__label:focus-within & {
     background-color: rgba(255, 255, 255, 0.6);
   }
 

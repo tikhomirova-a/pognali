@@ -15,6 +15,8 @@
     margin-top: -60px;
 
     background-color: $dark_blue;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
   }
 }
 
@@ -101,19 +103,37 @@
     padding-left: 70px;
   }
 
-  & br:first-of-type {
-    display: none;
+  & .br:first-of-type {
+    display: inline;
 
     @media (max-width: $mobile-width-only) {
-      display: inline;
+      display: block;
+      white-space: normal;
     }
   }
 
-  & br:last-of-type {
-    display: none;
+  & .br:first-of-type::before {
+    content: " ";
+
+    @media (max-width: $mobile-width-only) {
+      content: "\A";
+    }
+  }
+
+  & .br > .br {
+    display: inline;
 
     @media (min-width: $tablet-width) and (max-width: 1439px) {
-      display: inline;
+      display: block;
+      white-space: normal;
+    }
+  }
+
+  & .br > .br::before {
+    content: " ";
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      content: "\A";
     }
   }
 }

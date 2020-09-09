@@ -152,11 +152,19 @@
     }
   }
 
-  & br {
-    display: none;
+  & .br {
+    display: block;
 
-    @media (min-width: $tablet-width) {
+    @media (max-width: $mobile-width-only) {
       display: inline;
+    }
+  }
+
+  & .br::before {
+    content: "\A";
+
+    @media (max-width: $mobile-width-only) {
+      content: " ";
     }
   }
 }

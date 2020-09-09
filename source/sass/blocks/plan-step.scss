@@ -36,7 +36,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      display: block;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       padding-right: 150px;
     }
   }
@@ -75,6 +76,12 @@
       border-bottom: 1px solid #e1e3e9;
     }
   }
+
+  .plan-step--date & {
+    @media (min-width: $desktop-width) {
+      grid-column: 1/-1;
+    }
+  }
 }
 
 .plan-step__heading {
@@ -95,15 +102,27 @@
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
     grid-row: 1/2;
-
-    & br {
-      display: none;
-    }
   }
 
   .plan-step--date & {
     @media (max-width: $mobile-width-only) {
       margin-bottom: 18px;
+    }
+  }
+
+  & .br {
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
+  }
+
+  & .br::before {
+    content: "\A";
+
+    @media (min-width: $desktop-width) {
+      content: " ";
     }
   }
 }
@@ -128,9 +147,21 @@
     grid-row: 2/-1;
   }
 
-  .plan-step--destination & br {
+  .plan-step--date & .br,
+  .plan-step--destination & .br {
+    display: block;
+
     @media (max-width: $mobile-width-only) {
-      display: none;
+      display: inline;
+    }
+  }
+
+  .plan-step--date & .br::before,
+  .plan-step--destination & .br::before {
+    content: "\A";
+
+    @media (max-width: $mobile-width-only) {
+      content: " ";
     }
   }
 
@@ -197,8 +228,13 @@
     display: inline-block;
     width: 475px;
     padding-top: 55px;
+    grid-column: 1/2;
 
     border: none;
+
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -336,6 +372,14 @@
     height: 70px;
   }
 
+  &--minus {
+    left: 0;
+  }
+
+  &--plus {
+    right: 0;
+  }
+
   & svg:first-child {
     display: none;
 
@@ -371,10 +415,6 @@
       width: 20px;
       height: 20px;
     }
-  }
-
-  &--plus {
-    right: 0;
   }
 
   &:focus {
@@ -421,6 +461,7 @@
     width: 465px;
     padding-top: 27px;
     margin-bottom: 35px;
+    grid-column: 1/2;
 
     border: none;
   }
@@ -440,9 +481,11 @@
 
   @media (min-width: $desktop-width) {
     display: inline-block;
-    margin-left: 280px;
-    padding-top: 35px;
+    margin-left: 250px;
+    padding-top: 55px;
     padding-bottom: 35px;
+    grid-column: 2/-1;
+    grid-row: 2/3;
   }
 }
 
@@ -461,6 +504,10 @@
     font-size: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
   }
 }
 
@@ -491,7 +538,8 @@
     background-image: url("../img/tick.svg");
   }
 
-  .plan-step__checkbox-label:hover & {
+  .plan-step__checkbox-label:hover &,
+  .plan-step__checkbox-label:focus-within & {
     border-color: #959bb2;
   }
 
@@ -509,6 +557,12 @@
 
 .plan-step__calendar {
   @include reset-fieldset;
+
+  .plan-step--date & {
+    @media (min-width: $desktop-width) {
+      grid-column: 1/-1;
+    }
+  }
 }
 
 .plan-step__month-wrapper {
@@ -963,9 +1017,9 @@
 .plan-step__button-dropdown {
   @include reset-button;
 
-  position: relative;
-  left: -45px;
-  margin-right: -45px;
+  position: absolute;
+  top: 0;
+  right: 23%;
 
   width: 40px;
   height: 42px;
@@ -980,13 +1034,16 @@
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    left: -75px;
-    margin-right: -75px;
+    right: 31%;
 
     width: 70px;
     height: 70px;
 
     background-size: 17px 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 27%;
   }
 }
 
@@ -1314,6 +1371,8 @@
 }
 
 .plan-step__activity-country {
+  @include reset-text;
+
   position: relative;
 
   width: fill-available;

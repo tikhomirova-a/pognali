@@ -34,15 +34,16 @@
     font-size: 24px;
   }
 
-  .login-form__email:invalid:not(:focus):not(:placeholder-shown) + & {
+  .login-form__email--error:not(:focus) + & {
     opacity: 1;
   }
 
-  .login-form__email:invalid:focus:not(:placeholder-shown) + & {
+  .login-form__email--error:focus:not(:placeholder-shown) + & {
     opacity: 0;
   }
 
-  .login-form__email:focus + & {
+  .login-form__email:focus + &,
+  .login-form__email:active + & {
     opacity: 0;
   }
 
