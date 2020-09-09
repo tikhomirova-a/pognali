@@ -31,12 +31,22 @@
   }
 }
 
+.pagination__page-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  min-height: 50px;
+}
+
 .pagination__page-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
 
   font-weight: 700;
   font-size: 20px;

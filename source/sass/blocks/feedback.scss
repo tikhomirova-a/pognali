@@ -65,16 +65,28 @@
 
     font-size: 28px;
     line-height: 32px;
-
-    & br:first-of-type {
-      display: none;
-    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 60px;
 
     line-height: 31px;
+  }
+
+  & .br {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+  }
+
+  & .br::before {
+    content: "\A";
+
+    @media (min-width: $tablet-width) {
+      content: " ";
+    }
   }
 }
 
@@ -118,14 +130,26 @@
 
     font-size: 28px;
     line-height: 30px;
-
-    & br {
-      display: none;
-    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 45px;
+  }
+
+  & .br {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+  }
+
+  & .br::before {
+    content: "\A";
+
+    @media (min-width: $tablet-width) {
+      content: " ";
+    }
   }
 }
 

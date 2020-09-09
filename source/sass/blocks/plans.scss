@@ -68,7 +68,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  &:first-child {
+  &:not(:last-child) {
     margin-bottom: 8px;
 
     @media (min-width: $tablet-width) {
@@ -124,6 +124,12 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 36px;
+  }
+
+  &::after {
+    @media (max-width: $mobile-width-only) {
+      content: " ";
+    }
   }
 }
 
@@ -219,7 +225,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 140px;
+    margin-left: 132px;
     letter-spacing: 0.08em;
   }
 

@@ -218,7 +218,7 @@
                   </div>
                   <div class="plans__text-wrapper">
                     <p class="plans__text">3 попутчика</p>
-                    <p class="plans__text">26 мар — 29 мар</p>
+                    <p class="plans__text">26 мар &horbar; 29 мар</p>
                     <a class="plans__link" href="#">Изменить</a>
                   </div>
                 </li>
@@ -229,7 +229,7 @@
                   </div>
                   <div class="plans__text-wrapper">
                     <p class="plans__text">1 попутчик</p>
-                    <p class="plans__text">1 июл — 15 июл</p>
+                    <p class="plans__text">1 июл &horbar; 15 июл</p>
                     <a class="plans__link" href="#">Изменить</a>
                   </div>
                 </li>
@@ -257,9 +257,9 @@
               <ol class="new-plan__list">
                 <li class="new-plan__item plan-step plan-step--date" id="plan-date">
                   <header class="plan-step__header">
-                    <h3 class="plan-step__heading">Шаг 1.<br> Даты пребывания</h3>
-                    <p class="plan-step__description">Укажите предпочтительное количество попутчиков, которых<br>вы хотели бы
-                      позвать в поездку и ее предполагаемую длительность.</p>
+                    <h3 class="plan-step__heading">Шаг 1.<span class="br">Даты пребывания</span></h3>
+                    <p class="plan-step__description">Укажите предпочтительное количество попутчиков, которых<span class="br">вы хотели бы
+                      позвать в поездку и ее предполагаемую длительность.</span></p>
                     <ul class="plan-step__markers markers">
                       <li class="markers__item markers__item--active">
                         <span class="markers__text">Даты</span>
@@ -280,18 +280,18 @@
                     <p class="plan-step__input-wrapper">
                       <input class="plan-step__input" id="traveler-amount" type="text" name="traveler-amount" value="2">
                       <button class="plan-step__button plan-step__button--minus" type="button" aria-label="Уменьшить количество попутчиков">
-                        <svg viewBox="0 0 14 2">
+                        <svg width="14" height="2" viewBox="0 0 14 2">
                           <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
                         </svg>
-                        <svg viewBox="0 0 20 2">
+                        <svg width="20" height="2" viewBox="0 0 20 2">
                           <use xlink:href="img/sprite.svg#qty-minus"></use>
                         </svg>
                       </button>
                       <button class="plan-step__button plan-step__button--plus" type="button" aria-label="Увеличить количество попутчиков">
-                        <svg viewBox="0 0 14 14">
+                        <svg width="14" height="14" viewBox="0 0 14 14">
                           <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
                         </svg>
-                        <svg viewBox="0 0 20 20">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
                           <use xlink:href="img/sprite.svg#qty-plus"></use>
                         </svg>
                       </button>
@@ -435,9 +435,9 @@
                   </li>
                 <li class="new-plan__item plan-step plan-step--destination" id="plan-destination">
                   <header class="plan-step__header">
-                    <h3 class="plan-step__heading">Шаг 2.<br> Маршрут</h3>
-                    <p class="plan-step__description">Укажите страны, которые вы хотели посетить.<br> Это может быть одна или сразу
-                      несколько.
+                    <h3 class="plan-step__heading">Шаг 2.<span class="br">Маршрут</span></h3>
+                    <p class="plan-step__description">Укажите страны, которые вы хотели посетить.<span class="br">Это может быть одна или сразу
+                      несколько.</span>
                     </p>
                     <ul class="plan-step__markers markers">
                       <li class="markers__item">
@@ -457,7 +457,7 @@
                       <button class="plan-step__button-dropdown" aria-label="Показать/Скрыть список стран" type="button"></button>
                       <button class="plan-step__button-delete" aria-label="Удалить добавленную страну" type="button">
                         <svg width="9" height="9" viewBox="0 0 9 9">
-                        <use xlink:href="img/sprite.svg#small-cross"></use>
+                          <use xlink:href="img/sprite.svg#small-cross"></use>
                         </svg>
                       </button>
                     </li>
@@ -588,9 +588,10 @@
                           <li class="alphabet-sort__countries-item">
                             <ul class="alphabet-sort__countries-sublist alphabet-sort__countries-sublist--1">
                               <li class="alphabet-sort__countries-subitem">
-                                <a class="alphabet-sort__countries-link" href="/europe/australia">Австралия</a>
+                                <a class="alphabet-sort__countries-link" href="#">Австралия</a>
                               </li>
                               <li class="alphabet-sort__countries-subitem">
+                                <!--Путь ссылки указан только для одной ссылки как пример-->
                                 <a class="alphabet-sort__countries-link" href="/europe/austria">Австрия</a>
                               </li>
                               <li class="alphabet-sort__countries-subitem">
@@ -647,7 +648,7 @@
                 </li>
                 <li class="new-plan__item plan-step plan-step--activity" id="plan-activity">
                   <header class="plan-step__header">
-                    <h3 class="plan-step__heading">Шаг 3.<br> Развлечения</h3>
+                    <h3 class="plan-step__heading">Шаг 3.<span class="br">Развлечения</span></h3>
                     <p class="plan-step__description">Наконец, расскажите о своих планах времяпровождения.<br>Можно писать в
                       свободной форме и ставить тэги.</p>
                     <ul class="plan-step__markers markers">
@@ -663,18 +664,18 @@
                     </ul>
                   </header>
                   <fieldset class="plan-step__activity-wrapper">
-                    <legend class="plan-step__activity-country plan-step__activity-country--bosnia">
+                    <h4 class="plan-step__activity-country plan-step__activity-country--bosnia">
                       <span class="plan-step__country-name">Босния и Герцеговина</span>
-                    </legend>
+                    </h4>
                     <label class="visually-hidden" for="activity-first-country">Опишите план действий в выбранной стране</label>
                     <textarea class="plan-step__activity-text" id="activity-first-country" name="activity-first-country"
                       placeholder="План действий" rows="9" cols="25" required></textarea>
                     <span class="plan-step__warning">Это поле должно быть заполнено</span>
                   </fieldset>
                   <fieldset class="plan-step__activity-wrapper">
-                    <legend class="plan-step__activity-country plan-step__activity-country--czech">
+                    <h4 class="plan-step__activity-country plan-step__activity-country--czech">
                       <span class="plan-step__country-name">Чехия</span>
-                    </legend>
+                    </h4>
                     <label class="visually-hidden" for="activity-second-country">Опишите план действий в выбранной
                       стране</label>
                     <textarea class="plan-step__activity-text" id="activity-second-country" name="activity-second-country"

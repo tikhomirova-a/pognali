@@ -120,14 +120,14 @@
   color: $dark_blue;
   opacity: 0.3;
 
-  &:active,
-  &--active {
-    opacity: 1;
-  }
-
   &:hover,
   &:focus {
     opacity: 0.6;
+  }
+
+  &:active,
+  &--active {
+    opacity: 1;
   }
 }
 
@@ -186,7 +186,7 @@
   @media (min-width: $desktop-width) {
     .country-filter--opened & {
       max-width: 100%;
-      margin-top: 40px;
+      margin-top: 38px;
     }
   }
 

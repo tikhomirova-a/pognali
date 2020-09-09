@@ -50,7 +50,7 @@
   }
 
   &:hover,
-  &:focus {
+  .transport-checkbox__input:focus + & {
     filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
     outline: none;
   }

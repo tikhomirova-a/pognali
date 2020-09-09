@@ -96,17 +96,7 @@
     align-self: stretch;
     padding-top: 15px;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      content: "";
-      width: 270px;
-      height: 0;
-
-      border: 1px solid #f2f2f2;
-    }
+    border-top: 2px solid #f2f2f2;
   }
 
   @media (min-width: $tablet-width) {
